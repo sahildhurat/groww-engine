@@ -1,5 +1,63 @@
 import { NextRequest, NextResponse } from "next/server";
-import promptsData from "@/data/prompts.json";
+import tryPrompts from "@/data/try_prompts.json";
+
+// The pipeline's request shape (pipeline/llm.py): system = the prompt's SYSTEM section with {{CATEGORIES}} filled
+// (site/data/try_prompts.json, built by tools/build_try_prompts.py), user = "Items:\n" + the items as JSON, thinking
+// disabled, and every text block of the reply joined.
+function itemsJson(id: string, text: string): string {
+  // Python json.dumps(..., ensure_ascii=False) layout, as the pipeline sent it
+  return `[{"id": "${id}", "src": "other", "ctx": "", "text": ${JSON.stringify(text)}}]`;
+}
+
+function truncateForGate(t: string, maxLen = 700): string {
+  // pipeline/gate.py truncate_for_gate: keep the start and the last 150 characters
+  const s = t.trim();
+  if (s.length <= maxLen) return s;
+  return `${s.slice(0, maxLen - 150 - 5)} ... ${s.slice(-150)}`;
+}
+
+async function callModel(apiKey: string, system: string, items: string, maxTokens: number): Promise<{ text: string; inTok: number; outTok: number }> {
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "x-api-key": apiKey, "anthropic-version": "2023-06-01", "content-type": "application/json" },
+    body: JSON.stringify({
+      model: "claude-haiku-5-5",
+      max_tokens: maxTokens,
+      thinking: { type: "disabled" },
+      system: [{ type: "text", text: system }],
+      messages: [{ role: "user", content: `Items:\n${items}` }],
+    }),
+    signal: AbortSignal.timeout(20000),
+  });
+  if (!res.ok) throw Object.assign(new Error(`model http ${res.status}`), { stage: "model_http", status: res.status });
+  const json = await res.json();
+  const text = Array.isArray(json.content)
+    ? json.content.filter((b: any) => b && b.type === "text" && typeof b.text === "string").map((b: any) => b.text).join("")
+    : "";
+  return { text, inTok: json.usage?.input_tokens || 0, outTok: json.usage?.output_tokens || 0 };
+}
+
+// Find the item for `id` in the model's reply: a JSON array (as asked), a single object, or an object keyed by id,
+// with or without code fences or a sentence around it. Anything else gives {} (all fields unknown).
+function pickItem(raw: string, id: string): Record<string, any> {
+  const t = raw.replace(/```json|```/g, "").trim();
+  const candidates: string[] = [];
+  const a0 = t.indexOf("["), a1 = t.lastIndexOf("]");
+  if (a0 !== -1 && a1 > a0) candidates.push(t.slice(a0, a1 + 1));
+  const o0 = t.indexOf("{"), o1 = t.lastIndexOf("}");
+  if (o0 !== -1 && o1 > o0) candidates.push(t.slice(o0, o1 + 1));
+  for (const c of candidates) {
+    try {
+      const v = JSON.parse(c);
+      const arr = Array.isArray(v) ? v : v && typeof v === "object" ? (v.id ? [v] : v[id] ? [{ id, ...v[id] }] : [v]) : [];
+      const hit = arr.find((x: any) => x && typeof x === "object" && x.id === id) || arr.find((x: any) => x && typeof x === "object");
+      if (hit) return hit;
+    } catch {
+      /* try the next candidate */
+    }
+  }
+  return {};
+}
 
 // In-memory rate limiting map: ip -> rate record
 interface RateRecord {
@@ -145,60 +203,20 @@ export async function POST(request: NextRequest) {
     }
 
     // 4. Gate Step with 20s timeout
-    const gateInputPayload = [
-      { id: "try1", src: "general", ctx: "", text },
-    ];
-
-    let gateRes: Response;
+    let stage = "gate";
+    let gateParsed: Record<string, any> = {};
     try {
-      gateRes = await fetch("https://api.anthropic.com/v1/messages", {
-        method: "POST",
-        headers: {
-          "x-api-key": apiKey!,
-          "anthropic-version": "2023-06-01",
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          model: "claude-haiku-5-5",
-          max_tokens: 400,
-          system: promptsData.gate_system_prompt,
-          messages: [
-            {
-              role: "user",
-              content: `Items:\n${JSON.stringify(gateInputPayload)}`,
-            },
-          ],
-        }),
-        signal: AbortSignal.timeout(20000),
-      });
+      const r = await callModel(apiKey!, tryPrompts.gate_system, itemsJson("try1", truncateForGate(text)), 400);
+      gateInputTokens = r.inTok;
+      gateOutputTokens = r.outTok;
+      gateParsed = pickItem(r.text, "try1");
     } catch (err: any) {
-      console.error("[try_api] Gate fetch timeout or network failure");
+      const timeout = err?.name === "TimeoutError" || err?.name === "AbortError";
+      console.error(`[try_api] gate call failed: ${timeout ? "timeout" : err?.stage === "model_http" ? `http ${err.status}` : err?.name || "error"}`);
       return NextResponse.json(
-        { error: "Engine request timed out. Please try again or use the cached examples." },
-        { status: 504 }
+        { error: timeout ? "Engine request timed out. Please try again or use the cached examples." : "Engine call failed. Please try again or inspect cached examples." },
+        { status: timeout ? 504 : 502 }
       );
-    }
-
-    if (!gateRes.ok) {
-      console.error("[try_api] Anthropic gate call returned HTTP status:", gateRes.status);
-      return NextResponse.json(
-        { error: "Engine call failed. Please try again or inspect cached examples." },
-        { status: 502 }
-      );
-    }
-
-    const gateJson = await gateRes.json();
-    gateInputTokens = gateJson.usage?.input_tokens || 0;
-    gateOutputTokens = gateJson.usage?.output_tokens || 0;
-
-    const gateRawText = gateJson.content?.[0]?.text || "[]";
-    let gateParsed: any = {};
-    try {
-      const parsedArray = JSON.parse(gateRawText.replace(/```json|```/g, "").trim());
-      gateParsed = Array.isArray(parsedArray) ? parsedArray[0] : parsedArray;
-    } catch {
-      console.error("[try_api] Gate response JSON parsing failed");
-      gateParsed = { rel: "n", type: "other", sip: 0, ft: "u" };
     }
 
     const rel = gateParsed.rel || "n";
@@ -212,52 +230,22 @@ export async function POST(request: NextRequest) {
     let extractionResult: any = null;
     let groundedSpans: Array<{ field: string; value: any; span: string }> = [];
 
-    // 5. Extraction Step (only if gate-positive) with 20s timeout
+    // 5. Extraction Step (only if gate-positive), same request shape as the pipeline
     if (isGatePositive) {
-      const extInputPayload = [
-        { id: "try1", src: "general", ctx: "", text },
-      ];
-
-      let extRes: Response | null = null;
+      stage = "extract";
+      let extOk = false;
+      let extParsed: Record<string, any> = {};
       try {
-        extRes = await fetch("https://api.anthropic.com/v1/messages", {
-          method: "POST",
-          headers: {
-            "x-api-key": apiKey!,
-            "anthropic-version": "2023-06-01",
-            "content-type": "application/json",
-          },
-          body: JSON.stringify({
-            model: "claude-haiku-5-5",
-            max_tokens: 2000,
-            system: promptsData.extract_system_prompt,
-            messages: [
-              {
-                role: "user",
-                content: `Items:\n${JSON.stringify(extInputPayload)}`,
-              },
-            ],
-          }),
-          signal: AbortSignal.timeout(20000),
-        });
-      } catch {
-        console.error("[try_api] Extraction fetch timeout or network failure");
+        const r = await callModel(apiKey!, tryPrompts.extract_system, itemsJson("try1", text), 2000);
+        extInputTokens = r.inTok;
+        extOutputTokens = r.outTok;
+        extParsed = pickItem(r.text, "try1");
+        extOk = true;
+      } catch (err: any) {
+        console.error(`[try_api] extraction call failed: ${err?.stage === "model_http" ? `http ${err.status}` : err?.name || "error"}`);
       }
 
-      if (extRes && extRes.ok) {
-        const extJson = await extRes.json();
-        extInputTokens = extJson.usage?.input_tokens || 0;
-        extOutputTokens = extJson.usage?.output_tokens || 0;
-
-        const extRawText = extJson.content?.[0]?.text || "[]";
-        let extParsed: any = {};
-        try {
-          const parsedArray = JSON.parse(extRawText.replace(/```json|```/g, "").trim());
-          extParsed = Array.isArray(parsedArray) ? parsedArray[0] : parsedArray;
-        } catch {
-          console.error("[try_api] Extraction response JSON parsing failed");
-        }
-
+      if (extOk) {
         // Post-processing: Rules H1, H2, H4, H5, H11 & quote check
         const extType =
           typeof extParsed.type === "object" ? extParsed.type?.v : extParsed.type || gateType;
@@ -284,15 +272,15 @@ export async function POST(request: NextRequest) {
         }
 
         // H4 rule: Numbers in spans
-        if (typeof extParsed.months_since_start === "object" && extParsed.months_since_start?.s) {
-          if (!/\d+/.test(extParsed.months_since_start.s)) {
+        if (extParsed.months_since_start && typeof extParsed.months_since_start === "object") {
+          if (typeof extParsed.months_since_start.s !== "string" || !/\d+/.test(extParsed.months_since_start.s)) {
             extParsed.months_since_start = "unknown";
           }
         }
 
         // H5 rule: First-time status cue
-        if (typeof extParsed.first_time_status === "object" && extParsed.first_time_status?.s) {
-          const spanLower = extParsed.first_time_status.s.toLowerCase();
+        if (extParsed.first_time_status && typeof extParsed.first_time_status === "object") {
+          const spanLower = typeof extParsed.first_time_status.s === "string" ? extParsed.first_time_status.s.toLowerCase() : "";
           const hasCue = FIRST_TIME_CUES.some((cue) => spanLower.includes(cue));
           if (!hasCue) {
             extParsed.first_time_status = "unknown";
@@ -374,8 +362,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       live: true,
       prompts: {
-        gate: promptsData.gate_version,
-        extract: promptsData.extract_version,
+        gate: tryPrompts.gate_version,
+        extract: tryPrompts.extract_version,
       },
       gate: {
         rel,
@@ -391,8 +379,9 @@ export async function POST(request: NextRequest) {
       grounded_spans: groundedSpans,
       latency_ms: latencyMs,
     });
-  } catch {
-    console.error("[try_api] Unexpected internal processing failure");
+  } catch (err: any) {
+    // Only the error's type, never the text or the message (which could echo the input)
+    console.error(`[try_api] unexpected failure: ${err?.name || "error"}`);
     return NextResponse.json(
       { error: "An unexpected error occurred during processing." },
       { status: 500 }

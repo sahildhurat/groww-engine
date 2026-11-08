@@ -11,12 +11,11 @@ export const metadata = {
 export default function StoriesPage() {
   return (
     <div className="py-8 max-w-6xl mx-auto space-y-6">
-      <div className="border-b border-border pb-6">
-        <h1 className="text-3xl font-bold tracking-tight text-foreground">
-          Story Explorer
-        </h1>
-        <p className="mt-2 text-base text-muted-foreground max-w-3xl">
-          Browse and filter early-journey stories from the discovery engine corpus. Every quote is scrubbed and privacy-checked; all evidence spans are grounded in verbatim user posts.
+      <div className="pb-2">
+        <h1 className="text-[32px] font-semibold tracking-tight text-slate-900">Story Explorer</h1>
+        <p className="mt-2 max-w-3xl text-[16px] leading-relaxed text-slate-600">
+          Every early-journey story the engine found in public posts. Pick a lens or click a bar to see who stopped, why, and
+          what they said. Quotes are scrubbed of personal details, and every evidence phrase is copied word for word from the post.
         </p>
       </div>
 
