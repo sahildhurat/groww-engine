@@ -3,8 +3,28 @@
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, ErrorBar, Cell } from "recharts";
-import { FormattedText } from "@/components/FormattedText";
+import { FormattedText, MarkdownBlocks } from "@/components/FormattedText";
 import { Calendar, HelpCircle, Layers, ArrowRight, Info, Clock, Route, Users } from "lucide-react";
+
+// Where "Explore matching stories" lands for each question: the Story Explorer has no question filter, so each question
+// opens the outcome group it is about (Q3 stoppers, Q7 continuers), or all stories.
+const STORY_LINK: Record<string, string> = {
+  Q3: "/stories?group=stop",
+  Q7: "/stories?group=cont",
+};
+
+// Short tab labels, so every tab names its question.
+const SHORT_LABEL: Record<string, string> = {
+  Q1: "Why they start",
+  Q2: "After starting",
+  Q3: "Why they stop",
+  Q4: "What they check",
+  Q5: "In-app confusion",
+  Q6: "Outside the app",
+  Q7: "Who keeps going",
+  Q8: "By segment",
+  Q9: "Unmet needs",
+};
 
 interface QuestionViewProps {
   questionsData: any;
@@ -39,14 +59,17 @@ export function QuestionView({ questionsData }: QuestionViewProps) {
     if (!activeTableKey || !currentQ.tables[activeTableKey]) return null;
     const tData = currentQ.tables[activeTableKey];
 
-    // Priority: check MAIN -> pop -> group -> src
-    const mainData = tData["MAIN"] || {};
-    const popData = mainData[pop] || mainData["all"] || mainData["E"] || {};
-    const gData = popData[group] || popData["any"] || popData["stop"] || {};
-    const sData = gData[src] || gData["pooled"] || Object.values(gData)[0] || null;
-
-    return sData;
+    // Exact cut only: no silent fallback to pooled data when a combination was not computed (audit E07).
+    return tData["MAIN"]?.[pop]?.[group]?.[src] ?? null;
   }, [currentQ, activeTableKey, pop, group, src]);
+
+  // Which sources exist for the chosen population and group (per-source cuts exist only for an outcome group).
+  const sourceAvailable = (s: string) =>
+    !!(activeTableKey && currentQ.tables?.[activeTableKey]?.MAIN?.[pop]?.[group]?.[s]);
+  React.useEffect(() => {
+    if (activeTableKey && src !== "pooled" && !sourceAvailable(src)) setSrc("pooled");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeTableKey, pop, group, src]);
 
   // Transform rows for Recharts
   const chartData = useMemo(() => {
@@ -91,9 +114,7 @@ export function QuestionView({ questionsData }: QuestionViewProps) {
                 }`}
               >
                 <span>Q{q.num}</span>
-                <span className="hidden md:inline font-normal opacity-90 truncate max-w-[140px]">
-                  · {q.title.split(",")[0].replace("What leads to ", "").replace("What separates ", "")}
-                </span>
+                <span className="hidden md:inline font-normal opacity-90">{SHORT_LABEL[q.id] ?? q.title}</span>
               </button>
             );
           })}
@@ -110,7 +131,7 @@ export function QuestionView({ questionsData }: QuestionViewProps) {
             <h1 className="text-2xl font-bold text-slate-900 mt-1">{currentQ.title}</h1>
           </div>
           <Link
-            href={`/stories?q=${currentQ.id}`}
+            href={STORY_LINK[currentQ.id] ?? "/stories"}
             className="text-xs font-semibold text-indigo-600 hover:text-indigo-800 flex items-center space-x-1 self-start sm:self-auto"
           >
             <span>Explore matching stories</span>
@@ -118,7 +139,8 @@ export function QuestionView({ questionsData }: QuestionViewProps) {
           </Link>
         </div>
 
-        {/* Toggles bar */}
+        {/* Toggles bar (hidden where the question has no chart to filter, e.g. Q8; audit E08) */}
+        {tableKeys.length > 0 && (
         <div className="bg-slate-50 rounded-lg p-3 sm:p-4 border border-slate-200/80 flex flex-wrap items-center justify-between gap-3 text-xs">
           <div className="flex flex-wrap items-center gap-3">
             {/* Table selector if multiple tables exist */}
@@ -176,7 +198,7 @@ export function QuestionView({ questionsData }: QuestionViewProps) {
                 onChange={(e) => setGroup(e.target.value)}
                 className="bg-white border border-slate-300 rounded px-2.5 py-1 text-slate-800 font-medium focus:ring-1 focus:ring-indigo-500"
               >
-                <option value="any">All Early-Journey</option>
+                <option value="any">All groups</option>
                 <option value="stop">Stopped SIP</option>
                 <option value="consider">Considering Stopping</option>
                 <option value="cont">Kept Going</option>
@@ -192,9 +214,15 @@ export function QuestionView({ questionsData }: QuestionViewProps) {
                 className="bg-white border border-slate-300 rounded px-2.5 py-1 text-slate-800 font-medium focus:ring-1 focus:ring-indigo-500"
               >
                 <option value="pooled">Pooled (All Sources)</option>
-                <option value="reddit">Reddit</option>
-                <option value="youtube">YouTube</option>
-                <option value="appreviews">App Reviews</option>
+                {[
+                  ["reddit", "Reddit"],
+                  ["youtube", "YouTube"],
+                  ["appreviews", "App Reviews"],
+                ].map(([v, l]) => (
+                  <option key={v} value={v} disabled={!sourceAvailable(v)}>
+                    {sourceAvailable(v) ? l : `${l} (pick an outcome group)`}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
@@ -209,6 +237,7 @@ export function QuestionView({ questionsData }: QuestionViewProps) {
             </div>
           )}
         </div>
+        )}
 
         {/* Horizontal Bar Chart */}
         {chartData.length > 0 ? (
@@ -218,7 +247,11 @@ export function QuestionView({ questionsData }: QuestionViewProps) {
               <span className="font-mono">Metric: share of stated mentions</span>
             </div>
 
-            <div style={{ width: "100%", height: chartHeight }}>
+            <div
+              style={{ width: "100%", height: chartHeight }}
+              role="img"
+              aria-label={`${currentQ.title}: bar chart of ${chartData.length} categories; the table below lists every value.`}
+            >
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                   data={chartData}
@@ -261,11 +294,33 @@ export function QuestionView({ questionsData }: QuestionViewProps) {
                 </BarChart>
               </ResponsiveContainer>
             </div>
+            <details className="mt-2 text-xs text-slate-600">
+              <summary className="cursor-pointer font-medium text-indigo-700">Show these numbers as a table</summary>
+              <table className="mt-2 min-w-full text-xs">
+                <thead>
+                  <tr className="text-left text-slate-500">
+                    <th scope="col" className="py-1 pr-3 font-semibold">Category</th>
+                    <th scope="col" className="py-1 pr-3 font-semibold text-right">Share</th>
+                    <th scope="col" className="py-1 font-semibold text-right">95% CI</th>
+                  </tr>
+                </thead>
+                <tbody className="tabular-nums">
+                  {chartData.map((d: any) => (
+                    <tr key={d.code} className="border-t border-slate-100">
+                      <td className="py-1 pr-3 text-slate-800">{d.label}</td>
+                      <td className="py-1 pr-3 text-right">{d.sharePct}%</td>
+                      <td className="py-1 text-right">{d.ciLowPct}–{d.ciHighPct}%</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p className="mt-1 text-slate-500">Base: n = {currentTableData?.n}{currentTableData?.n_eff ? `, effective n = ${currentTableData.n_eff}` : ""}.</p>
+            </details>
           </div>
         ) : (
           !currentQ.has_segments && !currentQ.has_timing && (
             <div className="py-8 text-center text-slate-500 text-sm">
-              No chart distribution available for this specific filter cut. Select another population or group.
+              This cut was not computed. Pick another population, group or source.
             </div>
           )
         )}
@@ -335,7 +390,9 @@ export function QuestionView({ questionsData }: QuestionViewProps) {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100">
-                    {Object.entries(event_timing || {}).map(([windowKey, winData]: [string, any]) => (
+                    {Object.entries(event_timing || {})
+                      .sort(([a], [b]) => parseInt(a, 10) - parseInt(b, 10))
+                      .map(([windowKey, winData]: [string, any]) => (
                       <tr key={windowKey} className="hover:bg-slate-50/70">
                         <td className="py-2.5 px-3 font-semibold text-slate-900">{windowKey} months</td>
                         <td className="py-2.5 px-3 font-mono text-slate-600">n = {winData.n_events}</td>
@@ -497,8 +554,8 @@ export function QuestionView({ questionsData }: QuestionViewProps) {
             {currentQ.verbatim_bullets.map((bullet: string, i: number) => (
               <div key={i} className="flex items-start space-x-2 text-xs sm:text-sm text-slate-700 bg-slate-50 p-3 rounded-lg border border-slate-100">
                 <span className="text-indigo-600 font-bold mt-0.5">•</span>
-                <div>
-                  <FormattedText text={bullet} />
+                <div className="min-w-0 flex-1">
+                  <MarkdownBlocks text={bullet} />
                 </div>
               </div>
             ))}

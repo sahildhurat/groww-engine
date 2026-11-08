@@ -294,8 +294,18 @@ export function TryEngine({ examples, promptMeta }: TryEngineProps) {
           </ol>
         </section>
 
+        {result && inputText.trim() !== shownText.trim() && !isLoading && (
+          <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-[13px] text-amber-900" data-testid="stale-result">
+            You have edited the post. The result below is for the earlier text; press Run to analyse the new one.
+          </p>
+        )}
+
         {result && (
-          <section className="rounded-2xl border border-slate-200 bg-white p-5 space-y-5">
+          <section
+            className={`rounded-2xl border border-slate-200 bg-white p-5 space-y-5 transition-opacity ${
+              inputText.trim() !== shownText.trim() && !isLoading ? "opacity-60" : ""
+            }`}
+          >
             <div>
               <p className="text-[13px] text-slate-500">Verdict</p>
               <p className={`mt-0.5 text-[19px] font-semibold leading-snug ${positive ? "text-emerald-800" : "text-slate-700"}`}>

@@ -265,7 +265,7 @@ function StoryCard({ story, spotlight = false }: { story: Story; spotlight?: boo
         <span className="text-slate-600">{labelFor(SOURCE_LABELS, story.source)}</span>
         {story.posted && story.posted !== "unknown" && <span className="text-slate-500 tabular-nums">{story.posted}</span>}
         {story.scope && story.scope !== "general" && <span className="text-slate-500">{labelFor(SCOPE_LABELS, story.scope)}</span>}
-        {story.first_time && <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[12px] font-medium text-emerald-800">First-time investor</span>}
+        {story.first_time && <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[12px] font-medium text-emerald-800">First-time (stated or likely)</span>}
         {story.targeted && <span className="rounded-full bg-violet-100 px-2 py-0.5 text-[12px] font-semibold text-violet-800">Targeted top-up</span>}
         <span className="ml-auto text-[12px] text-slate-400">{story.uid}</span>
       </header>
@@ -448,6 +448,9 @@ export function StoryExplorer({ manifest }: { manifest: Manifest }) {
 
   const matchedUids = useMemo(() => {
     if (!qParam.trim() || !miniSearchRef.current) return null;
+    // A full story id (e.g. "reddit:post:1s9vjfd") opens exactly that story, not fuzzy neighbours.
+    const exact = stories.find((s) => s.uid === qParam.trim());
+    if (exact) return new Set([exact.uid]);
     try {
       return new Set(miniSearchRef.current.search(qParam.trim()).map((r) => r.id as string));
     } catch {
@@ -680,8 +683,8 @@ export function StoryExplorer({ manifest }: { manifest: Manifest }) {
             Investor
             <select className={`mt-1 ${selectCls}`} value={selectedFirstTime} onChange={(e) => updateFilter("first_time", e.target.value)}>
               <option value="all">All investors</option>
-              <option value="first_time">First-time investor stated</option>
-              <option value="experienced">Not stated as first-time</option>
+              <option value="first_time">First-time (stated or likely)</option>
+              <option value="experienced">Not marked first-time</option>
             </select>
           </label>
           <label className="text-[12px] text-slate-500">

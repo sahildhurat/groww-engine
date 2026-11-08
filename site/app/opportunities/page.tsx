@@ -69,7 +69,7 @@ export default function OpportunitiesPage() {
                     {area.reach_E_pct}%
                   </div>
                   <div className="text-xs text-muted-foreground mt-0.5">
-                    n = {area.n_E.toLocaleString()} early stories
+                    weighted share; n = {area.n_E.toLocaleString()} early-journey episodes
                   </div>
                 </div>
 

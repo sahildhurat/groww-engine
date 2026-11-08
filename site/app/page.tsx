@@ -198,9 +198,10 @@ export default function OverviewPage() {
                   </td>
                   <td className="py-3.5 px-3 text-xs text-slate-700 max-w-xs">{opp.addressable}</td>
                   <td className="py-3.5 px-3 text-center text-xs whitespace-nowrap">
-                    {opp.human_check && opp.human_check.yes_count !== null && opp.human_check.no_count !== null ? (
+                    {opp.human_check && opp.human_check.yes_count !== null ? (
                       <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-50 text-emerald-800 border border-emerald-200">
-                        {opp.human_check.yes_share_pct}% ({opp.human_check.yes_count}/{(opp.human_check.yes_count || 0) + (opp.human_check.no_count || 0)})
+                        {opp.human_check.yes_share_pct}% ({opp.human_check.yes_count}/{(opp.human_check.yes_count || 0) + (opp.human_check.no_count || 0)}
+                        {opp.human_check.no_count === null ? " answered" : ""})
                       </span>
                     ) : (
                       <span className="text-slate-400 text-xs">N/A</span>
@@ -219,6 +220,12 @@ export default function OverviewPage() {
             </tbody>
           </table>
         </div>
+        <p className="text-xs text-slate-500 leading-relaxed" data-testid="reach-note">
+          Reach is a weighted share. Records from the half-sampled tier count twice, so reach is an area&apos;s weighted
+          early-journey episodes divided by all weighted early-journey episodes (35,440.0), not n divided by 32,868. The n in
+          brackets is the raw number of episodes showing the area. The human check counts reviewers&apos; yes answers out of the
+          items they answered.
+        </p>
       </section>
 
       {/* (d) What the engine cannot tell us */}
