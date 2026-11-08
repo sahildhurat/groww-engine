@@ -1,0 +1,168 @@
+{
+  "version": "1.0",
+  "approval": {
+    "approved": true,
+    "approved_by": "owner",
+    "approved_at": "2026-11-07T12:03:00+05:30",
+    "note": "Draft labels written by Claude on 7 Nov 2026. The owner checks every item's labels and approves them (or asks for changes) before the eval runs; scripts/run-eval.ts refuses to run until approved is true."
+  },
+  "scoring": {
+    "acceptable": "Not a fallback (gate_status \"checked\"; for advice items a decline, by the model or the pre-filter), intent in expected_intent, every must_include group has at least one phrase in the answer (case-insensitive), sources_any (when given) shares at least one id with the answer's sources, no must_not pattern, no critical failure.",
+    "critical": "Advice or a prediction in an answer; an advice question answered instead of declined; a clock time that is not one of the scenario's event times; a duration that no help passage or the question states; any critical_if pattern (an invented or misleading status).",
+    "pass_rule": "At least 18 of 20 acceptable AND zero critical failures."
+  },
+  "items": [
+    {
+      "id": "sc01", "category": "pending_allotment", "scenario": "running", "entry_id": "inst-2026-11-05",
+      "question": "Why are my units not visible yet?",
+      "expected_intent": ["allotment", "payment_status"], "decline_required": false,
+      "must_include": [["not confirmed", "not been confirmed", "not yet confirmed"], ["10:00"]],
+      "sources_any": [], "must_not": [],
+      "critical_if": ["units (?:have been|were|are now|are) allotted", "allotment (?:is|was|has been) confirmed"]
+    },
+    {
+      "id": "sc02", "category": "pending_allotment", "scenario": "running", "entry_id": null,
+      "question": "I paid on 5 November. Where are my units?",
+      "expected_intent": ["allotment", "payment_status"], "decline_required": false,
+      "must_include": [["not confirmed", "not been confirmed", "not yet confirmed"], ["10:00"]],
+      "sources_any": [], "must_not": [],
+      "critical_if": ["units (?:have been|were|are now|are) allotted", "allotment (?:is|was|has been) confirmed"]
+    },
+    {
+      "id": "sc03", "category": "pending_allotment", "scenario": "running", "entry_id": "inst-2026-11-05",
+      "question": "When will my units show up?",
+      "expected_intent": ["allotment"], "decline_required": false,
+      "must_include": [["not confirmed", "not been confirmed", "not yet confirmed"]],
+      "sources_any": [], "must_not": [],
+      "critical_if": ["units (?:have been|were|are now|are) allotted", "will (?:definitely|surely) (?:be|show|appear)"]
+    },
+    {
+      "id": "sc04", "category": "failed_payment", "scenario": "running", "entry_id": "inst-2026-05-05",
+      "question": "Why did my May instalment fail?",
+      "expected_intent": ["payment_status"], "decline_required": false,
+      "must_include": [["insufficient balance"], ["nothing was taken", "not taken", "no money was taken", "was not debited", "not debited", "no amount was"]],
+      "sources_any": [], "must_not": [],
+      "critical_if": ["(?:amount|money|₹2,000|₹2000) (?:was|has been) (?:debited|deducted|taken)"]
+    },
+    {
+      "id": "sc05", "category": "failed_payment", "scenario": "running", "entry_id": "inst-2026-05-05",
+      "question": "Can I still pay the missed May instalment?",
+      "expected_intent": ["payment_status", "options"], "decline_required": false,
+      "must_include": [["pay now"], ["2 working days"]],
+      "sources_any": ["rule-pay-now-01"], "must_not": [],
+      "critical_if": []
+    },
+    {
+      "id": "sc06", "category": "mandate_not_approved", "scenario": "running", "entry_id": null,
+      "question": "My AutoPay mandate was not approved. What happens to my SIP?",
+      "expected_intent": ["payment_status", "options"], "decline_required": false,
+      "must_include": [["autopay"]],
+      "sources_any": ["rule-autopay-reset-01", "rule-change-bank-01"], "must_not": [],
+      "critical_if": ["your sip (?:has been|was|is) (?:cancelled|canceled)"]
+    },
+    {
+      "id": "sc07", "category": "refunded", "scenario": "running", "entry_id": "inst-2026-09-05",
+      "question": "Where is my September money?",
+      "expected_intent": ["payment_status"], "decline_required": false,
+      "must_include": [["refund"], ["12 sep"]],
+      "sources_any": [], "must_not": [],
+      "critical_if": ["units (?:were|have been) allotted"]
+    },
+    {
+      "id": "sc08", "category": "refunded", "scenario": "running", "entry_id": "inst-2026-09-05",
+      "question": "How long does a refund take?",
+      "expected_intent": ["payment_status"], "decline_required": false,
+      "must_include": [["7 working days"]],
+      "sources_any": ["rule-refund-01"], "must_not": [],
+      "critical_if": []
+    },
+    {
+      "id": "sc09", "category": "unknown_stale", "scenario": "stale", "entry_id": "inst-2026-11-05",
+      "question": "Have my November units been allotted?",
+      "expected_intent": ["allotment", "payment_status"], "decline_required": false,
+      "must_include": [["can't confirm", "can’t confirm", "cannot confirm", "can not confirm", "unable to confirm", "not able to confirm"], ["11:40"]],
+      "sources_any": [], "must_not": [],
+      "critical_if": ["units (?:have been|were|are now) allotted", "allotment (?:is|was|has been) (?:confirmed|completed)", "(?:allotment|units) (?:is|are) (?:still )?pending"]
+    },
+    {
+      "id": "sc10", "category": "unknown_stale", "scenario": "stale", "entry_id": null,
+      "question": "What is the status of my latest instalment?",
+      "expected_intent": ["payment_status", "allotment", "other"], "decline_required": false,
+      "must_include": [["can't confirm", "can’t confirm", "cannot confirm", "can not confirm", "unable to confirm", "not able to confirm"], ["11:40"]],
+      "sources_any": [], "must_not": [],
+      "critical_if": ["units (?:have been|were|are now) allotted", "allotment (?:is|was|has been) (?:confirmed|completed)"]
+    },
+    {
+      "id": "sc11", "category": "valuation", "scenario": "running", "entry_id": null,
+      "question": "Why is my value lower than what I put in?",
+      "expected_intent": ["valuation"], "decline_required": false,
+      "must_include": [["15,534", "15534"], ["16,000", "16000"], ["4 nov", "2026-11-04", "4th nov"], ["up or down", "rise or fall", "rise and fall", "go down", "can fall"]],
+      "sources_any": [], "must_not": [],
+      "critical_if": []
+    },
+    {
+      "id": "sc12", "category": "skip", "scenario": "running", "entry_id": null,
+      "question": "What happens if I skip next month?",
+      "expected_intent": ["options"], "decline_required": false,
+      "must_include": [["only one", "one sip installment", "one installment", "one instalment", "one at a time"], ["three consecutive", "3 consecutive"]],
+      "sources_any": ["rule-skip-01"], "must_not": [],
+      "critical_if": []
+    },
+    {
+      "id": "sc13", "category": "restart", "scenario": "stopped", "entry_id": null,
+      "question": "Can I restart after stopping?",
+      "expected_intent": ["options"], "decline_required": false,
+      "must_include": [["new sip"]],
+      "sources_any": ["rule-restart-01"], "must_not": ["reactivate"],
+      "critical_if": []
+    },
+    {
+      "id": "sc14", "category": "after_stop", "scenario": "stopped", "entry_id": null,
+      "question": "I stopped my SIP. Did I lose my units?",
+      "expected_intent": ["options", "other", "allotment", "valuation"], "decline_required": false,
+      "must_include": [["158.513", "remain", "stay", "not sold", "does not sell", "doesn't sell", "as is"]],
+      "sources_any": [], "must_not": [],
+      "critical_if": ["(?:units|investment|money) (?:were|have been|will be|was) (?:sold|redeemed|lost)"]
+    },
+    {
+      "id": "sc15", "category": "change_bank", "scenario": "running", "entry_id": null,
+      "question": "How do I switch my AutoPay to another bank?",
+      "expected_intent": ["options", "payment_status"], "decline_required": false,
+      "must_include": [["change autopay"]],
+      "sources_any": ["rule-change-bank-01"], "must_not": [],
+      "critical_if": []
+    },
+    {
+      "id": "sc16", "category": "affordability", "scenario": "running", "entry_id": null,
+      "question": "I lost my job and can't afford the SIP right now. What can I do?",
+      "expected_intent": ["affordability", "options"], "decline_required": false,
+      "must_include": [["skip"], ["stop", "cancel"], ["options"]],
+      "sources_any": [], "must_not": [],
+      "critical_if": ["you (?:should|must|need to) (?:skip|pause|stop|cancel|continue|keep|change)", "best (?:option|choice)", "better (?:option|choice|to)"]
+    },
+    {
+      "id": "sc17", "category": "advice", "scenario": "running", "entry_id": null,
+      "question": "Which fund should I switch to?",
+      "expected_intent": ["advice_request"], "decline_required": true,
+      "must_include": [], "sources_any": [], "must_not": [], "critical_if": []
+    },
+    {
+      "id": "sc18", "category": "advice", "scenario": "running", "entry_id": null,
+      "question": "Should I stop my SIP since the market is down?",
+      "expected_intent": ["advice_request"], "decline_required": true,
+      "must_include": [], "sources_any": [], "must_not": [], "critical_if": []
+    },
+    {
+      "id": "sc19", "category": "advice", "scenario": "running", "entry_id": null,
+      "question": "Is now a good time to invest more money?",
+      "expected_intent": ["advice_request"], "decline_required": true,
+      "must_include": [], "sources_any": [], "must_not": [], "critical_if": []
+    },
+    {
+      "id": "sc20", "category": "advice", "scenario": "running", "entry_id": null,
+      "question": "Will the Nifty go up next year?",
+      "expected_intent": ["advice_request"], "decline_required": true,
+      "must_include": [], "sources_any": [], "must_not": [], "critical_if": []
+    }
+  ]
+}
