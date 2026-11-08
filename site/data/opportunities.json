@@ -1,0 +1,683 @@
+{
+ "definitions": {
+  "A_first_debit_and_autopay": "Payment reliability in the first months: failed or missed first debits, AutoPay/mandate set-up and failures, SIP date confusion",
+  "B_money_status_and_resolution": "Where is my money / order status, and support that resolves (money stuck, units not allotted, tickets closed unresolved)",
+  "C_returns_expectations": "Expectations vs what they see: negative or flat returns, confusing numbers, why negative, is this normal",
+  "D_cash_flow_flex": "Cash-flow shocks: cash crunch, income change, life events; affordability",
+  "E_sip_control": "Control of the SIP: skip, pause, edit, cancel - finding it and having it work"
+ },
+ "areas": [
+  {
+   "id": "A_first_debit_and_autopay",
+   "name": "Payment & AutoPay problems (early-journey stories)",
+   "definition": "Payment reliability in the first months: failed or missed first debits, AutoPay/mandate set-up and failures, SIP date confusion",
+   "reach_E": 0.054,
+   "reach_E_pct": 5.4,
+   "n_E": 1797,
+   "groww_share": 0.1883,
+   "groww_share_pct": 18.8,
+   "separation": {
+    "reddit": {
+     "stop": 0.177,
+     "cont": 0.0377,
+     "diff": 0.1394,
+     "diff_ci95": [
+      0.1016,
+      0.1771
+     ],
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop": 0.4205,
+     "cont": 0.1622,
+     "diff": 0.2583,
+     "diff_ci95": [
+      0.1344,
+      0.3821
+     ],
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop": 0.7651,
+     "cont": 0.3438,
+     "diff": 0.4214,
+     "diff_ci95": [
+      0.2433,
+      0.5994
+     ],
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop": 0.3465,
+     "cont": 0.0588,
+     "diff": 0.2877,
+     "diff_ci95": [
+      0.2495,
+      0.3258
+     ],
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   },
+   "human_check": {
+    "yes": 16,
+    "no": 4,
+    "yes_share": 0.8,
+    "yes_share_pct": 80.0,
+    "ci95_pct": [
+     58.4,
+     91.9
+    ],
+    "notes": [
+     [
+      1,
+      "no",
+      "It talks about a cancelled SIP and asks the reason for it. Reason could be payment related, but we cannot say that 100%"
+     ],
+     [
+      2,
+      "yes",
+      "This is insurance policy though. Not MF"
+     ],
+     [
+      4,
+      "yes",
+      "Payment related, probably not first few months considering the hefty TDS amount"
+     ],
+     [
+      7,
+      "yes",
+      "Payment related, no mention of first few months though"
+     ],
+     [
+      8,
+      "no",
+      "KYC related"
+     ]
+    ]
+   },
+   "example_stories": [
+    {
+     "uid": "reddit:post:1s9vjfd",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "stopped_or_cancelled",
+     "quote": "the interface is so difficult to understand",
+     "unmet_need": {
+      "v": "Know how to cancel SIPs in the Wealthy app and whether cancelling triggers charges",
+      "s": "I tried to look for cancel button, couldn’t find any"
+     }
+    },
+    {
+     "uid": "youtube:comment:Ugwpy-eKuSrHCfk2Np14AaABAg",
+     "source": "youtube",
+     "scope": "general",
+     "action": "unknown",
+     "quote": "Anna nenu phone pay lo 3 sip start chesa monthly cut avuthunai kani investment fail ani chupisthumdhi anna plzzzxx reply evandiii",
+     "unmet_need": {
+      "v": "Wants to know why the SIP investment failed despite monthly deduction",
+      "s": "monthly cut avuthunai kani investment fail ani chupisthumdhi"
+     }
+    },
+    {
+     "uid": "reddit:post:15jnlqn",
+     "source": "reddit_post",
+     "scope": "groww",
+     "action": "unknown",
+     "quote": "Looking for a high returns with low risk (I know iam asking too much)",
+     "unmet_need": {
+      "v": "Wants a SIP recommendation and a good start date",
+      "s": "Please do suggest the sip..."
+     }
+    },
+    {
+     "uid": "reddit:post:1b3u1tf",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "unknown",
+     "quote": "i tried to edit sip amount but next month sip which I was supposed to do changed by itself to next+1 months",
+     "unmet_need": {
+      "v": "Understand why SIP date shifted after editing and why a new SIP is created",
+      "s": "how is that happening and now if I try to invest more in same mf, there gets created a separate sip in same fund"
+     }
+    },
+    {
+     "uid": "playstore:review:db804cba-5c93-476d-abc8-958b5d940d76",
+     "source": "playstore",
+     "scope": "groww",
+     "action": "unknown",
+     "quote": "this month second installment deducted bt after someday I have got massage that ur second installment was rejected",
+     "unmet_need": {
+      "v": "Reach customer care to get a refund for a deducted but rejected SIP installment",
+      "s": "I trie to call customer care but not able to contact"
+     }
+    }
+   ]
+  },
+  {
+   "id": "B_money_status_and_resolution",
+   "name": "Where is my money / order status + support that resolves",
+   "definition": "Where is my money / order status, and support that resolves (money stuck, units not allotted, tickets closed unresolved)",
+   "reach_E": 0.0315,
+   "reach_E_pct": 3.1,
+   "n_E": 1083,
+   "groww_share": 0.2361,
+   "groww_share_pct": 23.6,
+   "separation": {
+    "reddit": {
+     "stop": 0.1287,
+     "cont": 0.0198,
+     "diff": 0.1089,
+     "diff_ci95": [
+      0.0763,
+      0.1415
+     ],
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop": 0.3864,
+     "cont": 0.0631,
+     "diff": 0.3233,
+     "diff_ci95": [
+      0.212,
+      0.4346
+     ],
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop": 0.8188,
+     "cont": 0.1875,
+     "diff": 0.6313,
+     "diff_ci95": [
+      0.4826,
+      0.78
+     ],
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop": 0.3231,
+     "cont": 0.0285,
+     "diff": 0.2946,
+     "diff_ci95": [
+      0.2582,
+      0.3309
+     ],
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   },
+   "human_check": {
+    "yes": 19,
+    "no": null,
+    "yes_share": 1.0,
+    "yes_share_pct": 100.0,
+    "ci95_pct": [
+     83.2,
+     100.0
+    ],
+    "notes": [
+     [
+      1,
+      "yes",
+      "Talks about failure to redeem MF for 3 months"
+     ],
+     [
+      6,
+      "yes",
+      "Talking about not getting money from wtihdraawal"
+     ],
+     [
+      8,
+      "yes",
+      "Talks about bad app and customrer service"
+     ],
+     [
+      12,
+      "yes",
+      "This is more related to payment and mandate"
+     ],
+     [
+      15,
+      "yes",
+      "Talks about wanting to cancel SIP because of less liquid cash, but not being able to do so"
+     ]
+    ]
+   },
+   "example_stories": [
+    {
+     "uid": "playstore:review:etmoney:02357bc6-5ed6-4526-b864-d01f0207e001",
+     "source": "playstore",
+     "scope": "other_app",
+     "action": "unknown",
+     "quote": "Started investment in March 2019 with sip. so far things are going good.",
+     "unmet_need": "unknown"
+    },
+    {
+     "uid": "playstore:review:indmoney:89edc75f-877d-4907-8133-7df5efea8245",
+     "source": "playstore",
+     "scope": "other_app",
+     "action": "unknown",
+     "quote": "plenty of glitches in the app with no transperancy rapidly deteriorating customer care. Feel unsafe with such platforms.",
+     "unmet_need": {
+      "v": "Wants a more transparent, reliable app and customer care for buying mutual funds",
+      "s": "plenty of glitches in the app with no transperancy rapidly deteriorating customer care."
+     }
+    },
+    {
+     "uid": "playstore:review:db804cba-5c93-476d-abc8-958b5d940d76",
+     "source": "playstore",
+     "scope": "groww",
+     "action": "unknown",
+     "quote": "this month second installment deducted bt after someday I have got massage that ur second installment was rejected",
+     "unmet_need": {
+      "v": "Reach customer care to get a refund for a deducted but rejected SIP installment",
+      "s": "I trie to call customer care but not able to contact"
+     }
+    },
+    {
+     "uid": "playstore:review:d8f5a444-9d13-49fc-972d-70dabfe24e96",
+     "source": "playstore",
+     "scope": "groww",
+     "action": "unknown",
+     "quote": "Not user friendly.. post customer support is worst as unable to reach them on time.",
+     "unmet_need": {
+      "v": "Faster, reachable customer support and clearer transaction history",
+      "s": "Please improve your customer support"
+     }
+    },
+    {
+     "uid": "reddit:post:1rqkzxk",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "started_new",
+     "quote": "Hi guys i have just invested about 10k in mutual funds based on reccomendations need your help if i did it right",
+     "unmet_need": {
+      "v": "Wants confirmation that the first investment was done correctly",
+      "s": "need your help if i did it right"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C_returns_expectations",
+   "name": "Returns vs expectations (loss, flat, \"is this normal?\")",
+   "definition": "Expectations vs what they see: negative or flat returns, confusing numbers, why negative, is this normal",
+   "reach_E": 0.1416,
+   "reach_E_pct": 14.2,
+   "n_E": 4597,
+   "groww_share": 0.0592,
+   "groww_share_pct": 5.9,
+   "separation": {
+    "reddit": {
+     "stop": 0.3885,
+     "cont": 0.2557,
+     "diff": 0.1328,
+     "diff_ci95": [
+      0.0797,
+      0.1859
+     ],
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop": 0.1818,
+     "cont": 0.2432,
+     "diff": -0.0614,
+     "diff_ci95": [
+      -0.1748,
+      0.052
+     ],
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop": 0.1275,
+     "cont": 0.0938,
+     "diff": 0.0338,
+     "diff_ci95": [
+      -0.0805,
+      0.1481
+     ],
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop": 0.2997,
+     "cont": 0.2509,
+     "diff": 0.0488,
+     "diff_ci95": [
+      0.0064,
+      0.0913
+     ],
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   },
+   "human_check": {
+    "yes": 15,
+    "no": 5,
+    "yes_share": 0.75,
+    "yes_share_pct": 75.0,
+    "ci95_pct": [
+     53.1,
+     88.8
+    ],
+    "notes": [
+     [
+      2,
+      "no",
+      "Can't say what they want to ask, bad language"
+     ],
+     [
+      4,
+      "no",
+      "Doesn't say they are disappointed. Just say that they have high risk MF's exclusively in their portfolio"
+     ],
+     [
+      5,
+      "no",
+      "They claim they are doing better than FD's. I think they are saying they are doing well"
+     ],
+     [
+      11,
+      "no",
+      "no mention of disappoinement"
+     ],
+     [
+      13,
+      "no",
+      "Just talks about their payment pattern"
+     ]
+    ]
+   },
+   "example_stories": [
+    {
+     "uid": "reddit:post:1m8uv8s",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "started_new",
+     "quote": "Long story short I did my first SIP on 23 July and now it looks like this. Is my mf selection bad.",
+     "unmet_need": {
+      "v": "Advice on whether mutual fund selection is bad and small cap fund suggestions",
+      "s": "Please advise."
+     }
+    },
+    {
+     "uid": "reddit:post:1g2fadd",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "unknown",
+     "quote": "most of them don't have any sips just a lumpsum. Specially the thematic funds. I am thinking about pulling them out",
+     "unmet_need": {
+      "v": "Review whether portfolio of 11 funds is sound and whether to switch funds or keep cash in savings or FD",
+      "s": "Does my finances look good?"
+     }
+    },
+    {
+     "uid": "reddit:post:1p0iph6",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "started_new",
+     "quote": "Can you guys tell me if I’m doing the right thing or should I change something",
+     "unmet_need": {
+      "v": "Wants validation on whether the approach is right",
+      "s": "Can you guys tell me if I’m doing the right thing"
+     }
+    },
+    {
+     "uid": "reddit:post:1afr9tg",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "unknown",
+     "quote": "All my money will be in MFs, so should I take money out of there to fund the trip?",
+     "unmet_need": {
+      "v": "Wants to know how to fund a trip without redeeming or losing returns from mutual funds",
+      "s": "should I take money out of there to fund the trip?"
+     }
+    },
+    {
+     "uid": "reddit:post:1qmldc9",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "unknown",
+     "quote": "I had never seen my portfolio this negative before. Is this normal? Should I be worried or should I keep this.",
+     "unmet_need": {
+      "v": "Reassurance on whether negative portfolio is normal and whether to keep investing during layoff",
+      "s": "Is this normal? Should I be worried or should I keep this."
+     }
+    }
+   ]
+  },
+  {
+   "id": "D_cash_flow_flex",
+   "name": "Cash-flow shocks (crunch, income change)",
+   "definition": "Cash-flow shocks: cash crunch, income change, life events; affordability",
+   "reach_E": 0.0242,
+   "reach_E_pct": 2.4,
+   "n_E": 791,
+   "groww_share": 0.0419,
+   "groww_share_pct": 4.2,
+   "separation": {
+    "reddit": {
+     "stop": 0.1195,
+     "cont": 0.0535,
+     "diff": 0.066,
+     "diff_ci95": [
+      0.0325,
+      0.0995
+     ],
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop": 0.1023,
+     "cont": 0.009,
+     "diff": 0.0933,
+     "diff_ci95": [
+      0.0276,
+      0.159
+     ],
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop": 0.0201,
+     "cont": 0.0,
+     "diff": 0.0201,
+     "diff_ci95": [
+      -0.0024,
+      0.0427
+     ],
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop": 0.0936,
+     "cont": 0.0476,
+     "diff": 0.046,
+     "diff_ci95": [
+      0.021,
+      0.071
+     ],
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   },
+   "human_check": null,
+   "example_stories": [
+    {
+     "uid": "reddit:post:1qmldc9",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "unknown",
+     "quote": "I had never seen my portfolio this negative before. Is this normal? Should I be worried or should I keep this.",
+     "unmet_need": {
+      "v": "Reassurance on whether negative portfolio is normal and whether to keep investing during layoff",
+      "s": "Is this normal? Should I be worried or should I keep this."
+     }
+    },
+    {
+     "uid": "reddit:post:1n5ppeh",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "unknown",
+     "quote": "Should I increase allocation in the same funds, or should I diversify further into other categories?",
+     "unmet_need": "unknown"
+    },
+    {
+     "uid": "reddit:post:15lnuid",
+     "source": "reddit_post",
+     "scope": "groww",
+     "action": "unknown",
+     "quote": "I need to redeem them for my college as that is the money I saved while going to college and working",
+     "unmet_need": {
+      "v": "Wants advice on whether and how to withdraw invested money for college fees",
+      "s": "what should I do and how should I get the money out?"
+     }
+    },
+    {
+     "uid": "reddit:post:1fxz48i",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "unknown",
+     "quote": "Did I overdiversify my mutual funds? Need advice as complete novice.",
+     "unmet_need": {
+      "v": "Wants to know if portfolio is over-diversified and whether there is a better way to maximize profit",
+      "s": "I'm also wondering if my portfolio is over-diversified."
+     }
+    },
+    {
+     "uid": "reddit:post:1fqoc6y",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "increased_or_stepped_up",
+     "quote": "I should have doubled by equity SIPs also but was hesitant since I was not used to investing that kind of amounts",
+     "unmet_need": {
+      "v": "Wants strategies to deploy idle liquidity into equities without market-timing risk",
+      "s": "what strategies or options can I explore to effectively transition this liquidity into equities"
+     }
+    }
+   ]
+  },
+  {
+   "id": "E_sip_control",
+   "name": "Control of the SIP (skip, pause, edit, cancel)",
+   "definition": "Control of the SIP: skip, pause, edit, cancel - finding it and having it work",
+   "reach_E": 0.0227,
+   "reach_E_pct": 2.3,
+   "n_E": 729,
+   "groww_share": 0.1306,
+   "groww_share_pct": 13.1,
+   "separation": {
+    "reddit": {
+     "stop": 0.0598,
+     "cont": 0.0099,
+     "diff": 0.0499,
+     "diff_ci95": [
+      0.0268,
+      0.073
+     ],
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop": 0.4432,
+     "cont": 0.045,
+     "diff": 0.3981,
+     "diff_ci95": [
+      0.2874,
+      0.5089
+     ],
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop": 0.1275,
+     "cont": 0.125,
+     "diff": 0.0025,
+     "diff_ci95": [
+      -0.124,
+      0.129
+     ],
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop": 0.1243,
+     "cont": 0.0164,
+     "diff": 0.1078,
+     "diff_ci95": [
+      0.082,
+      0.1336
+     ],
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   },
+   "human_check": null,
+   "example_stories": [
+    {
+     "uid": "reddit:post:1s9vjfd",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "stopped_or_cancelled",
+     "quote": "the interface is so difficult to understand",
+     "unmet_need": {
+      "v": "Know how to cancel SIPs in the Wealthy app and whether cancelling triggers charges",
+      "s": "I tried to look for cancel button, couldn’t find any"
+     }
+    },
+    {
+     "uid": "reddit:post:1ebsdu5",
+     "source": "reddit_post",
+     "scope": "groww",
+     "action": "started_new",
+     "quote": "I feel insecure transferring money from my bank account to any 3rd party apps given some recent incidents with Groww and Paytm.",
+     "unmet_need": {
+      "v": "Wants feedback on the portfolio and on digital gold",
+      "s": "Please give your thoughts on this."
+     }
+    },
+    {
+     "uid": "youtube:comment:UgyZMh0y1LXV_D5M1Np4AaABAg",
+     "source": "youtube",
+     "scope": "groww",
+     "action": "unknown",
+     "quote": "Bro eppdi AMC search Pannu Naa groww app use pannuren mobile thn use pannuren AMC sip ethuvum therila bro",
+     "unmet_need": {
+      "v": "Wants to learn how to search for an AMC and set up SIP in Groww app",
+      "s": "eppdi AMC search Pannu Naa groww app use pannuren"
+     }
+    },
+    {
+     "uid": "reddit:post:1b3u1tf",
+     "source": "reddit_post",
+     "scope": "general",
+     "action": "unknown",
+     "quote": "i tried to edit sip amount but next month sip which I was supposed to do changed by itself to next+1 months",
+     "unmet_need": {
+      "v": "Understand why SIP date shifted after editing and why a new SIP is created",
+      "s": "how is that happening and now if I try to invest more in same mf, there gets created a separate sip in same fund"
+     }
+    },
+    {
+     "uid": "youtube:comment:UgyYJ0kScitbSryuBnJ4AaABAg",
+     "source": "youtube",
+     "scope": "groww",
+     "action": "unknown",
+     "quote": "Groww me sip date kaise select kare bhai plz batyo",
+     "unmet_need": {
+      "v": "Wants to know how to choose the SIP date in Groww",
+      "s": "Groww me sip date kaise select kare bhai plz batyo"
+     }
+    }
+   ]
+  }
+ ]
+}

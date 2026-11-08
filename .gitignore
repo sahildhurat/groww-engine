@@ -1,0 +1,32 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+data/raw/
+data/interim/
+data/processed/
+data/state/
+data/index/
+data/manual/
+logs/
+*.zst
+*.sqlite
+.DS_Store
+config/private_terms.txt
+scratch/
+brain_scratch/
+data/discovery/
+
+# Next.js / Node / Vercel
+node_modules/
+.next/
+site/node_modules/
+site/.next/
+site/.env*
+.env*
+*.log
+
+# TypeScript build cache
+*.tsbuildinfo

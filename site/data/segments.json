@@ -1,0 +1,1406 @@
+{
+ "verbatim_bullets": [
+  "Stop share = stop ÷ (stop + continue) among E stories with the segment stated. It compares segments; it is not a population rate.\n\n| Segment | Stop share [95% CI], n |\n|---|---|\n| SIP ≤ ₹1k/month | 39% [31%–49%], n=111 |\n| SIP ₹1k–3k | 30% [21%–39%], n=102 |\n| SIP ₹3k–10k | 19% [15%–25%], n=276 |\n| SIP > ₹10k | 23% [19%–27%], n=458 |\n| Salaried | 23% [19%–28%], n=315 |\n| Student | 27% [20%–34%], n=157 |\n| Variable/gig income | 33% [14%–61%], n=12 |\n| Age ≤ 22 | 16% [12%–21%], n=226 |\n| Age 23–27 | 28% [23%–34%], n=265 |\n| Age 28–32 | 12% [6%–22%], n=72 |\n| Money from salary | 21% [17%–27%], n=269 |\n| Money from family | 36% [23%–51%], n=46 |\n| Pocket money | 12% [6%–23%], n=56 |\n| Started on own research | 28% [24%–33%], n=492 |\n| Started via creator/YouTube | 17% [8%–32%], n=39 |\n| Started via advisor | 46% [27%–66%], n=23 |\n| Expected steady growth | 16% [10%–25%], n=96 |\n| Expected quick gains | 29% [15%–47%], n=31 |",
+  "Clearest gradient: **small SIPs stop more** (≤ ₹1k 39% vs > ₹10k 23%).",
+  "Income stability stays thin even after the targeted top-up (variable/gig n=12 in the main data): the engine can't answer this cell; it goes to interviews."
+ ],
+ "segments": {
+  "MAIN": {
+   "all": {
+    "work": [
+     {
+      "value": "salaried",
+      "n": 718,
+      "stop_share": 0.3214,
+      "ci95": [
+       0.2869,
+       0.3579
+      ]
+     },
+     {
+      "value": "student",
+      "n": 191,
+      "stop_share": 0.3026,
+      "ci95": [
+       0.2413,
+       0.3718
+      ]
+     },
+     {
+      "value": "business",
+      "n": 27,
+      "stop_share": 0.4828,
+      "ci95": [
+       0.3041,
+       0.6659
+      ]
+     },
+     {
+      "value": "variable_or_gig",
+      "n": 25,
+      "stop_share": 0.4286,
+      "ci95": [
+       0.2515,
+       0.6261
+      ]
+     },
+     {
+      "value": "variable",
+      "n": 12,
+      "stop_share": 0.4167,
+      "ci95": [
+       0.1933,
+       0.6805
+      ]
+     },
+     {
+      "value": "retired",
+      "n": 5,
+      "stop_share": 0.5,
+      "ci95": [
+       0.1607,
+       0.8393
+      ]
+     },
+     {
+      "value": "homemaker",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     }
+    ],
+    "amount": [
+     {
+      "value": ">10k",
+      "n": 1159,
+      "stop_share": 0.2929,
+      "ci95": [
+       0.2662,
+       0.321
+      ]
+     },
+     {
+      "value": "3k-10k",
+      "n": 525,
+      "stop_share": 0.2962,
+      "ci95": [
+       0.2574,
+       0.3383
+      ]
+     },
+     {
+      "value": "1k-3k",
+      "n": 198,
+      "stop_share": 0.3659,
+      "ci95": [
+       0.301,
+       0.436
+      ]
+     },
+     {
+      "value": "<=1k",
+      "n": 186,
+      "stop_share": 0.4227,
+      "ci95": [
+       0.3527,
+       0.4959
+      ]
+     }
+    ],
+    "influenced_by": [
+     {
+      "value": "self",
+      "n": 987,
+      "stop_share": 0.3576,
+      "ci95": [
+       0.3272,
+       0.3892
+      ]
+     },
+     {
+      "value": "finfluencer_or_youtube",
+      "n": 80,
+      "stop_share": 0.3333,
+      "ci95": [
+       0.238,
+       0.4445
+      ]
+     },
+     {
+      "value": "advisor",
+      "n": 67,
+      "stop_share": 0.6753,
+      "ci95": [
+       0.5506,
+       0.7793
+      ]
+     },
+     {
+      "value": "friend_or_colleague",
+      "n": 64,
+      "stop_share": 0.3881,
+      "ci95": [
+       0.2763,
+       0.513
+      ]
+     },
+     {
+      "value": "family",
+      "n": 58,
+      "stop_share": 0.3667,
+      "ci95": [
+       0.253,
+       0.4973
+      ]
+     },
+     {
+      "value": "app",
+      "n": 42,
+      "stop_share": 0.5349,
+      "ci95": [
+       0.386,
+       0.6778
+      ]
+     }
+    ],
+    "first_time": [
+     {
+      "value": "not_flagged",
+      "n": 4945,
+      "stop_share": 0.6602,
+      "ci95": [
+       0.6464,
+       0.6739
+      ]
+     },
+     {
+      "value": "first_time",
+      "n": 1736,
+      "stop_share": 0.3269,
+      "ci95": [
+       0.3048,
+       0.3498
+      ]
+     }
+    ],
+    "scope": [
+     {
+      "value": "general",
+      "n": 4757,
+      "stop_share": 0.4953,
+      "ci95": [
+       0.4805,
+       0.5102
+      ]
+     },
+     {
+      "value": "other_app",
+      "n": 1162,
+      "stop_share": 0.8158,
+      "ci95": [
+       0.7925,
+       0.8371
+      ]
+     },
+     {
+      "value": "groww",
+      "n": 762,
+      "stop_share": 0.8058,
+      "ci95": [
+       0.7762,
+       0.8323
+      ]
+     }
+    ],
+    "source": [
+     {
+      "value": "reddit",
+      "n": 4279,
+      "stop_share": 0.477,
+      "ci95": [
+       0.4614,
+       0.4927
+      ]
+     },
+     {
+      "value": "appreviews",
+      "n": 1305,
+      "stop_share": 0.9088,
+      "ci95": [
+       0.892,
+       0.9233
+      ]
+     },
+     {
+      "value": "youtube",
+      "n": 1010,
+      "stop_share": 0.612,
+      "ci95": [
+       0.5803,
+       0.6428
+      ]
+     },
+     {
+      "value": "other",
+      "n": 87,
+      "stop_share": 0.7931,
+      "ci95": [
+       0.6965,
+       0.8649
+      ]
+     }
+    ],
+    "language": [
+     {
+      "value": "english",
+      "n": 6681,
+      "stop_share": 0.5779,
+      "ci95": [
+       0.5655,
+       0.5901
+      ]
+     }
+    ],
+    "age": [
+     {
+      "value": "23-27",
+      "n": 514,
+      "stop_share": 0.3451,
+      "ci95": [
+       0.3034,
+       0.3893
+      ]
+     },
+     {
+      "value": "<=22",
+      "n": 275,
+      "stop_share": 0.1812,
+      "ci95": [
+       0.1395,
+       0.232
+      ]
+     },
+     {
+      "value": "28-32",
+      "n": 218,
+      "stop_share": 0.3409,
+      "ci95": [
+       0.2781,
+       0.4098
+      ]
+     },
+     {
+      "value": "33+",
+      "n": 129,
+      "stop_share": 0.255,
+      "ci95": [
+       0.1848,
+       0.3407
+      ]
+     }
+    ],
+    "money_source": [
+     {
+      "value": "salary",
+      "n": 616,
+      "stop_share": 0.2917,
+      "ci95": [
+       0.2559,
+       0.3304
+      ]
+     },
+     {
+      "value": "savings",
+      "n": 133,
+      "stop_share": 0.3741,
+      "ci95": [
+       0.2938,
+       0.4621
+      ]
+     },
+     {
+      "value": "pocket_money",
+      "n": 74,
+      "stop_share": 0.1447,
+      "ci95": [
+       0.0816,
+       0.2438
+      ]
+     },
+     {
+      "value": "family_money",
+      "n": 65,
+      "stop_share": 0.4429,
+      "ci95": [
+       0.3255,
+       0.5669
+      ]
+     },
+     {
+      "value": "business_income",
+      "n": 27,
+      "stop_share": 0.2857,
+      "ci95": [
+       0.1491,
+       0.4772
+      ]
+     },
+     {
+      "value": "freelance",
+      "n": 16,
+      "stop_share": 0.25,
+      "ci95": [
+       0.1018,
+       0.495
+      ]
+     }
+    ],
+    "expectation": [
+     {
+      "value": "steady_growth",
+      "n": 215,
+      "stop_share": 0.2743,
+      "ci95": [
+       0.2171,
+       0.3399
+      ]
+     },
+     {
+      "value": "number_stated",
+      "n": 127,
+      "stop_share": 0.274,
+      "ci95": [
+       0.201,
+       0.3615
+      ]
+     },
+     {
+      "value": "quick_gains",
+      "n": 84,
+      "stop_share": 0.3505,
+      "ci95": [
+       0.2531,
+       0.4622
+      ]
+     },
+     {
+      "value": "no_idea",
+      "n": 31,
+      "stop_share": 0.5758,
+      "ci95": [
+       0.3989,
+       0.7352
+      ]
+     },
+     {
+      "value": "safety",
+      "n": 18,
+      "stop_share": 0.65,
+      "ci95": [
+       0.4136,
+       0.8302
+      ]
+     }
+    ]
+   },
+   "E": {
+    "work": [
+     {
+      "value": "salaried",
+      "n": 315,
+      "stop_share": 0.2294,
+      "ci95": [
+       0.1852,
+       0.2806
+      ]
+     },
+     {
+      "value": "student",
+      "n": 157,
+      "stop_share": 0.2687,
+      "ci95": [
+       0.205,
+       0.3437
+      ]
+     },
+     {
+      "value": "variable_or_gig",
+      "n": 12,
+      "stop_share": 0.3333,
+      "ci95": [
+       0.1381,
+       0.6094
+      ]
+     },
+     {
+      "value": "business",
+      "n": 7,
+      "stop_share": 0.25,
+      "ci95": [
+       0.0625,
+       0.6251
+      ]
+     },
+     {
+      "value": "variable",
+      "n": 7,
+      "stop_share": 0.4286,
+      "ci95": [
+       0.1582,
+       0.7495
+      ]
+     }
+    ],
+    "amount": [
+     {
+      "value": ">10k",
+      "n": 458,
+      "stop_share": 0.2303,
+      "ci95": [
+       0.1928,
+       0.2727
+      ]
+     },
+     {
+      "value": "3k-10k",
+      "n": 276,
+      "stop_share": 0.1945,
+      "ci95": [
+       0.1512,
+       0.2467
+      ]
+     },
+     {
+      "value": "<=1k",
+      "n": 111,
+      "stop_share": 0.3947,
+      "ci95": [
+       0.3078,
+       0.4889
+      ]
+     },
+     {
+      "value": "1k-3k",
+      "n": 102,
+      "stop_share": 0.2952,
+      "ci95": [
+       0.2145,
+       0.3912
+      ]
+     }
+    ],
+    "influenced_by": [
+     {
+      "value": "self",
+      "n": 492,
+      "stop_share": 0.2825,
+      "ci95": [
+       0.2433,
+       0.3254
+      ]
+     },
+     {
+      "value": "finfluencer_or_youtube",
+      "n": 39,
+      "stop_share": 0.1707,
+      "ci95": [
+       0.0825,
+       0.3204
+      ]
+     },
+     {
+      "value": "friend_or_colleague",
+      "n": 36,
+      "stop_share": 0.25,
+      "ci95": [
+       0.1375,
+       0.4107
+      ]
+     },
+     {
+      "value": "family",
+      "n": 24,
+      "stop_share": 0.24,
+      "ci95": [
+       0.1117,
+       0.4423
+      ]
+     },
+     {
+      "value": "advisor",
+      "n": 23,
+      "stop_share": 0.4583,
+      "ci95": [
+       0.2728,
+       0.6561
+      ]
+     },
+     {
+      "value": "app",
+      "n": 18,
+      "stop_share": 0.2778,
+      "ci95": [
+       0.125,
+       0.5087
+      ]
+     }
+    ],
+    "first_time": [
+     {
+      "value": "first_time",
+      "n": 1456,
+      "stop_share": 0.3281,
+      "ci95": [
+       0.304,
+       0.3532
+      ]
+     },
+     {
+      "value": "not_flagged",
+      "n": 384,
+      "stop_share": 0.5202,
+      "ci95": [
+       0.4678,
+       0.5721
+      ]
+     }
+    ],
+    "scope": [
+     {
+      "value": "general",
+      "n": 1453,
+      "stop_share": 0.3052,
+      "ci95": [
+       0.2813,
+       0.3302
+      ]
+     },
+     {
+      "value": "other_app",
+      "n": 200,
+      "stop_share": 0.695,
+      "ci95": [
+       0.628,
+       0.7546
+      ]
+     },
+     {
+      "value": "groww",
+      "n": 187,
+      "stop_share": 0.5882,
+      "ci95": [
+       0.5166,
+       0.6563
+      ]
+     }
+    ],
+    "source": [
+     {
+      "value": "reddit",
+      "n": 1444,
+      "stop_share": 0.3001,
+      "ci95": [
+       0.2763,
+       0.325
+      ]
+     },
+     {
+      "value": "youtube",
+      "n": 199,
+      "stop_share": 0.4815,
+      "ci95": [
+       0.4109,
+       0.5528
+      ]
+     },
+     {
+      "value": "appreviews",
+      "n": 181,
+      "stop_share": 0.8232,
+      "ci95": [
+       0.7611,
+       0.8719
+      ]
+     },
+     {
+      "value": "other",
+      "n": 16,
+      "stop_share": 0.75,
+      "ci95": [
+       0.505,
+       0.8982
+      ]
+     }
+    ],
+    "language": [
+     {
+      "value": "english",
+      "n": 1840,
+      "stop_share": 0.3715,
+      "ci95": [
+       0.349,
+       0.3944
+      ]
+     }
+    ],
+    "age": [
+     {
+      "value": "23-27",
+      "n": 265,
+      "stop_share": 0.28,
+      "ci95": [
+       0.2273,
+       0.3395
+      ]
+     },
+     {
+      "value": "<=22",
+      "n": 226,
+      "stop_share": 0.1602,
+      "ci95": [
+       0.1177,
+       0.2142
+      ]
+     },
+     {
+      "value": "28-32",
+      "n": 72,
+      "stop_share": 0.122,
+      "ci95": [
+       0.0632,
+       0.2223
+      ]
+     },
+     {
+      "value": "33+",
+      "n": 34,
+      "stop_share": 0.0789,
+      "ci95": [
+       0.0247,
+       0.225
+      ]
+     }
+    ],
+    "expectation": [
+     {
+      "value": "steady_growth",
+      "n": 96,
+      "stop_share": 0.1569,
+      "ci95": [
+       0.0963,
+       0.2451
+      ]
+     },
+     {
+      "value": "number_stated",
+      "n": 48,
+      "stop_share": 0.2642,
+      "ci95": [
+       0.1573,
+       0.4084
+      ]
+     },
+     {
+      "value": "quick_gains",
+      "n": 31,
+      "stop_share": 0.2857,
+      "ci95": [
+       0.1534,
+       0.469
+      ]
+     },
+     {
+      "value": "no_idea",
+      "n": 9,
+      "stop_share": 0.4444,
+      "ci95": [
+       0.1888,
+       0.7334
+      ]
+     },
+     {
+      "value": "safety",
+      "n": 3,
+      "stop_share": 0.6667,
+      "ci95": [
+       0.2077,
+       0.9385
+      ]
+     }
+    ],
+    "money_source": [
+     {
+      "value": "salary",
+      "n": 269,
+      "stop_share": 0.2131,
+      "ci95": [
+       0.1671,
+       0.2676
+      ]
+     },
+     {
+      "value": "savings",
+      "n": 67,
+      "stop_share": 0.2857,
+      "ci95": [
+       0.19,
+       0.4056
+      ]
+     },
+     {
+      "value": "pocket_money",
+      "n": 56,
+      "stop_share": 0.1228,
+      "ci95": [
+       0.0601,
+       0.2348
+      ]
+     },
+     {
+      "value": "family_money",
+      "n": 46,
+      "stop_share": 0.36,
+      "ci95": [
+       0.2337,
+       0.5092
+      ]
+     },
+     {
+      "value": "freelance",
+      "n": 11,
+      "stop_share": 0.1818,
+      "ci95": [
+       0.0514,
+       0.477
+      ]
+     },
+     {
+      "value": "business_income",
+      "n": 8,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.3428
+      ]
+     }
+    ]
+   }
+  },
+  "TOPUP": {
+   "all": {
+    "age": [
+     {
+      "value": "<=22",
+      "n": 18,
+      "stop_share": 0.0556,
+      "ci95": [
+       0.0099,
+       0.2576
+      ]
+     },
+     {
+      "value": "23-27",
+      "n": 8,
+      "stop_share": 0.375,
+      "ci95": [
+       0.1368,
+       0.6943
+      ]
+     },
+     {
+      "value": "28-32",
+      "n": 2,
+      "stop_share": 0.5,
+      "ci95": [
+       0.0945,
+       0.9055
+      ]
+     },
+     {
+      "value": "33+",
+      "n": 2,
+      "stop_share": 1.0,
+      "ci95": [
+       0.3424,
+       1
+      ]
+     }
+    ],
+    "amount": [
+     {
+      "value": ">10k",
+      "n": 10,
+      "stop_share": 0.5,
+      "ci95": [
+       0.2366,
+       0.7634
+      ]
+     },
+     {
+      "value": "3k-10k",
+      "n": 4,
+      "stop_share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     {
+      "value": "1k-3k",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     }
+    ],
+    "first_time": [
+     {
+      "value": "not_flagged",
+      "n": 65,
+      "stop_share": 0.5692,
+      "ci95": [
+       0.4483,
+       0.6824
+      ]
+     },
+     {
+      "value": "first_time",
+      "n": 47,
+      "stop_share": 0.1915,
+      "ci95": [
+       0.1042,
+       0.3254
+      ]
+     }
+    ],
+    "scope": [
+     {
+      "value": "general",
+      "n": 98,
+      "stop_share": 0.3878,
+      "ci95": [
+       0.2973,
+       0.4867
+      ]
+     },
+     {
+      "value": "other_app",
+      "n": 8,
+      "stop_share": 0.375,
+      "ci95": [
+       0.1368,
+       0.6943
+      ]
+     },
+     {
+      "value": "groww",
+      "n": 6,
+      "stop_share": 0.8333,
+      "ci95": [
+       0.4365,
+       0.9699
+      ]
+     }
+    ],
+    "source": [
+     {
+      "value": "reddit",
+      "n": 97,
+      "stop_share": 0.3711,
+      "ci95": [
+       0.2816,
+       0.4705
+      ]
+     },
+     {
+      "value": "appreviews",
+      "n": 10,
+      "stop_share": 0.6,
+      "ci95": [
+       0.3127,
+       0.8318
+      ]
+     },
+     {
+      "value": "youtube",
+      "n": 4,
+      "stop_share": 1.0,
+      "ci95": [
+       0.5101,
+       1
+      ]
+     },
+     {
+      "value": "other",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     }
+    ],
+    "language": [
+     {
+      "value": "english",
+      "n": 108,
+      "stop_share": 0.3889,
+      "ci95": [
+       0.3023,
+       0.4831
+      ]
+     },
+     {
+      "value": "hinglish",
+      "n": 3,
+      "stop_share": 1.0,
+      "ci95": [
+       0.4385,
+       1
+      ]
+     },
+     {
+      "value": "hindi_devanagari",
+      "n": 1,
+      "stop_share": 1.0,
+      "ci95": [
+       0.2065,
+       1
+      ]
+     }
+    ],
+    "work": [
+     {
+      "value": "student",
+      "n": 38,
+      "stop_share": 0.2105,
+      "ci95": [
+       0.1107,
+       0.3635
+      ]
+     },
+     {
+      "value": "salaried",
+      "n": 13,
+      "stop_share": 0.4615,
+      "ci95": [
+       0.2321,
+       0.7086
+      ]
+     },
+     {
+      "value": "variable_or_gig",
+      "n": 3,
+      "stop_share": 0.3333,
+      "ci95": [
+       0.0615,
+       0.7923
+      ]
+     },
+     {
+      "value": "business",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     },
+     {
+      "value": "variable",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     },
+     {
+      "value": "retired",
+      "n": 1,
+      "stop_share": 1.0,
+      "ci95": [
+       0.2065,
+       1
+      ]
+     }
+    ],
+    "money_source": [
+     {
+      "value": "pocket_money",
+      "n": 39,
+      "stop_share": 0.3333,
+      "ci95": [
+       0.2063,
+       0.4902
+      ]
+     },
+     {
+      "value": "salary",
+      "n": 11,
+      "stop_share": 0.1818,
+      "ci95": [
+       0.0514,
+       0.477
+      ]
+     },
+     {
+      "value": "freelance",
+      "n": 6,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.3903
+      ]
+     },
+     {
+      "value": "savings",
+      "n": 4,
+      "stop_share": 0.75,
+      "ci95": [
+       0.3006,
+       0.9544
+      ]
+     },
+     {
+      "value": "family_money",
+      "n": 3,
+      "stop_share": 0.3333,
+      "ci95": [
+       0.0615,
+       0.7923
+      ]
+     },
+     {
+      "value": "business_income",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     }
+    ],
+    "influenced_by": [
+     {
+      "value": "self",
+      "n": 25,
+      "stop_share": 0.28,
+      "ci95": [
+       0.1428,
+       0.4758
+      ]
+     },
+     {
+      "value": "family",
+      "n": 6,
+      "stop_share": 0.6667,
+      "ci95": [
+       0.3,
+       0.9032
+      ]
+     },
+     {
+      "value": "advisor",
+      "n": 3,
+      "stop_share": 0.6667,
+      "ci95": [
+       0.2077,
+       0.9385
+      ]
+     },
+     {
+      "value": "app",
+      "n": 2,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.6576
+      ]
+     }
+    ],
+    "expectation": [
+     {
+      "value": "quick_gains",
+      "n": 3,
+      "stop_share": 0.3333,
+      "ci95": [
+       0.0615,
+       0.7923
+      ]
+     },
+     {
+      "value": "number_stated",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     },
+     {
+      "value": "steady_growth",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     }
+    ]
+   },
+   "E": {
+    "influenced_by": [
+     {
+      "value": "self",
+      "n": 11,
+      "stop_share": 0.0,
+      "ci95": [
+       0.0,
+       0.2588
+      ]
+     },
+     {
+      "value": "family",
+      "n": 5,
+      "stop_share": 0.6,
+      "ci95": [
+       0.2307,
+       0.8824
+      ]
+     }
+    ],
+    "first_time": [
+     {
+      "value": "first_time",
+      "n": 42,
+      "stop_share": 0.1905,
+      "ci95": [
+       0.0998,
+       0.333
+      ]
+     },
+     {
+      "value": "not_flagged",
+      "n": 5,
+      "stop_share": 0.2,
+      "ci95": [
+       0.0362,
+       0.6245
+      ]
+     }
+    ],
+    "scope": [
+     {
+      "value": "general",
+      "n": 43,
+      "stop_share": 0.1395,
+      "ci95": [
+       0.0656,
+       0.2726
+      ]
+     },
+     {
+      "value": "groww",
+      "n": 3,
+      "stop_share": 0.6667,
+      "ci95": [
+       0.2077,
+       0.9385
+      ]
+     },
+     {
+      "value": "other_app",
+      "n": 1,
+      "stop_share": 1.0,
+      "ci95": [
+       0.2065,
+       1
+      ]
+     }
+    ],
+    "source": [
+     {
+      "value": "reddit",
+      "n": 44,
+      "stop_share": 0.1591,
+      "ci95": [
+       0.0793,
+       0.2937
+      ]
+     },
+     {
+      "value": "appreviews",
+      "n": 3,
+      "stop_share": 0.6667,
+      "ci95": [
+       0.2077,
+       0.9385
+      ]
+     }
+    ],
+    "language": [
+     {
+      "value": "english",
+      "n": 47,
+      "stop_share": 0.1915,
+      "ci95": [
+       0.1042,
+       0.3254
+      ]
+     }
+    ],
+    "work": [
+     {
+      "value": "student",
+      "n": 24,
+      "stop_share": 0.0833,
+      "ci95": [
+       0.0232,
+       0.2585
+      ]
+     },
+     {
+      "value": "salaried",
+      "n": 4,
+      "stop_share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     {
+      "value": "variable_or_gig",
+      "n": 2,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.6576
+      ]
+     }
+    ],
+    "money_source": [
+     {
+      "value": "pocket_money",
+      "n": 26,
+      "stop_share": 0.1538,
+      "ci95": [
+       0.0615,
+       0.3353
+      ]
+     },
+     {
+      "value": "salary",
+      "n": 4,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.4899
+      ]
+     },
+     {
+      "value": "freelance",
+      "n": 2,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.6576
+      ]
+     },
+     {
+      "value": "family_money",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     },
+     {
+      "value": "business_income",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     }
+    ],
+    "expectation": [
+     {
+      "value": "quick_gains",
+      "n": 2,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.6576
+      ]
+     },
+     {
+      "value": "steady_growth",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     }
+    ],
+    "age": [
+     {
+      "value": "<=22",
+      "n": 16,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.1936
+      ]
+     },
+     {
+      "value": "23-27",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     }
+    ],
+    "amount": [
+     {
+      "value": ">10k",
+      "n": 3,
+      "stop_share": 0.3333,
+      "ci95": [
+       0.0615,
+       0.7923
+      ]
+     },
+     {
+      "value": "3k-10k",
+      "n": 3,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.5615
+      ]
+     },
+     {
+      "value": "1k-3k",
+      "n": 1,
+      "stop_share": 0.0,
+      "ci95": [
+       0,
+       0.7935
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

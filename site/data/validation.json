@@ -1,0 +1,927 @@
+{
+ "summary": {
+  "summary_version": "v1.14",
+  "validation_checks": {
+   "held_out_dev": {
+    "n": 20,
+    "gate_relevant_agreement": 0.95,
+    "gate_type_agreement": 0.75,
+    "action_primary_agreement": 0.85,
+    "trigger_primary_agreement": 0.85
+   },
+   "held_out": {
+    "n": 20,
+    "gate_relevant_agreement": 0.85,
+    "gate_type_agreement": 0.35,
+    "action_primary_agreement": 0.7,
+    "trigger_primary_agreement": 1.0,
+    "action_filled_when_human_unknown": 0
+   },
+   "h8_instability": {
+    "n": 2710,
+    "action_primary_agreement": 0.756,
+    "action_primary_instability_rate": 0.244,
+    "instability_by_field": {
+     "action_primary": 24.4,
+     "start_reason": 7.2,
+     "triggers": 12.5,
+     "tier": 0.0,
+     "life_stage": 10.1,
+     "influencer": 5.9,
+     "w2": 0.0,
+     "ungrounded": 27.6,
+     "actions_all": 24.1,
+     "checks_what": 5.1,
+     "expectation": 8.4,
+     "off_app_action": 11.9,
+     "experience": 19.9,
+     "asset_type": 48.8,
+     "sip_status": 18.6,
+     "check_frequency": 0.6,
+     "trigger_primary": 15.6,
+     "platform": 0.6,
+     "exit_mode": 11.3,
+     "app": 12.8,
+     "expectation_value": 0.2,
+     "months_since_start": 3.8,
+     "unmet_need": 68.0,
+     "income_stability": 6.4,
+     "quote": 51.2,
+     "first_time_status": 21.3,
+     "quote_ok": 0.0,
+     "holding_format": 2.1,
+     "origin": 0.0,
+     "scope": 0.0,
+     "age_stated": 8.0,
+     "in_app_confusion": 19.6,
+     "source_group": 0.0,
+     "source_of_money": 6.8,
+     "plan_type": 3.2,
+     "features": 10.5,
+     "gap_flag": 0.5,
+     "months_bucket": 2.1
+    }
+   },
+   "j1_vs_main": {
+    "n": 28427,
+    "overall_agreement_rate": 0.3025,
+    "agreement_by_action_family": {
+     "continue_growth": {
+      "total": 10534,
+      "agree": 1978,
+      "agreement_rate": 0.1878
+     },
+     "shift_exit": {
+      "total": 5345,
+      "agree": 1780,
+      "agreement_rate": 0.333
+     },
+     "start": {
+      "total": 3245,
+      "agree": 2095,
+      "agreement_rate": 0.6456
+     },
+     "stop": {
+      "total": 9303,
+      "agree": 2747,
+      "agreement_rate": 0.2953
+     }
+    },
+    "jc_recovery_count": 640,
+    "jc_recovery_rate": 0.1121
+   },
+   "sonnet_main": {
+    "n": 300,
+    "action_primary_agreement": 0.77,
+    "action_primary_both_filled_agreement": 0.7045,
+    "trigger_primary_agreement": 0.8533
+   },
+   "sonnet_j1": {
+    "n": 100,
+    "did_act_agreement": 0.67,
+    "action_agreement": 0.56,
+    "first_sip_month_agreement": 0.84,
+    "months_at_action_agreement": 0.91
+   },
+   "groq_vs_haiku": {
+    "n": 120,
+    "action_primary": {
+     "agreement": 0.625,
+     "cohens_kappa": 0.2258
+    },
+    "trigger_primary": {
+     "agreement": 0.6833,
+     "cohens_kappa": 0.0979
+    },
+    "first_time_status": {
+     "agreement": 0.8083,
+     "cohens_kappa": 0.4561
+    }
+   },
+   "groq_vs_sonnet": {
+    "n": 120,
+    "action_primary": {
+     "agreement": 0.6333,
+     "cohens_kappa": 0.1801
+    },
+    "trigger_primary": {
+     "agreement": 0.7167,
+     "cohens_kappa": 0.1387
+    },
+    "first_time_status": {
+     "agreement": 0.8333,
+     "cohens_kappa": 0.4777
+    }
+   },
+   "ungrounded_shares": {
+    "main_pass_ungrounded_pct": 6.4,
+    "journey_pilot_ungrounded_pct": 4.06,
+    "g1_heldout_ungrounded_drops": 8
+   },
+   "h_event_counts": {
+    "h11_non_exp_action_removals": 11144,
+    "counts_by_original_action": {
+     "switched_fund": 360,
+     "switched_platform": 359,
+     "increased_or_stepped_up": 960,
+     "stopped_or_cancelled": 586,
+     "started_new": 4923,
+     "redeemed_withdrew": 578,
+     "continued": 1088,
+     "unknown": 432,
+     "considered_stopping": 1396,
+     "lapsed_failed_debit": 43,
+     "restarted": 75,
+     "skipped_or_paused": 208,
+     "reduced_amount": 112,
+     "switched_plan": 3,
+     "continued_with_friction": 14,
+     "reallocated": 1,
+     "restructured": 1,
+     "rebalanced": 1,
+     "liquidated_or_redeemed": 1,
+     "pause_planned": 1,
+     "switched_plan_type": 2
+    }
+   }
+  }
+ },
+ "g1_heldout": {
+  "status": "completed",
+  "split": "heldout",
+  "sample_size": 20,
+  "setup": {
+   "gate": "gate_v1_1",
+   "extract": "extract_v1_2a",
+   "rules": "H1-H11",
+   "categories": "categories_v0_1.yaml"
+  },
+  "gate": {
+   "relevant_k": 17,
+   "relevant_pct": 85.0,
+   "relevant_pass": true,
+   "type_k": 7,
+   "type_pct": 35.0,
+   "tp": 11,
+   "fp": 5,
+   "fn": 1,
+   "tn": 3,
+   "gate_positive_recall_pct": 91.67,
+   "gate_positive_precision_pct": 68.75,
+   "details": [
+    {
+     "uid": "reddit:post:17yx7i0",
+     "g1_id": "G01",
+     "human_rel": "a",
+     "human_type": "exp",
+     "model_rel": "r",
+     "model_type": "q",
+     "rel_match": false,
+     "type_match": false
+    },
+    {
+     "uid": "reddit:post:1lvb6i5",
+     "g1_id": "G02",
+     "human_rel": "r",
+     "human_type": "exp",
+     "model_rel": "r",
+     "model_type": "q",
+     "rel_match": true,
+     "type_match": false
+    },
+    {
+     "uid": "youtube:comment:UgyjqVLtNnu0i3UBDah4AaABAg",
+     "g1_id": "G04",
+     "human_rel": "r",
+     "human_type": "q",
+     "model_rel": "r",
+     "model_type": "q",
+     "rel_match": true,
+     "type_match": true
+    },
+    {
+     "uid": "reddit:post:pjthx8",
+     "g1_id": "G06",
+     "human_rel": "r",
+     "human_type": "exp",
+     "model_rel": "r",
+     "model_type": "q",
+     "rel_match": true,
+     "type_match": false
+    },
+    {
+     "uid": "appstore:review:paytm_money:4154590970",
+     "g1_id": "G07",
+     "human_rel": "r",
+     "human_type": "exp",
+     "model_rel": "r",
+     "model_type": "exp",
+     "rel_match": true,
+     "type_match": true
+    },
+    {
+     "uid": "appstore:review:11658901886",
+     "g1_id": "G10",
+     "human_rel": "r",
+     "human_type": "exp",
+     "model_rel": "r",
+     "model_type": "exp",
+     "rel_match": true,
+     "type_match": true
+    },
+    {
+     "uid": "appstore:review:9983012319",
+     "g1_id": "G11",
+     "human_rel": "r",
+     "human_type": "exp",
+     "model_rel": "r",
+     "model_type": "q",
+     "rel_match": true,
+     "type_match": false
+    },
+    {
+     "uid": "tradingqna:comment:380817",
+     "g1_id": "G13",
+     "human_rel": "r",
+     "human_type": "adv",
+     "model_rel": "r",
+     "model_type": "exp",
+     "rel_match": true,
+     "type_match": false
+    },
+    {
+     "uid": "playstore:review:paytm_money:caf22515-734c-4257-b188-82f5421e3bf8",
+     "g1_id": "G16",
+     "human_rel": "r",
+     "human_type": "exp",
+     "model_rel": "r",
+     "model_type": "adv",
+     "rel_match": true,
+     "type_match": false
+    },
+    {
+     "uid": "tradingqna:comment:446954",
+     "g1_id": "G18",
+     "human_rel": "r",
+     "human_type": "exp",
+     "model_rel": "r",
+     "model_type": "q",
+     "rel_match": true,
+     "type_match": false
+    },
+    {
+     "uid": "x:post:1367831945577525252",
+     "g1_id": "G20",
+     "human_rel": "r",
+     "human_type": "exp",
+     "model_rel": "r",
+     "model_type": "exp",
+     "rel_match": true,
+     "type_match": true
+    },
+    {
+     "uid": "reddit:post:sj86zc",
+     "g1_id": "G21",
+     "human_rel": "a",
+     "human_type": "other",
+     "model_rel": "a",
+     "model_type": "q",
+     "rel_match": true,
+     "type_match": false
+    },
+    {
+     "uid": "playstore:review:3faf1739-4204-475a-b308-482aec7aa8d1",
+     "g1_id": "G24",
+     "human_rel": "r",
+     "human_type": "adv",
+     "model_rel": "r",
+     "model_type": "q",
+     "rel_match": true,
+     "type_match": false
+    },
+    {
+     "uid": "reddit:post:1hdu6yo",
+     "g1_id": "G25",
+     "human_rel": "r",
+     "human_type": "other",
+     "model_rel": "a",
+     "model_type": "q",
+     "rel_match": false,
+     "type_match": false
+    },
+    {
+     "uid": "reddit:post:1lpdo6m",
+     "g1_id": "G27",
+     "human_rel": "r",
+     "human_type": "exp",
+     "model_rel": "r",
+     "model_type": "q",
+     "rel_match": true,
+     "type_match": false
+    },
+    {
+     "uid": "x:post:2095128106319114339",
+     "g1_id": "G31",
+     "human_rel": "r",
+     "human_type": "adv",
+     "model_rel": "r",
+     "model_type": "adv",
+     "rel_match": true,
+     "type_match": true
+    },
+    {
+     "uid": "playstore:review:dhan:b2dab30f-d9dd-40f0-ab4b-ac3b63a8c088",
+     "g1_id": "G33",
+     "human_rel": "r",
+     "human_type": "exp",
+     "model_rel": "r",
+     "model_type": "exp",
+     "rel_match": true,
+     "type_match": true
+    },
+    {
+     "uid": "reddit:post:q5fm69",
+     "g1_id": "G34",
+     "human_rel": "a",
+     "human_type": "other",
+     "model_rel": "r",
+     "model_type": "q",
+     "rel_match": false,
+     "type_match": false
+    },
+    {
+     "uid": "appstore:review:paytm_money:7543543957",
+     "g1_id": "G38",
+     "human_rel": "r",
+     "human_type": "exp",
+     "model_rel": "r",
+     "model_type": "exp",
+     "rel_match": true,
+     "type_match": true
+    },
+    {
+     "uid": "youtube:comment:UgyDOyYz1ZVX1guT2ih4AaABAg",
+     "g1_id": "G40",
+     "human_rel": "r",
+     "human_type": "other",
+     "model_rel": "r",
+     "model_type": "q",
+     "rel_match": true,
+     "type_match": false
+    }
+   ]
+  },
+  "extract": {
+   "action_primary_k": 14,
+   "action_primary_pct": 70.0,
+   "action_primary_pass": true,
+   "trigger_primary_k": 20,
+   "trigger_primary_pct": 100.0,
+   "trigger_primary_pass": true,
+   "filled_fields_count": 30,
+   "ungrounded_drops_count": 8,
+   "ungrounded_rate_pct": 21.05,
+   "ungrounded_pass": false,
+   "action_filled_when_human_unknown": 0,
+   "action_filled_when_human_unknown_pass": true,
+   "all_fields_k": {
+    "action_primary": 14,
+    "trigger_primary": 20,
+    "first_time_status": 18,
+    "months_since_start": 20,
+    "expectation": 20,
+    "experience": 18,
+    "in_app_confusion": 14,
+    "feature_mentioned": 14,
+    "feature_stage": 16,
+    "start_reason": 19,
+    "off_app_action": 18
+   },
+   "filled_label_scores": {
+    "action_primary": {
+     "a_k": 14,
+     "b_k": 2,
+     "b_n": 8,
+     "c_filled_unknown": 0
+    },
+    "trigger_primary": {
+     "a_k": 20,
+     "b_k": 1,
+     "b_n": 1,
+     "c_filled_unknown": 0
+    },
+    "experience": {
+     "a_k": 18,
+     "b_k": 6,
+     "b_n": 7,
+     "c_filled_unknown": 1
+    },
+    "in_app_confusion": {
+     "a_k": 14,
+     "b_k": 5,
+     "b_n": 9,
+     "c_filled_unknown": 2
+    },
+    "first_time_status": {
+     "a_k": 18,
+     "b_k": 5,
+     "b_n": 5,
+     "c_filled_unknown": 2
+    }
+   },
+   "disagreements": [
+    {
+     "uid": "reddit:post:17yx7i0",
+     "g1_id": "G01",
+     "field": "start_reason",
+     "model": "unknown",
+     "human": "friend_colleague"
+    },
+    {
+     "uid": "reddit:post:17yx7i0",
+     "g1_id": "G01",
+     "field": "off_app_action",
+     "model": "unknown",
+     "human": "friend_colleague"
+    },
+    {
+     "uid": "reddit:post:pjthx8",
+     "g1_id": "G06",
+     "field": "action_primary",
+     "model": "unknown",
+     "human": "started_new"
+    },
+    {
+     "uid": "reddit:post:pjthx8",
+     "g1_id": "G06",
+     "field": "in_app_confusion",
+     "model": "[{'v': 'none', 's': 'I would like to have your advice on the above matter.'}]",
+     "human": "unknown"
+    },
+    {
+     "uid": "appstore:review:paytm_money:4154590970",
+     "g1_id": "G07",
+     "field": "action_primary",
+     "model": "unknown",
+     "human": "started_new"
+    },
+    {
+     "uid": "appstore:review:paytm_money:4154590970",
+     "g1_id": "G07",
+     "field": "first_time_status",
+     "model": "{'v': 'likely', 's': 'I started SIP in one of the fund from Mirae asset since last two months.'}",
+     "human": "unknown"
+    },
+    {
+     "uid": "appstore:review:paytm_money:4154590970",
+     "g1_id": "G07",
+     "field": "feature_mentioned",
+     "model": "unknown",
+     "human": "customer_support"
+    },
+    {
+     "uid": "appstore:review:paytm_money:4154590970",
+     "g1_id": "G07",
+     "field": "feature_stage",
+     "model": "unknown",
+     "human": "not_resolved"
+    },
+    {
+     "uid": "appstore:review:11658901886",
+     "g1_id": "G10",
+     "field": "action_primary",
+     "model": "{'v': 'redeemed_withdrew', 's': \"I'm deleting Groww taking out all money I made a big mistake investing 2lakh on grow\"}",
+     "human": "switched_platform"
+    },
+    {
+     "uid": "appstore:review:11658901886",
+     "g1_id": "G10",
+     "field": "feature_mentioned",
+     "model": "unknown",
+     "human": "customer_support"
+    },
+    {
+     "uid": "appstore:review:11658901886",
+     "g1_id": "G10",
+     "field": "feature_stage",
+     "model": "unknown",
+     "human": "could_not_access"
+    },
+    {
+     "uid": "appstore:review:9983012319",
+     "g1_id": "G11",
+     "field": "first_time_status",
+     "model": "{'v': 'not', 's': 'I have been using this app for Investment in both the Stocks and MF since 2021'}",
+     "human": "unknown"
+    },
+    {
+     "uid": "appstore:review:9983012319",
+     "g1_id": "G11",
+     "field": "feature_mentioned",
+     "model": "unknown",
+     "human": "none"
+    },
+    {
+     "uid": "tradingqna:comment:380817",
+     "g1_id": "G13",
+     "field": "experience",
+     "model": "[{'v': 'payment_problem', 's': 'we’ve faced a bunch of issues there'}]",
+     "human": "unknown"
+    },
+    {
+     "uid": "tradingqna:comment:380817",
+     "g1_id": "G13",
+     "field": "feature_mentioned",
+     "model": "unknown",
+     "human": "autopay;pause;edit_sip"
+    },
+    {
+     "uid": "tradingqna:comment:380817",
+     "g1_id": "G13",
+     "field": "feature_stage",
+     "model": "unknown",
+     "human": "could_not_access"
+    },
+    {
+     "uid": "playstore:review:paytm_money:caf22515-734c-4257-b188-82f5421e3bf8",
+     "g1_id": "G16",
+     "field": "experience",
+     "model": "unknown",
+     "human": "app_problem"
+    },
+    {
+     "uid": "playstore:review:paytm_money:caf22515-734c-4257-b188-82f5421e3bf8",
+     "g1_id": "G16",
+     "field": "in_app_confusion",
+     "model": "unknown",
+     "human": "order_status_units"
+    },
+    {
+     "uid": "tradingqna:comment:446954",
+     "g1_id": "G18",
+     "field": "action_primary",
+     "model": "unknown",
+     "human": "started_new"
+    },
+    {
+     "uid": "x:post:1367831945577525252",
+     "g1_id": "G20",
+     "field": "action_primary",
+     "model": "unknown",
+     "human": "continued_with_friction"
+    },
+    {
+     "uid": "playstore:review:3faf1739-4204-475a-b308-482aec7aa8d1",
+     "g1_id": "G24",
+     "field": "in_app_confusion",
+     "model": "[{'v': 'skip_pause_cancel', 's': 'Cancel should give the option.'}]",
+     "human": "other"
+    },
+    {
+     "uid": "playstore:review:3faf1739-4204-475a-b308-482aec7aa8d1",
+     "g1_id": "G24",
+     "field": "feature_mentioned",
+     "model": "unknown",
+     "human": "none"
+    },
+    {
+     "uid": "reddit:post:1lpdo6m",
+     "g1_id": "G27",
+     "field": "action_primary",
+     "model": "unknown",
+     "human": "started_new"
+    },
+    {
+     "uid": "reddit:post:q5fm69",
+     "g1_id": "G34",
+     "field": "in_app_confusion",
+     "model": "[{'v': 'exit_load_tax', 's': \"How broker's like Zerodha or groww, manage the expense ratio fees?How did they pay it?\"}]",
+     "human": "unknown"
+    },
+    {
+     "uid": "appstore:review:paytm_money:7543543957",
+     "g1_id": "G38",
+     "field": "in_app_confusion",
+     "model": "[{'v': 'other', 's': 'They switch has taken place but it has not been effected.'}]",
+     "human": "order_status_units;where_money_went"
+    },
+    {
+     "uid": "appstore:review:paytm_money:7543543957",
+     "g1_id": "G38",
+     "field": "off_app_action",
+     "model": "[{'v': 'none', 's': 'after several follow ups nothing has happened.'}]",
+     "human": "unknown"
+    },
+    {
+     "uid": "appstore:review:paytm_money:7543543957",
+     "g1_id": "G38",
+     "field": "feature_mentioned",
+     "model": "unknown",
+     "human": "customer_support"
+    },
+    {
+     "uid": "appstore:review:paytm_money:7543543957",
+     "g1_id": "G38",
+     "field": "feature_stage",
+     "model": "unknown",
+     "human": "not_resolved"
+    },
+    {
+     "uid": "youtube:comment:UgyDOyYz1ZVX1guT2ih4AaABAg",
+     "g1_id": "G40",
+     "field": "in_app_confusion",
+     "model": "unknown",
+     "human": "plan_type_direct_regular"
+    }
+   ]
+  }
+ },
+ "g2_agreement": {
+  "set": "G2",
+  "codebook": "themes_v0",
+  "n_items": 60,
+  "n_labelled_by_human": 59,
+  "computed_by": "Claude, script, 2 Nov 2026",
+  "pairs": {
+   "human_vs_claude": {
+    "primary_agreement": 0.424,
+    "kappa_primary": 0.287,
+    "any_overlap": 0.678
+   },
+   "human_vs_model": {
+    "primary_agreement": 0.508,
+    "kappa_primary": 0.385,
+    "any_overlap": 0.729
+   },
+   "claude_vs_model": {
+    "primary_agreement": 0.831,
+    "kappa_primary": 0.8,
+    "any_overlap": 0.932
+   }
+  },
+  "main_disagreement_patterns": [
+   "the researcher used T01 (advice) for any request for an opinion, incl. continue/stop, getting started, safety (about 13 items)",
+   "the researcher used T11 (how it works) for in-app how-to such as cancelling or turning AutoPay on (about 6 items)",
+   "support coded first where Claude coded the refund/fix first (about 4 items)"
+  ],
+  "action": "codebook themes_v1: 13 themes and three decision rules; fresh 40-item check G3"
+ },
+ "g3_agreement": {
+  "set": "G3",
+  "codebook": "themes_v1",
+  "n_items": 40,
+  "n_labelled_by_human": 37,
+  "computed_by": "Claude, script, 2 Nov 2026",
+  "human_vs_claude": {
+   "primary_agreement": 0.432,
+   "kappa_primary": 0.357,
+   "any_overlap": 0.514,
+   "family_level_primary": 0.54,
+   "family_level_kappa": 0.42
+  },
+  "model_vs_humans": "done (model labels from reports/g3_model_labels_v1.json)",
+  "main_disagreement_patterns": [
+   "portfolio review coded C08 (see my investment) instead of C01: the name \"Which funds (fund picking)\" hid that C01 includes portfolio review (5 items; the researcher flagged it in notes)",
+   "return expectations / projections had no theme (the researcher: \"don't know where it fits\"), so a theme is missing",
+   "in-app problems coded C04 support rather than the thing they wanted (C05/C06/C10), 4 items",
+   "editing or restarting a SIP coded C07/C11/C02 rather than C05"
+  ],
+  "conclusion": "Human agreement on the theme layer stays below the usual 0.6 kappa bar after one revision (0.29 -> 0.36). Themes are used as a supporting, indicative layer; headline findings rest on the structured fields validated in G1 and the Sonnet audit.",
+  "pairs": {
+   "human_vs_claude": {
+    "primary": 0.432,
+    "kappa": 0.357,
+    "any_overlap": 0.514
+   },
+   "human_vs_model": {
+    "primary": 0.405,
+    "kappa": 0.323,
+    "any_overlap": 0.459
+   },
+   "claude_vs_model": {
+    "primary": 0.85,
+    "kappa": 0.817,
+    "any_overlap": 0.875
+   }
+  }
+ },
+ "findings_check": {
+  "check": "findings_check_v1",
+  "by": "the researcher",
+  "computed_by": "Claude script, 2 Nov 2026",
+  "results": {
+   "A payments": {
+    "counts": {
+     "no": 4,
+     "yes": 16
+    },
+    "yes_share": 0.8,
+    "yes_ci95": [
+     0.584,
+     0.919
+    ],
+    "yes_share_excl_unclear": 0.8,
+    "notes": [
+     [
+      1,
+      "no",
+      "It talks about a cancelled SIP and asks the reason for it. Reason could be payment related, but we cannot say that 100%",
+      "maine same procedure mai sip star Kiya tha but 5 bar sip cancel huwa , aisa kyu huwa hai b"
+     ],
+     [
+      2,
+      "yes",
+      "This is insurance policy though. Not MF",
+      "when I am trying to pay the premium, it is not allowing me to pay for the single policy, i"
+     ],
+     [
+      4,
+      "yes",
+      "Payment related, probably not first few months considering the hefty TDS amount",
+      "So i redeemed the funds from Axis and they have cut TDS of almost rs71000. Is this the usu"
+     ],
+     [
+      7,
+      "yes",
+      "Payment related, no mention of first few months though",
+      "the amount didn't credit into my bank account but in the app it is showing that the withdr"
+     ],
+     [
+      8,
+      "no",
+      "KYC related",
+      "I started a SIP but the transaction is showing in progress meanwhile i received a msg stat"
+     ],
+     [
+      9,
+      "no",
+      "SIP related, but more related to starting issue than Payment",
+      "after 13 days I tried again and it worked"
+     ],
+     [
+      11,
+      "yes",
+      "No mention of first few months",
+      "Recently when I checked it’s showing Paytm bank and not able to withdraw."
+     ],
+     [
+      12,
+      "no",
+      "KYC related",
+      "I could not make any further investments. I regret my decision of chosing PAYTM money."
+     ],
+     [
+      15,
+      "yes",
+      "Payment issue but also talks about bad customer support experience",
+      "The order got canceled by AMC after repeated follow up with Groww for my investment. The a"
+     ],
+     [
+      17,
+      "yes",
+      "Confusion between SIP and direct buying of MF's",
+      "i mistakenly clicked on buy option instead of SIP option..I put my amount which was 500rup"
+     ],
+     [
+      18,
+      "yes",
+      "Payment related because customer talks about having money only for one SIP at first, then arranging the money for second SIP by evening. I am assuming",
+      "Aaj subah tak mere paas sirf ek hi SIP ke pese the"
+     ],
+     [
+      19,
+      "yes",
+      "UMRN related",
+      "I have now received an SMS telling me about the UMRN and Request ID which us now active."
+     ],
+     [
+      20,
+      "yes",
+      "They talk about missed SIP date and restarting, so could be both date and payment related",
+      "I missed the due date by one month, but I invested that amount in 'one time' or 'start SIP"
+     ]
+    ]
+   },
+   "B money & support": {
+    "counts": {
+     "yes": 19,
+     "blank": 1
+    },
+    "yes_share": 1.0,
+    "yes_ci95": [
+     0.832,
+     1.0
+    ],
+    "yes_share_excl_unclear": 1.0,
+    "notes": [
+     [
+      1,
+      "yes",
+      "Talks about failure to redeem MF for 3 months",
+      "I've been trying unsuccessfully to withdraw money from a specific MF for more than three m"
+     ],
+     [
+      6,
+      "yes",
+      "Talking about not getting money from wtihdraawal",
+      "maine SIP Kari thi 2 mahine Tak Kari uske bad maine cancel kari rs 1000 withdraw Kiya ab r"
+     ],
+     [
+      8,
+      "yes",
+      "Talks about bad app and customrer service",
+      ""
+     ],
+     [
+      12,
+      "yes",
+      "This is more related to payment and mandate",
+      "Started Sip in two mutual funds in Jun 2023 then cancelled Sip in Jun 2023 and Cancelled e"
+     ],
+     [
+      15,
+      "yes",
+      "Talks about wanting to cancel SIP because of less liquid cash, but not being able to do so",
+      "after 3 months ive realised this saving is making me short on money for daily necessities "
+     ],
+     [
+      18,
+      "yes",
+      "KYC related",
+      "it's been one month and iam not able to invest in SIP it says kyc rejected"
+     ],
+     [
+      19,
+      "",
+      "I don't understand this language",
+      "Naa cancel pannave illa epdi bro enakku onnume puriyala ippo continue panna mudiyumaa??? A"
+     ]
+    ]
+   },
+   "C returns": {
+    "counts": {
+     "yes": 15,
+     "no": 5
+    },
+    "yes_share": 0.75,
+    "yes_ci95": [
+     0.531,
+     0.888
+    ],
+    "yes_share_excl_unclear": 0.75,
+    "notes": [
+     [
+      2,
+      "no",
+      "Can't say what they want to ask, bad language",
+      ""
+     ],
+     [
+      4,
+      "no",
+      "Doesn't say they are disappointed. Just say that they have high risk MF's exclusively in their portfolio",
+      "My portfolio is only small-caps. I was a bit greedy when I entered the investing scenario"
+     ],
+     [
+      5,
+      "no",
+      "They claim they are doing better than FD's. I think they are saying they are doing well",
+      "my total returns are at 4.8% and XIRR is at 9% (it was 14% two weeks ago), even in this be"
+     ],
+     [
+      11,
+      "no",
+      "no mention of disappoinement",
+      "I just deleted a Quant ELSS fund where I already invested 10k as part of my monthly SIP."
+     ],
+     [
+      13,
+      "no",
+      "Just talks about their payment pattern",
+      "The months I know i dont have money i pause it for 1 or 2 months and then resume."
+     ]
+    ]
+   }
+  }
+ }
+}

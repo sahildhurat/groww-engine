@@ -1,0 +1,381 @@
+{
+ "title": "Discovery Engine: First-Year SIP Continuity Findings",
+ "git_sha": "fbe532e",
+ "answer_in_five_lines": [
+  "**Most of what we collected is general SIP talk. The problem-specific core is small and we analyse it separately:** 32,868 early-journey episodes (first-time investors, or within 12 months of starting), of which **684 are stop stories, 405 are considering stopping, and 1156 kept going**.",
+  "**Losses make first-year investors *think* about stopping; mechanics make them *actually* stop.** Among those considering stopping, 55% describe negative returns. Among those who stopped, the most common routes are payment lapse (35%) and app friction (30%); returns disappointment is 21%.",
+  "**The two strongest separators between stoppers and continuers are payment/AutoPay problems and 'where is my money' / unresolved support.** Both point the same way on Reddit, YouTube and app reviews (opportunity table, §3).",
+  "**It happens early:** 49% of first-time stoppers who say when they stopped did so within 3 months, and 25% at months 7–12. In dated events, months 0–3 mix set-up problems (first-debit problem or failed payment 7%, confused in the app 6%) with early losses (9%); from month 4, seeing losses or flat returns dominates (24%–29%).",
+  "**Continuers hold a long-term frame** (71% of their reasons). Almost nobody describes skipping, pausing or reducing *instead of* stopping (reduced instead 1%; skipped or paused instead 0%; n=298). The flexibility exists in apps but is rarely described as the thing that kept someone going.",
+  "**Caveat that shapes Part 3.** Public posts over-represent loud failures; people who simply drift away rarely post. The payment/friction story is strongly evidenced; the size of quiet drift is not knowable from public data and is the main thing the interviews must test."
+ ],
+ "funnel": [
+  {
+   "step": "Clean public records collected",
+   "count": "1,630,416 + 741 social",
+   "detail": "Reddit, YouTube, Play/App Store, TradingQ&A, X, social manual"
+  },
+  {
+   "step": "Gated by AI for relevance",
+   "count": "231,654",
+   "detail": "AI relevance check on every record in the pool"
+  },
+  {
+   "step": "Analysed episodes",
+   "count": "90,755",
+   "detail": "Gate-positive, extracted with H11 deterministic overrides"
+  },
+  {
+   "step": "Early-journey core episodes (E)",
+   "count": "32,868",
+   "detail": "First-time investor signal OR timing ≤ 12 months"
+  },
+  {
+   "step": "E stop / consider / continue stories",
+   "count": "684 / 405 / 1,156",
+   "detail": "Strict labels validated by date-aware second read (J1)"
+  },
+  {
+   "step": "Targeted top-up episodes",
+   "count": "1,642 (46 stop / 66 cont)",
+   "detail": "Variable-income & first-year stops (evaluated separately, zero weight in shares)"
+  }
+ ],
+ "opportunities": [
+  {
+   "id": "A_first_debit_and_autopay",
+   "letter": "A",
+   "name": "Payment & AutoPay problems (early-journey stories)",
+   "definition": "Payment reliability in the first months: failed or missed first debits, AutoPay/mandate set-up and failures, SIP date confusion",
+   "reach_pct": 5.4,
+   "reach_n": 1797,
+   "groww_share_pct": 18.8,
+   "addressable": "Yes",
+   "separation": {
+    "reddit": {
+     "stop_pct": 17.7,
+     "cont_pct": 3.8,
+     "diff_pct": 13.9,
+     "diff_ci95": [
+      10.2,
+      17.7
+     ],
+     "mark": "✓",
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop_pct": 42.0,
+     "cont_pct": 16.2,
+     "diff_pct": 25.8,
+     "diff_ci95": [
+      13.4,
+      38.2
+     ],
+     "mark": "✓",
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop_pct": 76.5,
+     "cont_pct": 34.4,
+     "diff_pct": 42.1,
+     "diff_ci95": [
+      24.3,
+      59.9
+     ],
+     "mark": "✓",
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop_pct": 34.6,
+     "cont_pct": 5.9,
+     "diff_pct": 28.8,
+     "diff_ci95": [
+      24.9,
+      32.6
+     ],
+     "mark": "✓",
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   },
+   "human_check": {
+    "yes_count": 16,
+    "no_count": 4,
+    "yes_share_pct": 80.0,
+    "yes_ci95_pct": [
+     58.4,
+     91.9
+    ]
+   }
+  },
+  {
+   "id": "B_money_status_and_resolution",
+   "letter": "B",
+   "name": "Where is my money / order status + support that resolves",
+   "definition": "Where is my money / order status, and support that resolves (money stuck, units not allotted, tickets closed unresolved)",
+   "reach_pct": 3.1,
+   "reach_n": 1083,
+   "groww_share_pct": 23.6,
+   "addressable": "Yes",
+   "separation": {
+    "reddit": {
+     "stop_pct": 12.9,
+     "cont_pct": 2.0,
+     "diff_pct": 10.9,
+     "diff_ci95": [
+      7.6,
+      14.1
+     ],
+     "mark": "✓",
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop_pct": 38.6,
+     "cont_pct": 6.3,
+     "diff_pct": 32.3,
+     "diff_ci95": [
+      21.2,
+      43.5
+     ],
+     "mark": "✓",
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop_pct": 81.9,
+     "cont_pct": 18.8,
+     "diff_pct": 63.1,
+     "diff_ci95": [
+      48.3,
+      78.0
+     ],
+     "mark": "✓",
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop_pct": 32.3,
+     "cont_pct": 2.9,
+     "diff_pct": 29.5,
+     "diff_ci95": [
+      25.8,
+      33.1
+     ],
+     "mark": "✓",
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   },
+   "human_check": {
+    "yes_count": 19,
+    "no_count": null,
+    "yes_share_pct": 100.0,
+    "yes_ci95_pct": [
+     83.2,
+     100.0
+    ]
+   }
+  },
+  {
+   "id": "C_returns_expectations",
+   "letter": "C",
+   "name": "Returns vs expectations (loss, flat, \"is this normal?\")",
+   "definition": "Expectations vs what they see: negative or flat returns, confusing numbers, why negative, is this normal",
+   "reach_pct": 14.2,
+   "reach_n": 4597,
+   "groww_share_pct": 5.9,
+   "addressable": "Partly: explain, don't advise; no fear or urgency",
+   "separation": {
+    "reddit": {
+     "stop_pct": 38.9,
+     "cont_pct": 25.6,
+     "diff_pct": 13.3,
+     "diff_ci95": [
+      8.0,
+      18.6
+     ],
+     "mark": "✓",
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop_pct": 18.2,
+     "cont_pct": 24.3,
+     "diff_pct": -6.1,
+     "diff_ci95": [
+      -17.5,
+      5.2
+     ],
+     "mark": "~",
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop_pct": 12.8,
+     "cont_pct": 9.4,
+     "diff_pct": 3.4,
+     "diff_ci95": [
+      -8.1,
+      14.8
+     ],
+     "mark": "~",
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop_pct": 30.0,
+     "cont_pct": 25.1,
+     "diff_pct": 4.9,
+     "diff_ci95": [
+      0.6,
+      9.1
+     ],
+     "mark": "✓",
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   },
+   "human_check": {
+    "yes_count": 15,
+    "no_count": 5,
+    "yes_share_pct": 75.0,
+    "yes_ci95_pct": [
+     53.1,
+     88.8
+    ]
+   }
+  },
+  {
+   "id": "D_cash_flow_flex",
+   "letter": "D",
+   "name": "Cash-flow shocks (crunch, income change)",
+   "definition": "Cash-flow shocks: cash crunch, income change, life events; affordability",
+   "reach_pct": 2.4,
+   "reach_n": 791,
+   "groww_share_pct": 4.2,
+   "addressable": "Yes (skip/pause/reduce as a safety valve)",
+   "separation": {
+    "reddit": {
+     "stop_pct": 11.9,
+     "cont_pct": 5.3,
+     "diff_pct": 6.6,
+     "diff_ci95": [
+      3.2,
+      10.0
+     ],
+     "mark": "✓",
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop_pct": 10.2,
+     "cont_pct": 0.9,
+     "diff_pct": 9.3,
+     "diff_ci95": [
+      2.8,
+      15.9
+     ],
+     "mark": "✓",
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop_pct": 2.0,
+     "cont_pct": 0.0,
+     "diff_pct": 2.0,
+     "diff_ci95": [
+      -0.2,
+      4.3
+     ],
+     "mark": "~",
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop_pct": 9.4,
+     "cont_pct": 4.8,
+     "diff_pct": 4.6,
+     "diff_ci95": [
+      2.1,
+      7.1
+     ],
+     "mark": "✓",
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   },
+   "human_check": null
+  },
+  {
+   "id": "E_sip_control",
+   "letter": "E",
+   "name": "Control of the SIP (skip, pause, edit, cancel)",
+   "definition": "Control of the SIP: skip, pause, edit, cancel - finding it and having it work",
+   "reach_pct": 2.3,
+   "reach_n": 729,
+   "groww_share_pct": 13.1,
+   "addressable": "Yes",
+   "separation": {
+    "reddit": {
+     "stop_pct": 6.0,
+     "cont_pct": 1.0,
+     "diff_pct": 5.0,
+     "diff_ci95": [
+      2.7,
+      7.3
+     ],
+     "mark": "✓",
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop_pct": 44.3,
+     "cont_pct": 4.5,
+     "diff_pct": 39.8,
+     "diff_ci95": [
+      28.7,
+      50.9
+     ],
+     "mark": "✓",
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop_pct": 12.8,
+     "cont_pct": 12.5,
+     "diff_pct": 0.2,
+     "diff_ci95": [
+      -12.4,
+      12.9
+     ],
+     "mark": "~",
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop_pct": 12.4,
+     "cont_pct": 1.6,
+     "diff_pct": 10.8,
+     "diff_ci95": [
+      8.2,
+      13.4
+     ],
+     "mark": "✓",
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   },
+   "human_check": null
+  }
+ ],
+ "cant_tell_us": [
+  "**Quiet drift**: people who stop thinking about it and let the SIP lapse rarely post. Size unknown.",
+  "**Income stability** cells (variable/gig, business) stay below 30 stories.",
+  "**How often people check**: thin.",
+  "**Unmet-need themes**: human–AI agreement on the theme list stayed below the 0.6 κ bar (G2 researcher–Claude κ 0.287, G3 κ 0.357; model–researcher κ 0.323; Claude–model κ 0.817). Themes are used as colour, not as evidence."
+ ]
+}

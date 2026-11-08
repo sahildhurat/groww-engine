@@ -1,0 +1,233 @@
+[
+ {
+  "id": "ex1",
+  "uid": "appstore:review:dhan:13379148727",
+  "title": "First mutual fund order and onboarding support delay",
+  "source": "appstore",
+  "note": "Real engine output from the corpus run",
+  "model": "claude-haiku-5-5",
+  "prompt_version": "gate_v1_1 / extract_v1_2a",
+  "text": "Haven’t been able to buy MFs from my account since i opened the demat, for the past 10 days i have contacted customer support none have been able to solve. Pathetic customer support. Worst part is you cannot go back to the same chat to continue. Every-time you have to explain the same issue to 10 different useless agents.",
+  "gate": {
+   "rel": "r",
+   "type": "exp",
+   "sip": 0,
+   "ft": "l"
+  },
+  "extraction": {
+   "experience": [
+    {
+     "v": "payment_problem",
+     "s": "Haven’t been able to buy MFs from my account since i opened the demat"
+    }
+   ],
+   "in_app_confusion": [
+    {
+     "v": "other",
+     "s": "Haven’t been able to buy MFs from my account since i opened the demat"
+    }
+   ],
+   "unmet_need": {
+    "v": "Working customer support that can resume a chat",
+    "s": "Worst part is you cannot go back to the same chat to continue"
+   },
+   "quote": "Haven’t been able to buy MFs from my account since i opened the demat, for the past 10 days i have contacted customer support none have been able to solve."
+  },
+  "routes": [
+   "payment_lapse"
+  ],
+  "areas": [
+   "A_first_debit_and_autopay",
+   "B_money_status_and_resolution"
+  ]
+ },
+ {
+  "id": "ex2",
+  "uid": "reddit:post:1bhld0i",
+  "title": "SIP mandate rejection and order status inquiry",
+  "source": "reddit_post",
+  "note": "Real engine output from the corpus run",
+  "model": "claude-haiku-5-5",
+  "prompt_version": "gate_v1_1 / extract_v1_2a",
+  "text": "I don’t know much about investing. I have some SIPs running and started a new one on this fund. It got rejected. Can you guys please tell me whats going on?",
+  "gate": {
+   "rel": "r",
+   "type": "q",
+   "sip": 1,
+   "ft": "l"
+  },
+  "extraction": {
+   "experience": [
+    {
+     "v": "payment_problem",
+     "s": "It got rejected."
+    }
+   ],
+   "in_app_confusion": [
+    {
+     "v": "order_status_units",
+     "s": "It got rejected."
+    }
+   ],
+   "unmet_need": {
+    "v": "Wants to understand why new SIP order was rejected",
+    "s": "Can you guys please tell me whats going on?"
+   },
+   "quote": "It got rejected.",
+   "first_time_status": {
+    "v": "likely",
+    "s": "I don’t know much about investing."
+   }
+  },
+  "routes": [
+   "payment_lapse"
+  ],
+  "areas": [
+   "A_first_debit_and_autopay",
+   "B_money_status_and_resolution"
+  ]
+ },
+ {
+  "id": "ex3",
+  "uid": "reddit:post:1uf348c",
+  "title": "Returns vs expectations and fund switching question",
+  "source": "reddit_post",
+  "note": "Real engine output from the corpus run",
+  "model": "claude-haiku-5-5",
+  "prompt_version": "gate_v1_1 / extract_v1_2a",
+  "text": "I have started investing around one yr ago in this fund there's never been a single day I was in green\n\nI'm also investing in another fund (started both on same day) which used to be red but now it's around +9% \n\nAnd why the fuck they invest in stocks which are saturated already?(like they bought ather and many other when they were at all time high ) \n\nShould i switch from this fund?\n\nAny alternative fund suggestions please 🙂",
+  "gate": {
+   "rel": "r",
+   "type": "exp",
+   "sip": 0,
+   "ft": "l"
+  },
+  "extraction": {
+   "triggers": [
+    {
+     "v": "returns_disappointing",
+     "s": "there's never been a single day I was in green"
+    }
+   ],
+   "experience": [
+    {
+     "v": "negative_returns",
+     "s": "there's never been a single day I was in green"
+    }
+   ],
+   "quote": "Should i switch from this fund?",
+   "months_since_start": {
+    "v": 12,
+    "s": "started investing around one yr ago"
+   }
+  },
+  "routes": [
+   "returns_disappointment"
+  ],
+  "areas": [
+   "C_returns_expectations"
+  ]
+ },
+ {
+  "id": "ex4",
+  "uid": "reddit:comment:n8lw365",
+  "title": "Daily SIP debit failure due to balance and bank charges",
+  "source": "reddit_comment",
+  "note": "Real engine output from the corpus run",
+  "model": "claude-haiku-5-5",
+  "prompt_version": "gate_v1_1 / extract_v1_2a",
+  "text": "I had started a daily SIP of 50 rupees. Somehow, balance remained below that for a couple of days. Imagine the error when I again had balance in that account.\n\n\nI don't think Government wants us to save or invest. There's tax on literally everything. If somehow, we are able to save some amount, we end up paying tax on FD/SB interest, dividend payouts, etc.",
+  "gate": {
+   "rel": "r",
+   "type": "exp",
+   "sip": 1,
+   "ft": "l"
+  },
+  "extraction": {
+   "action_primary": {
+    "v": "skipped_or_paused",
+    "s": "Somehow, balance remained below that for a couple of days."
+   },
+   "actions_all": [
+    {
+     "v": "skipped_or_paused",
+     "s": "Somehow, balance remained below that for a couple of days."
+    }
+   ],
+   "trigger_primary": {
+    "v": "cash_crunch_expense",
+    "s": "Somehow, balance remained below that for a couple of days."
+   },
+   "triggers": [
+    {
+     "v": "cash_crunch_expense",
+     "s": "Somehow, balance remained below that for a couple of days."
+    }
+   ],
+   "experience": [
+    {
+     "v": "payment_problem",
+     "s": "Somehow, balance remained below that for a couple of days."
+    }
+   ],
+   "quote": "I had started a daily SIP of 50 rupees. Somehow, balance remained below that for a couple of days."
+  },
+  "routes": [
+   "cash_flow",
+   "payment_lapse"
+  ],
+  "areas": [
+   "A_first_debit_and_autopay",
+   "D_cash_flow_flex"
+  ]
+ },
+ {
+  "id": "ex5",
+  "uid": "reddit:comment:o5om7ja",
+  "title": "Annual SIP step-up and disciplined continuation",
+  "source": "reddit_comment",
+  "note": "Real engine output from the corpus run",
+  "model": "claude-haiku-5-5",
+  "prompt_version": "gate_v1_1 / extract_v1_2a",
+  "text": "yes totally! I get your point about inflation that's why I keep adding 10% to the Mutual fund SIP's every year to hedge for future. I keep my lifestyle easy and simple as I've lived a very extroverted life for 20 plus years. Met 100's of people by the day and sometimes lacs by the month. Now i'm more introverted and like seclusion. I'm very comfortable lifewise, got good health, muscular body, I sleep peacefully and eat well. Sort of don't feel the need for a wife as i got two girlfriends but they're not permanent.",
+  "gate": {
+   "rel": "r",
+   "type": "exp",
+   "sip": 0,
+   "ft": "n"
+  },
+  "extraction": {
+   "action_primary": {
+    "v": "increased_or_stepped_up",
+    "s": "I keep adding 10% to the Mutual fund SIP's every year"
+   },
+   "quote": "I keep adding 10% to the Mutual fund SIP's every year to hedge for future.",
+   "kept_going_because": [
+    "long_term_view"
+   ]
+  },
+  "routes": [
+   "advice_external"
+  ],
+  "areas": []
+ },
+ {
+  "id": "ex6",
+  "uid": "reddit:post:1hgyuwr",
+  "title": "IPO application mandate failure inquiry",
+  "source": "reddit_post",
+  "note": "Real engine output from the corpus run",
+  "model": "claude-haiku-5-5",
+  "prompt_version": "gate_v1_1 / extract_v1_2a",
+  "text": "Hi members, I am trying to apply for the Identical Brain Studios IPO. But the UPI mandate failed even when I gave the correct pin. Now when reapplying, I am getting bid failed error mentioning multiple applications not allowed under same PAN. How to resolve this issue and apply for the IPO. Any recommendations will be greatly appreciated!",
+  "gate": {
+   "rel": "a",
+   "type": "q",
+   "sip": 0,
+   "ft": "u"
+  },
+  "extraction": null,
+  "routes": [],
+  "areas": []
+ }
+]

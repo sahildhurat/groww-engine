@@ -1,0 +1,40 @@
+version: v0.1
+fields:
+  relevant:        {codes: [r, a, n], def: "r = about SIP/MF investing behaviour or experience; a = investing app or personal finance but not SIP/MF behaviour; n = unrelated"}
+  type:            {codes: [exp, q, adv, news, other], def: "exp = own (or family member's) SIP/MF situation or action; q = asks about own situation with little detail; adv = general advice/opinion; news = news, promotion, ads"}
+  first_time_status: {codes: [stated, likely, not, unknown], def: "stated = says first SIP / new to MF / beginner; likely = clear signs (started recently, first salary, basic questions); not = years of investing"}
+  months_since_start: {type: int_or_unknown, def: "months since the person's first SIP, only if stated or computable from stated dates"}
+  start_reason:    {multi: 2, codes: [goal_specific, tax_saving, grow_wealth, beat_fd_inflation, first_salary_or_income, family_push, friend_colleague, finfluencer_media, app_onboarding_offer, employer_or_advisor, other, unknown]}
+  expectation:     {codes: [number_stated, steady_growth, quick_gains, safety, no_idea, unknown], value_field: expectation_value, def: "what they expected returns or the SIP to do; number_stated keeps the number in expectation_value e.g. '12-15%'"}
+  experience:      {multi: 2, codes: [positive, flat, negative_returns, small_absolute_value, confusing_numbers, payment_problem, app_problem, unknown], def: "what they actually saw or went through"}
+  action_primary:  {codes: [continued, continued_with_friction, considered_stopping, skipped_or_paused, reduced_amount, stopped_or_cancelled, lapsed_failed_debit, restarted, switched_fund, switched_platform, redeemed_withdrew, increased_or_stepped_up, started_new, unknown], def: "the latest or most consequential SIP action described"}
+  actions_all:     {multi: 3, codes_from: action_primary}
+  trigger_primary: {codes: [returns_disappointing, market_fall_news, cash_crunch_expense, income_change, goal_changed_or_reached, payment_mandate_problem, forgot_or_didnt_notice, confusion_product_or_app, advice_from_someone, influencer_or_media, app_issue_or_ux, fees_tax_exit_load, trust_concern_platform, better_alternative, other, none, unknown], def: "what led to the action; none = no trigger (e.g. simply continuing). Fill only when action_primary is filled; otherwise unknown."}
+  triggers:        {multi: 3, codes_from: trigger_primary}
+  checks_what:     {multi: 3, codes: [returns_pct, rupee_gain_loss, xirr, nav, portfolio_value, nothing, unknown]}
+  check_frequency: {codes: [daily, weekly, monthly, rarely, never, unknown]}
+  in_app_confusion: {multi: 3, codes: [autopay_mandate, returns_calculation, why_negative, exit_load_tax, skip_pause_cancel, sip_date_first_debit, where_money_went, order_status_units, plan_type_direct_regular, other, none, unknown], def: "confusion or worry about something shown or done in an investing app, or about SIP mechanics: mandates and debits, order status and units, returns shown, skip/pause/cancel, exit load or tax, plan type. Questions about which fund to choose or how markets work are unknown, not other."}
+  off_app_action:  {multi: 3, codes: [family, friend_colleague, youtube_finfluencer, reddit_forum, bank, advisor_ca, compared_fd_rd, searched_web, none, unknown], def: "what the writer says they did outside the investing app when unsure: asked family or friends, watched videos, searched online, asked the bank or an adviser, compared with FD/RD. Posting this item does not count: a Reddit post is not reddit_forum and a YouTube comment is not youtube_finfluencer, unless the text says the writer went there for help."}
+  income_stability: {codes: [salaried, variable, student, homemaker, retired, business, unknown]}
+  life_stage:      {codes: [student, early_career, mid_career, parent, near_retirement, retired, unknown]}
+  age_stated:      {type: int_or_unknown}
+  source_of_money: {codes: [salary, pocket_money, family_money, business_income, freelance, savings, unknown]}
+  influencer:      {codes: [family, friend, colleague, finfluencer, app, advisor, self, unknown]}
+  app:             {codes: [groww, coin, indmoney, etmoney, paytm_money, kuvera, other_app, amc_or_bank_direct, unknown], def: "the app or channel this experience is about"}
+  plan_type:       {codes: [direct, regular_or_prime, unknown]}
+  platform:        {codes: [android, ios, web, unknown]}
+  holding_format:  {codes: [soa, demat, unknown]}
+  asset_type:      {codes: [mf_sip, stock_sip, etf_sip, unknown]}
+  sip_status:      {codes: [active, paused, stopped, cancelled_by_system, unknown]}
+  features:        {multi: 3, pair: {feature: [reminder, autopay, pay_now, one_time_payment, skip, pause, step_up, edit_sip, cancel, xirr_view, returns_view, help_or_ai_search, customer_support, gr1, prime, none], stage: [unaware, aware, could_not_access, used, resolved, not_resolved, unknown]}, def: "an existing app feature mentioned, and how far the person got with it. one_time_payment means paying a missed SIP instalment once; a normal lumpsum purchase is not a feature."}
+  unmet_need:      {type: short_text_20_words}
+  quote:           {type: verbatim_30_words_or_null}
+examples:   # one per key code; used in the labelling guide
+  lapsed_failed_debit: "My SIP got cancelled because autopay failed 3 times, I didn't even know"
+  skipped_or_paused: "Skipped this month's SIP since rent was due"
+  returns_disappointing: "6 months and my SIP is still red, what's the point"
+  sip_date_first_debit: "Started SIP on 10th but no money was deducted, next date shows December?"
+  number_stated: "Everyone on YouTube says 12-15% so I expected that"
+  family: "My father told me to stop and put it in FD instead"
+  could_not_access: "I wanted to skip but couldn't find the option anywhere"
+

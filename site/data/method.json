@@ -1,0 +1,132 @@
+{
+ "pipeline_steps": [
+  {
+   "step": "1. Public Collection",
+   "detail": "Reddit, YouTube, Play/App Store, TradingQ&A, X, social manual",
+   "records": "1,630,416 + 741"
+  },
+  {
+   "step": "2. Scrub & Privacy",
+   "detail": "PII scrubbed, author_hash HMAC, zero usernames or handles",
+   "records": "1,630,416"
+  },
+  {
+   "step": "3. AI Gate v1.1",
+   "detail": "Haiku 5.5 message batch; relevance (r/a/n) and type (exp/q/adv)",
+   "records": "231,654 gated (O2 census)"
+  },
+  {
+   "step": "4. Structured Extraction v1.2a",
+   "detail": "Haiku 5.5 with H11 deterministic action rules and span grounding",
+   "records": "90,755 episodes"
+  },
+  {
+   "step": "5. Second-Read Journey (J1)",
+   "detail": "Date-aware event timeline extraction for strict action validation",
+   "records": "28,427 journey items"
+  },
+  {
+   "step": "6. Strict Consensus Labels",
+   "detail": "Deterministic consensus between main extraction and J1",
+   "records": "684 stop / 405 consider / 1,156 cont (E)"
+  },
+  {
+   "step": "7. Quantitative Analysis",
+   "detail": "Wilson 95% CIs on Kish effective sample sizes, within-source",
+   "records": "32,868 early-journey core"
+  }
+ ],
+ "models_prompts": [
+  {
+   "stage": "Gate",
+   "model": "Claude Haiku 5.5 (claude-haiku-5-5)",
+   "prompt_file": "prompts/gate_v1_1.md",
+   "max_tokens": 4000,
+   "thinking": "disabled",
+   "batch_size": 40
+  },
+  {
+   "stage": "Extraction",
+   "model": "Claude Haiku 5.5 (claude-haiku-5-5)",
+   "prompt_file": "prompts/extract_v1_2a.md",
+   "max_tokens": 8000,
+   "thinking": "disabled",
+   "batch_size": 4
+  },
+  {
+   "stage": "Journey J1",
+   "model": "Claude Haiku 5.5 (claude-haiku-5-5)",
+   "prompt_file": "prompts/journey_v1.md",
+   "max_tokens": 8000,
+   "thinking": "disabled",
+   "batch_size": 4
+  },
+  {
+   "stage": "Themes v1",
+   "model": "Claude Haiku 5.5 (claude-haiku-5-5)",
+   "prompt_file": "prompts/themes_v1.md",
+   "max_tokens": 2000,
+   "thinking": "disabled",
+   "batch_size": 50
+  },
+  {
+   "stage": "Interactive /try (Gate)",
+   "model": "Claude Haiku 5.5 (claude-haiku-5-5)",
+   "prompt_file": "prompts/gate_v1_1.md",
+   "max_tokens": 400,
+   "thinking": "disabled",
+   "batch_size": 1
+  },
+  {
+   "stage": "Interactive /try (Extract)",
+   "model": "Claude Haiku 5.5 (claude-haiku-5-5)",
+   "prompt_file": "prompts/extract_v1_2a.md",
+   "max_tokens": 2000,
+   "thinking": "disabled",
+   "batch_size": 1
+  }
+ ],
+ "corrections": [
+  {
+   "id": 1,
+   "title": "Extraction prompt v1.3a rejected",
+   "detail": "Tried on G1-dev and rejected (action identification 11/20 vs 15/20 in v1.2a). Replaced by deterministic H11 rule."
+  },
+  {
+   "id": 2,
+   "title": "STOP C sample table transcription error",
+   "detail": "Rows 5–10 were inadvertently typed rather than copied from JSON. Replaced with programmatic script copy and instituted Rule W8."
+  },
+  {
+   "id": 3,
+   "title": "Groq-vs-Sonnet cross-model agreement",
+   "detail": "Initial audit showed κ = 0 due to unmatched UID keys across test runs. Resolved with strict UID matching."
+  },
+  {
+   "id": 4,
+   "title": "Publication date coverage backfill",
+   "detail": "Export initially had posted='unknown' for main corpus due to add-on date rule mismatch; backfilled from UTC created_at (278 rows unparsable/unknown, 90,477 with posted YYYY-MM)."
+  },
+  {
+   "id": 5,
+   "title": "Theme codebook human agreement demotion",
+   "detail": "Themes failed human agreement twice (κ 0.287 in G2, κ 0.357 in G3). Demoted from quantitative evidence to illustrative colour."
+  },
+  {
+   "id": 6,
+   "title": "Findings check re-classifications",
+   "detail": "The researcher's blind check flagged insurance premium as payment failure and KYC blocks as payment problems. Area A definition was updated accordingly."
+  },
+  {
+   "id": 7,
+   "title": "Source rejections",
+   "detail": "Quora answers rejected as advisor-dominated; LinkedIn comments rejected as B2B/advisor-heavy; Telegram broadcast channels rejected due to promotional spam."
+  }
+ ],
+ "ledger": {
+  "cumulative_spend_usd": 21.249556,
+  "production_spend_usd": 21.249373,
+  "test_spend_usd": 0.000183,
+  "cap_usd": 30
+ }
+}

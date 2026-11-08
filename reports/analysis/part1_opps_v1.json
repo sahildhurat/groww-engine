@@ -1,0 +1,267 @@
+{
+ "definitions": {
+  "A_first_debit_and_autopay": "Payment reliability in the first months: failed or missed first debits, AutoPay/mandate set-up and failures, SIP date confusion",
+  "B_money_status_and_resolution": "Where is my money / order status, and support that resolves (money stuck, units not allotted, tickets closed unresolved)",
+  "C_returns_expectations": "Expectations vs what they see: negative or flat returns, confusing numbers, why negative, is this normal",
+  "D_cash_flow_flex": "Cash-flow shocks: cash crunch, income change, life events; affordability",
+  "E_sip_control": "Control of the SIP: skip, pause, edit, cancel - finding it and having it work"
+ },
+ "E_episodes_weighted": 35440.0,
+ "areas": {
+  "A_first_debit_and_autopay": {
+   "reach_E": 0.054,
+   "n_E": 1797,
+   "groww_share_of_area": 0.1883,
+   "separation": {
+    "reddit": {
+     "stop": 0.177,
+     "cont": 0.0377,
+     "diff": 0.1394,
+     "diff_ci95": [
+      0.1016,
+      0.1771
+     ],
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop": 0.4205,
+     "cont": 0.1622,
+     "diff": 0.2583,
+     "diff_ci95": [
+      0.1344,
+      0.3821
+     ],
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop": 0.7651,
+     "cont": 0.3438,
+     "diff": 0.4214,
+     "diff_ci95": [
+      0.2433,
+      0.5994
+     ],
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop": 0.3465,
+     "cont": 0.0588,
+     "diff": 0.2877,
+     "diff_ci95": [
+      0.2495,
+      0.3258
+     ],
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   }
+  },
+  "B_money_status_and_resolution": {
+   "reach_E": 0.0315,
+   "n_E": 1083,
+   "groww_share_of_area": 0.2361,
+   "separation": {
+    "reddit": {
+     "stop": 0.1287,
+     "cont": 0.0198,
+     "diff": 0.1089,
+     "diff_ci95": [
+      0.0763,
+      0.1415
+     ],
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop": 0.3864,
+     "cont": 0.0631,
+     "diff": 0.3233,
+     "diff_ci95": [
+      0.212,
+      0.4346
+     ],
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop": 0.8188,
+     "cont": 0.1875,
+     "diff": 0.6313,
+     "diff_ci95": [
+      0.4826,
+      0.78
+     ],
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop": 0.3231,
+     "cont": 0.0285,
+     "diff": 0.2946,
+     "diff_ci95": [
+      0.2582,
+      0.3309
+     ],
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   }
+  },
+  "C_returns_expectations": {
+   "reach_E": 0.1416,
+   "n_E": 4597,
+   "groww_share_of_area": 0.0592,
+   "separation": {
+    "reddit": {
+     "stop": 0.3885,
+     "cont": 0.2557,
+     "diff": 0.1328,
+     "diff_ci95": [
+      0.0797,
+      0.1859
+     ],
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop": 0.1818,
+     "cont": 0.2432,
+     "diff": -0.0614,
+     "diff_ci95": [
+      -0.1748,
+      0.052
+     ],
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop": 0.1275,
+     "cont": 0.0938,
+     "diff": 0.0338,
+     "diff_ci95": [
+      -0.0805,
+      0.1481
+     ],
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop": 0.2997,
+     "cont": 0.2509,
+     "diff": 0.0488,
+     "diff_ci95": [
+      0.0064,
+      0.0913
+     ],
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   }
+  },
+  "D_cash_flow_flex": {
+   "reach_E": 0.0242,
+   "n_E": 791,
+   "groww_share_of_area": 0.0419,
+   "separation": {
+    "reddit": {
+     "stop": 0.1195,
+     "cont": 0.0535,
+     "diff": 0.066,
+     "diff_ci95": [
+      0.0325,
+      0.0995
+     ],
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop": 0.1023,
+     "cont": 0.009,
+     "diff": 0.0933,
+     "diff_ci95": [
+      0.0276,
+      0.159
+     ],
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop": 0.0201,
+     "cont": 0.0,
+     "diff": 0.0201,
+     "diff_ci95": [
+      -0.0024,
+      0.0427
+     ],
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop": 0.0936,
+     "cont": 0.0476,
+     "diff": 0.046,
+     "diff_ci95": [
+      0.021,
+      0.071
+     ],
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   }
+  },
+  "E_sip_control": {
+   "reach_E": 0.0227,
+   "n_E": 729,
+   "groww_share_of_area": 0.1306,
+   "separation": {
+    "reddit": {
+     "stop": 0.0598,
+     "cont": 0.0099,
+     "diff": 0.0499,
+     "diff_ci95": [
+      0.0268,
+      0.073
+     ],
+     "n_stop": 435,
+     "n_cont": 1009
+    },
+    "youtube": {
+     "stop": 0.4432,
+     "cont": 0.045,
+     "diff": 0.3981,
+     "diff_ci95": [
+      0.2874,
+      0.5089
+     ],
+     "n_stop": 88,
+     "n_cont": 111
+    },
+    "appreviews": {
+     "stop": 0.1275,
+     "cont": 0.125,
+     "diff": 0.0025,
+     "diff_ci95": [
+      -0.124,
+      0.129
+     ],
+     "n_stop": 149,
+     "n_cont": 32
+    },
+    "pooled": {
+     "stop": 0.1243,
+     "cont": 0.0164,
+     "diff": 0.1078,
+     "diff_ci95": [
+      0.082,
+      0.1336
+     ],
+     "n_stop": 684,
+     "n_cont": 1156
+    }
+   }
+  }
+ }
+}
