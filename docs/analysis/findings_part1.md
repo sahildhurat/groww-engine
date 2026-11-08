@@ -156,6 +156,7 @@ For each area, 20 early-journey stop stories the engine flagged were drawn at ra
 - **Income stability** cells (variable/gig, business) stay below 30 stories.
 - **How often people check**: thin.
 - **Unmet-need themes**: human–AI agreement on the theme list stayed below the 0.6 κ bar (G2 researcher–Claude κ 0.287, G3 κ 0.357; model–researcher κ 0.323; Claude–model κ 0.817). Themes are used as colour, not as evidence.
+- **Whether a SIP feels like a monthly expense or like something you own**: the engine has no code for this feeling, so it can't size it or test whether it separates people who stop from people who keep going. Interviews test it.
 
 ## 5. Method and validation pointers
 - Labels: strict action labels require a second, date-aware read (J1) to confirm the writer acted; counts are lower bounds (G1 held-out: 2 of 8 real actions found, 0 invented).

@@ -376,6 +376,7 @@
   "**Quiet drift**: people who stop thinking about it and let the SIP lapse rarely post. Size unknown.",
   "**Income stability** cells (variable/gig, business) stay below 30 stories.",
   "**How often people check**: thin.",
-  "**Unmet-need themes**: human–AI agreement on the theme list stayed below the 0.6 κ bar (G2 researcher–Claude κ 0.287, G3 κ 0.357; model–researcher κ 0.323; Claude–model κ 0.817). Themes are used as colour, not as evidence."
+  "**Unmet-need themes**: human–AI agreement on the theme list stayed below the 0.6 κ bar (G2 researcher–Claude κ 0.287, G3 κ 0.357; model–researcher κ 0.323; Claude–model κ 0.817). Themes are used as colour, not as evidence.",
+  "**Whether a SIP feels like a monthly expense or like something you own**: the engine has no code for this feeling, so it can't size it or test whether it separates people who stop from people who keep going. Interviews test it."
  ]
 }
