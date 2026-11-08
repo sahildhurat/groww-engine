@@ -1,0 +1,446 @@
+{
+ "label": "Money didn’t move or the status was unclear (area A or B)",
+ "groups": {
+  "stop": {
+   "pct": 43.4,
+   "k": 297,
+   "n": 684,
+   "ci95": [
+    39.8,
+    47.2
+   ]
+  },
+  "consider": {
+   "pct": 7.6,
+   "k": 31,
+   "n": 405,
+   "ci95": [
+    5.4,
+    10.7
+   ]
+  },
+  "cont": {
+   "pct": 6.9,
+   "k": 80,
+   "n": 1156,
+   "ci95": [
+    5.6,
+    8.5
+   ]
+  }
+ },
+ "pooled_sep": {
+  "diff_pts": 36.5,
+  "diff_ci95": [
+   32.5,
+   40.5
+  ]
+ },
+ "by_source": [
+  {
+   "source": "Reddit",
+   "stop": {
+    "pct": 21.8,
+    "k": 95,
+    "n": 435,
+    "ci95": [
+     18.2,
+     26.0
+    ]
+   },
+   "cont": {
+    "pct": 4.8,
+    "k": 48,
+    "n": 1009,
+    "ci95": [
+     3.6,
+     6.2
+    ]
+   },
+   "diff_pts": 17.1,
+   "diff_ci95": [
+    13.0,
+    21.2
+   ]
+  },
+  {
+   "source": "YouTube",
+   "stop": {
+    "pct": 60.2,
+    "k": 53,
+    "n": 88,
+    "ci95": [
+     49.8,
+     69.8
+    ]
+   },
+   "cont": {
+    "pct": 17.1,
+    "k": 19,
+    "n": 111,
+    "ci95": [
+     11.2,
+     25.2
+    ]
+   },
+   "diff_pts": 43.1,
+   "diff_ci95": [
+    30.7,
+    55.5
+   ]
+  },
+  {
+   "source": "App reviews",
+   "stop": {
+    "pct": 92.6,
+    "k": 138,
+    "n": 149,
+    "ci95": [
+     87.3,
+     95.8
+    ]
+   },
+   "cont": {
+    "pct": 37.5,
+    "k": 12,
+    "n": 32,
+    "ci95": [
+     22.9,
+     54.8
+    ]
+   },
+   "diff_pts": 55.1,
+   "diff_ci95": [
+    37.8,
+    72.4
+   ]
+  },
+  {
+   "source": "Posts naming Groww",
+   "stop": {
+    "pct": 72.7,
+    "k": 80,
+    "n": 110,
+    "ci95": [
+     63.7,
+     80.2
+    ]
+   },
+   "cont": {
+    "pct": 22.1,
+    "k": 17,
+    "n": 77,
+    "ci95": [
+     14.3,
+     32.5
+    ]
+   },
+   "diff_pts": 50.6,
+   "diff_ci95": [
+    38.2,
+    63.1
+   ]
+  }
+ ],
+ "returns_compare": {
+  "stop": {
+   "pct": 30.0,
+   "k": 205,
+   "n": 684,
+   "ci95": [
+    26.7,
+    33.5
+   ]
+  },
+  "consider": {
+   "pct": 60.2,
+   "k": 244,
+   "n": 405,
+   "ci95": [
+    55.4,
+    64.9
+   ]
+  },
+  "cont": {
+   "pct": 25.1,
+   "k": 290,
+   "n": 1156,
+   "ci95": [
+    22.7,
+    27.7
+   ]
+  }
+ },
+ "timing": [
+  {
+   "window": "Months 0–3",
+   "n": 116,
+   "core_pct": 59.5,
+   "returns_pct": 30.2
+  },
+  {
+   "window": "Months 4–12",
+   "n": 102,
+   "core_pct": 17.6,
+   "returns_pct": 50.0
+  }
+ ],
+ "reach": {
+  "core_pct": 7.0,
+  "core_n": 2338,
+  "returns_pct": 14.2,
+  "returns_n": 4597
+ },
+ "recency": {
+  "stop_core_by_year": {
+   "before_2024": {
+    "n": 174,
+    "pct": 74.1
+   },
+   "2024": {
+    "n": 168,
+    "pct": 48.8
+   },
+   "2025": {
+    "n": 211,
+    "pct": 26.1
+   },
+   "2026": {
+    "n": 130,
+    "pct": 23.1
+   }
+  },
+  "reddit_2025_26": {
+   "core_A_or_B": {
+    "stop_pct": 16.8,
+    "stop_n": 286,
+    "cont_pct": 4.9,
+    "cont_n": 638,
+    "diff_ci95": [
+     7.3,
+     16.6
+    ]
+   },
+   "returns_C": {
+    "stop_pct": 44.1,
+    "stop_n": 286,
+    "cont_pct": 25.9,
+    "cont_n": 638,
+    "diff_ci95": [
+     11.5,
+     24.9
+    ]
+   }
+  }
+ },
+ "moments": [
+  {
+   "code": "payment_failed",
+   "label": "A payment failed",
+   "stop": 113,
+   "n": 135,
+   "pct": 83.7,
+   "ci95": [
+    76.6,
+    89.0
+   ]
+  },
+  {
+   "code": "first_debit_or_gap",
+   "label": "A first-debit problem or gap",
+   "stop": 79,
+   "n": 111,
+   "pct": 71.2,
+   "ci95": [
+    62.2,
+    78.8
+   ]
+  },
+  {
+   "code": "life_event_or_cash_need",
+   "label": "A life event or cash need",
+   "stop": 34,
+   "n": 52,
+   "pct": 65.4,
+   "ci95": [
+    51.8,
+    76.8
+   ]
+  },
+  {
+   "code": "confused_in_app",
+   "label": "Confused in the app",
+   "stop": 122,
+   "n": 222,
+   "pct": 55.0,
+   "ci95": [
+    48.4,
+    61.4
+   ]
+  },
+  {
+   "code": "advice_received",
+   "label": "Advice from someone",
+   "stop": 20,
+   "n": 72,
+   "pct": 27.8,
+   "ci95": [
+    18.8,
+    39.1
+   ]
+  },
+  {
+   "code": "saw_loss_or_flat",
+   "label": "Saw a loss or flat returns",
+   "stop": 87,
+   "n": 325,
+   "pct": 26.8,
+   "ci95": [
+    22.2,
+    31.8
+   ]
+  },
+  {
+   "code": "checked_returns",
+   "label": "Checked returns",
+   "stop": 35,
+   "n": 162,
+   "pct": 21.6,
+   "ci95": [
+    16.0,
+    28.6
+   ]
+  }
+ ],
+ "failed_payments": {
+  "n": 135,
+  "debited_no_units": {
+   "n": 33,
+   "stop": 30
+  },
+  "never_became_units": {
+   "n": 103,
+   "stop": 87
+  }
+ },
+ "exits": {
+  "pooled": {
+   "n_exits": 239,
+   "n_cause": 148,
+   "money": {
+    "k": 62,
+    "pct": 41.9
+   },
+   "app_support": {
+    "k": 23,
+    "pct": 15.5
+   },
+   "cash": {
+    "k": 17,
+    "pct": 11.5
+   },
+   "returns_or_market": {
+    "k": 19,
+    "pct": 12.8
+   }
+  },
+  "reddit": {
+   "n_exits": 102,
+   "n_cause": 72,
+   "money": {
+    "k": 18,
+    "pct": 25.0
+   },
+   "app_support": {
+    "k": 4,
+    "pct": 5.6
+   },
+   "cash": {
+    "k": 13,
+    "pct": 18.1
+   },
+   "returns_or_market": {
+    "k": 14,
+    "pct": 19.4
+   }
+  },
+  "youtube": {
+   "n_exits": 62,
+   "n_cause": 31,
+   "money": {
+    "k": 19,
+    "pct": 61.3
+   },
+   "app_support": {
+    "k": 3,
+    "pct": 9.7
+   },
+   "cash": {
+    "k": 2,
+    "pct": 6.5
+   },
+   "returns_or_market": {
+    "k": 4,
+    "pct": 12.9
+   }
+  },
+  "appreviews": {
+   "n_exits": 68,
+   "n_cause": 41,
+   "money": {
+    "k": 21,
+    "pct": 51.2
+   },
+   "app_support": {
+    "k": 16,
+    "pct": 39.0
+   },
+   "cash": {
+    "k": 2,
+    "pct": 4.9
+   },
+   "returns_or_market": {
+    "k": 1,
+    "pct": 2.4
+   }
+  },
+  "groww_scope": {
+   "n_exits": 56,
+   "n_cause": 37,
+   "money": {
+    "k": 15,
+    "pct": 40.5
+   },
+   "app_support": {
+    "k": 13,
+    "pct": 35.1
+   },
+   "cash": {
+    "k": 2,
+    "pct": 5.4
+   },
+   "returns_or_market": {
+    "k": 0,
+    "pct": 0.0
+   }
+  }
+ },
+ "sources": [
+  {
+   "file": "reports/analysis/part1_core_v1.json",
+   "sha256": "efd60c3bc4219088"
+  },
+  {
+   "file": "reports/analysis/part1_core_recency_v1.json",
+   "sha256": "0174fa7b88f5fa20"
+  },
+  {
+   "file": "reports/analysis/moment_hazard_v1.json",
+   "sha256": "e815aa89c524e0d9"
+  },
+  {
+   "file": "reports/analysis/exit_evidence_v1.json",
+   "sha256": "dad4b4cca03a5919"
+  }
+ ]
+}

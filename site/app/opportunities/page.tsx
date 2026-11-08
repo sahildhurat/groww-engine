@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import opportunitiesData from "@/data/opportunities.json";
 import summaryData from "@/data/summary.json";
+import { CoreDetail } from "@/components/CoreDetail";
 import { ArrowRight, CheckCircle2, AlertCircle, Quote, Sparkles, Building, Layers } from "lucide-react";
 
 export const metadata = {
@@ -23,6 +24,8 @@ export default function OpportunitiesPage() {
           From early-journey stories (≤ 12 months from the first SIP). Each area below shows its definition, how often it appears among people who stopped and people who kept going, and the human check.
         </p>
       </div>
+
+      <CoreDetail />
 
       <div className="space-y-16">
         {areas.map((area: any) => {

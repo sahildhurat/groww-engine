@@ -1,0 +1,6079 @@
+{
+ "population": "E episodes, non-targeted, de-duplicated (as part1_opps_v1.py)",
+ "E_weighted": 35440.0,
+ "reach": {
+  "A_first_debit_and_autopay": {
+   "share_w": 0.054,
+   "n": 1797
+  },
+  "B_money_status_and_resolution": {
+   "share_w": 0.0315,
+   "n": 1083
+  },
+  "CORE_A_and_B": {
+   "share_w": 0.0156,
+   "n": 542
+  },
+  "CORE_A_or_B": {
+   "share_w": 0.0699,
+   "n": 2338
+  },
+  "C_returns_expectations": {
+   "share_w": 0.1416,
+   "n": 4597
+  },
+  "D_cash_flow_flex": {
+   "share_w": 0.0242,
+   "n": 791
+  },
+  "E_sip_control": {
+   "share_w": 0.0227,
+   "n": 729
+  },
+  "NO_AREA": {
+   "share_w": 0.7655,
+   "n": 25193
+  },
+  "sig:advice_from_others": {
+   "share_w": 0.0228,
+   "n": 734
+  },
+  "sig:app_problem_experienced": {
+   "share_w": 0.016,
+   "n": 547
+  },
+  "sig:autopay_mandate": {
+   "share_w": 0.0248,
+   "n": 828
+  },
+  "sig:cash_or_income_change": {
+   "share_w": 0.0104,
+   "n": 327
+  },
+  "sig:confusing_returns_numbers": {
+   "share_w": 0.0317,
+   "n": 1037
+  },
+  "sig:costs_tax_exit_load": {
+   "share_w": 0.0043,
+   "n": 141
+  },
+  "sig:first_debit_or_sip_date": {
+   "share_w": 0.0273,
+   "n": 902
+  },
+  "sig:flat_returns": {
+   "share_w": 0.0204,
+   "n": 641
+  },
+  "sig:instalment_failed_or_lapsed": {
+   "share_w": 0.0103,
+   "n": 351
+  },
+  "sig:order_status_units": {
+   "share_w": 0.0093,
+   "n": 318
+  },
+  "sig:payment_problem_experienced": {
+   "share_w": 0.0209,
+   "n": 719
+  },
+  "sig:saw_loss_or_flat": {
+   "share_w": 0.0484,
+   "n": 1585
+  },
+  "sig:sip_control_failed": {
+   "share_w": 0.004,
+   "n": 128
+  },
+  "sig:skip_pause_cancel_confusion": {
+   "share_w": 0.0108,
+   "n": 339
+  },
+  "sig:support_not_resolved": {
+   "share_w": 0.0079,
+   "n": 281
+  },
+  "sig:trigger_market_fall": {
+   "share_w": 0.0046,
+   "n": 161
+  },
+  "sig:trigger_returns_disappointing": {
+   "share_w": 0.0168,
+   "n": 543
+  },
+  "sig:where_my_money_went": {
+   "share_w": 0.0078,
+   "n": 266
+  }
+ },
+ "groups": {
+  "appreviews": {
+   "consider": {
+    "n": 9,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 5,
+      "share": 0.5556,
+      "ci95": [
+       0.2666,
+       0.8112
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 5,
+      "share": 0.5556,
+      "ci95": [
+       0.2666,
+       0.8112
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 3,
+      "share": 0.3333,
+      "ci95": [
+       0.1206,
+       0.6458
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 7,
+      "share": 0.7778,
+      "ci95": [
+       0.4526,
+       0.9368
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 2,
+      "share": 0.2222,
+      "ci95": [
+       0.0632,
+       0.5474
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2992
+      ]
+     },
+     "E_sip_control": {
+      "k": 2,
+      "share": 0.2222,
+      "ci95": [
+       0.0632,
+       0.5474
+      ]
+     },
+     "NO_AREA": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2992
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2992
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 3,
+      "share": 0.3333,
+      "ci95": [
+       0.1206,
+       0.6458
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 4,
+      "share": 0.4444,
+      "ci95": [
+       0.1888,
+       0.7334
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2992
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2992
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2992
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 2,
+      "share": 0.2222,
+      "ci95": [
+       0.0632,
+       0.5474
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2992
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 3,
+      "share": 0.3333,
+      "ci95": [
+       0.1206,
+       0.6458
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2992
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 4,
+      "share": 0.4444,
+      "ci95": [
+       0.1888,
+       0.7334
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 1,
+      "share": 0.1111,
+      "ci95": [
+       0.0199,
+       0.435
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 2,
+      "share": 0.2222,
+      "ci95": [
+       0.0632,
+       0.5474
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 2,
+      "share": 0.2222,
+      "ci95": [
+       0.0632,
+       0.5474
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 4,
+      "share": 0.4444,
+      "ci95": [
+       0.1888,
+       0.7334
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2992
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2992
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2992
+      ]
+     }
+    }
+   },
+   "cont": {
+    "n": 32,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 11,
+      "share": 0.3438,
+      "ci95": [
+       0.2041,
+       0.5169
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 6,
+      "share": 0.1875,
+      "ci95": [
+       0.0889,
+       0.3531
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 5,
+      "share": 0.1562,
+      "ci95": [
+       0.0686,
+       0.3175
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 12,
+      "share": 0.375,
+      "ci95": [
+       0.2293,
+       0.5475
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 3,
+      "share": 0.0938,
+      "ci95": [
+       0.0324,
+       0.2422
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.1072
+      ]
+     },
+     "E_sip_control": {
+      "k": 4,
+      "share": 0.125,
+      "ci95": [
+       0.0497,
+       0.2807
+      ]
+     },
+     "NO_AREA": {
+      "k": 15,
+      "share": 0.4688,
+      "ci95": [
+       0.3087,
+       0.6355
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.1072
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 5,
+      "share": 0.1562,
+      "ci95": [
+       0.0686,
+       0.3175
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 8,
+      "share": 0.25,
+      "ci95": [
+       0.1325,
+       0.4211
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.1072
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 2,
+      "share": 0.0625,
+      "ci95": [
+       0.0173,
+       0.2015
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.1072
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 5,
+      "share": 0.1562,
+      "ci95": [
+       0.0686,
+       0.3175
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.1072
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 7,
+      "share": 0.2188,
+      "ci95": [
+       0.1102,
+       0.3876
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.1072
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 6,
+      "share": 0.1875,
+      "ci95": [
+       0.0889,
+       0.3531
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 2,
+      "share": 0.0625,
+      "ci95": [
+       0.0173,
+       0.2015
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 2,
+      "share": 0.0625,
+      "ci95": [
+       0.0173,
+       0.2015
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 1,
+      "share": 0.0312,
+      "ci95": [
+       0.0055,
+       0.1574
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 6,
+      "share": 0.1875,
+      "ci95": [
+       0.0889,
+       0.3531
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.1072
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.1072
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.1072
+      ]
+     }
+    }
+   },
+   "stop": {
+    "n": 149,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 114,
+      "share": 0.7651,
+      "ci95": [
+       0.6909,
+       0.826
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 122,
+      "share": 0.8188,
+      "ci95": [
+       0.7492,
+       0.8724
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 98,
+      "share": 0.6577,
+      "ci95": [
+       0.5784,
+       0.7291
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 138,
+      "share": 0.9262,
+      "ci95": [
+       0.8726,
+       0.9583
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 19,
+      "share": 0.1275,
+      "ci95": [
+       0.0832,
+       0.1906
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 3,
+      "share": 0.0201,
+      "ci95": [
+       0.0069,
+       0.0575
+      ]
+     },
+     "E_sip_control": {
+      "k": 19,
+      "share": 0.1275,
+      "ci95": [
+       0.0832,
+       0.1906
+      ]
+     },
+     "NO_AREA": {
+      "k": 5,
+      "share": 0.0336,
+      "ci95": [
+       0.0144,
+       0.0761
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 5,
+      "share": 0.0336,
+      "ci95": [
+       0.0144,
+       0.0761
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 28,
+      "share": 0.1879,
+      "ci95": [
+       0.1333,
+       0.2582
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 54,
+      "share": 0.3624,
+      "ci95": [
+       0.2896,
+       0.4422
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 3,
+      "share": 0.0201,
+      "ci95": [
+       0.0069,
+       0.0575
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 8,
+      "share": 0.0537,
+      "ci95": [
+       0.0275,
+       0.1024
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 6,
+      "share": 0.0403,
+      "ci95": [
+       0.0186,
+       0.0851
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 46,
+      "share": 0.3087,
+      "ci95": [
+       0.2401,
+       0.3869
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.0251
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 90,
+      "share": 0.604,
+      "ci95": [
+       0.5238,
+       0.679
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 26,
+      "share": 0.1745,
+      "ci95": [
+       0.122,
+       0.2434
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 95,
+      "share": 0.6376,
+      "ci95": [
+       0.5578,
+       0.7104
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 14,
+      "share": 0.094,
+      "ci95": [
+       0.0568,
+       0.1515
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 12,
+      "share": 0.0805,
+      "ci95": [
+       0.0467,
+       0.1355
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 5,
+      "share": 0.0336,
+      "ci95": [
+       0.0144,
+       0.0761
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 90,
+      "share": 0.604,
+      "ci95": [
+       0.5238,
+       0.679
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 1,
+      "share": 0.0067,
+      "ci95": [
+       0.0012,
+       0.037
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 1,
+      "share": 0.0067,
+      "ci95": [
+       0.0012,
+       0.037
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 26,
+      "share": 0.1745,
+      "ci95": [
+       0.122,
+       0.2434
+      ]
+     }
+    }
+   },
+   "separation": {
+    "A_first_debit_and_autopay": {
+     "diff": 0.4213,
+     "diff_ci95": [
+      0.2432,
+      0.5994
+     ]
+    },
+    "B_money_status_and_resolution": {
+     "diff": 0.6313,
+     "diff_ci95": [
+      0.4826,
+      0.78
+     ]
+    },
+    "CORE_A_and_B": {
+     "diff": 0.5015,
+     "diff_ci95": [
+      0.3544,
+      0.6486
+     ]
+    },
+    "CORE_A_or_B": {
+     "diff": 0.5512,
+     "diff_ci95": [
+      0.3783,
+      0.7241
+     ]
+    },
+    "C_returns_expectations": {
+     "diff": 0.0337,
+     "diff_ci95": [
+      -0.0806,
+      0.148
+     ]
+    },
+    "D_cash_flow_flex": {
+     "diff": 0.0201,
+     "diff_ci95": [
+      -0.0024,
+      0.0426
+     ]
+    },
+    "E_sip_control": {
+     "diff": 0.0025,
+     "diff_ci95": [
+      -0.124,
+      0.129
+     ]
+    },
+    "NO_AREA": {
+     "diff": -0.4352,
+     "diff_ci95": [
+      -0.6105,
+      -0.2599
+     ]
+    },
+    "sig:advice_from_others": {
+     "diff": 0.0336,
+     "diff_ci95": [
+      0.0047,
+      0.0625
+     ]
+    },
+    "sig:app_problem_experienced": {
+     "diff": 0.0317,
+     "diff_ci95": [
+      -0.1089,
+      0.1723
+     ]
+    },
+    "sig:autopay_mandate": {
+     "diff": 0.1124,
+     "diff_ci95": [
+      -0.0563,
+      0.2811
+     ]
+    },
+    "sig:cash_or_income_change": {
+     "diff": 0.0201,
+     "diff_ci95": [
+      -0.0024,
+      0.0426
+     ]
+    },
+    "sig:confusing_returns_numbers": {
+     "diff": -0.0088,
+     "diff_ci95": [
+      -0.1001,
+      0.0825
+     ]
+    },
+    "sig:costs_tax_exit_load": {
+     "diff": 0.0403,
+     "diff_ci95": [
+      0.0087,
+      0.0719
+     ]
+    },
+    "sig:first_debit_or_sip_date": {
+     "diff": 0.1525,
+     "diff_ci95": [
+      0.0065,
+      0.2985
+     ]
+    },
+    "sig:flat_returns": {
+     "diff": 0.0,
+     "diff_ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "sig:instalment_failed_or_lapsed": {
+     "diff": 0.3852,
+     "diff_ci95": [
+      0.2218,
+      0.5486
+     ]
+    },
+    "sig:order_status_units": {
+     "diff": 0.1745,
+     "diff_ci95": [
+      0.1136,
+      0.2354
+     ]
+    },
+    "sig:payment_problem_experienced": {
+     "diff": 0.4501,
+     "diff_ci95": [
+      0.2944,
+      0.6058
+     ]
+    },
+    "sig:saw_loss_or_flat": {
+     "diff": 0.0315,
+     "diff_ci95": [
+      -0.0646,
+      0.1276
+     ]
+    },
+    "sig:sip_control_failed": {
+     "diff": 0.018,
+     "diff_ci95": [
+      -0.0766,
+      0.1126
+     ]
+    },
+    "sig:skip_pause_cancel_confusion": {
+     "diff": 0.0024,
+     "diff_ci95": [
+      -0.0644,
+      0.0692
+     ]
+    },
+    "sig:support_not_resolved": {
+     "diff": 0.4165,
+     "diff_ci95": [
+      0.2601,
+      0.5729
+     ]
+    },
+    "sig:trigger_market_fall": {
+     "diff": 0.0067,
+     "diff_ci95": [
+      -0.0064,
+      0.0198
+     ]
+    },
+    "sig:trigger_returns_disappointing": {
+     "diff": 0.0067,
+     "diff_ci95": [
+      -0.0064,
+      0.0198
+     ]
+    },
+    "sig:where_my_money_went": {
+     "diff": 0.1745,
+     "diff_ci95": [
+      0.1136,
+      0.2354
+     ]
+    }
+   }
+  },
+  "groww_scope": {
+   "consider": {
+    "n": 22,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 3,
+      "share": 0.1364,
+      "ci95": [
+       0.0475,
+       0.3334
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 3,
+      "share": 0.1364,
+      "ci95": [
+       0.0475,
+       0.3334
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 1,
+      "share": 0.0455,
+      "ci95": [
+       0.0081,
+       0.218
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 5,
+      "share": 0.2273,
+      "ci95": [
+       0.1012,
+       0.4344
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 11,
+      "share": 0.5,
+      "ci95": [
+       0.3072,
+       0.6928
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 1,
+      "share": 0.0455,
+      "ci95": [
+       0.0081,
+       0.218
+      ]
+     },
+     "E_sip_control": {
+      "k": 6,
+      "share": 0.2727,
+      "ci95": [
+       0.1315,
+       0.4815
+      ]
+     },
+     "NO_AREA": {
+      "k": 3,
+      "share": 0.1364,
+      "ci95": [
+       0.0475,
+       0.3334
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 1,
+      "share": 0.0455,
+      "ci95": [
+       0.0081,
+       0.218
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 1,
+      "share": 0.0455,
+      "ci95": [
+       0.0081,
+       0.218
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 2,
+      "share": 0.0909,
+      "ci95": [
+       0.0253,
+       0.2782
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 1,
+      "share": 0.0455,
+      "ci95": [
+       0.0081,
+       0.218
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 4,
+      "share": 0.1818,
+      "ci95": [
+       0.0731,
+       0.3852
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.1487
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 1,
+      "share": 0.0455,
+      "ci95": [
+       0.0081,
+       0.218
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.1487
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.1487
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 1,
+      "share": 0.0455,
+      "ci95": [
+       0.0081,
+       0.218
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 1,
+      "share": 0.0455,
+      "ci95": [
+       0.0081,
+       0.218
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 5,
+      "share": 0.2273,
+      "ci95": [
+       0.1012,
+       0.4344
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 2,
+      "share": 0.0909,
+      "ci95": [
+       0.0253,
+       0.2782
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 5,
+      "share": 0.2273,
+      "ci95": [
+       0.1012,
+       0.4344
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 1,
+      "share": 0.0455,
+      "ci95": [
+       0.0081,
+       0.218
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 1,
+      "share": 0.0455,
+      "ci95": [
+       0.0081,
+       0.218
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 2,
+      "share": 0.0909,
+      "ci95": [
+       0.0253,
+       0.2782
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 2,
+      "share": 0.0909,
+      "ci95": [
+       0.0253,
+       0.2782
+      ]
+     }
+    }
+   },
+   "cont": {
+    "n": 77,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 14,
+      "share": 0.1818,
+      "ci95": [
+       0.1115,
+       0.2824
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 9,
+      "share": 0.1169,
+      "ci95": [
+       0.0627,
+       0.2075
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 6,
+      "share": 0.0779,
+      "ci95": [
+       0.0362,
+       0.1598
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 17,
+      "share": 0.2208,
+      "ci95": [
+       0.1427,
+       0.3254
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 16,
+      "share": 0.2078,
+      "ci95": [
+       0.1321,
+       0.3112
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 1,
+      "share": 0.013,
+      "ci95": [
+       0.0023,
+       0.07
+      ]
+     },
+     "E_sip_control": {
+      "k": 4,
+      "share": 0.0519,
+      "ci95": [
+       0.0204,
+       0.1261
+      ]
+     },
+     "NO_AREA": {
+      "k": 43,
+      "share": 0.5584,
+      "ci95": [
+       0.4474,
+       0.6639
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 4,
+      "share": 0.0519,
+      "ci95": [
+       0.0204,
+       0.1261
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 5,
+      "share": 0.0649,
+      "ci95": [
+       0.0281,
+       0.1432
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 11,
+      "share": 0.1429,
+      "ci95": [
+       0.0817,
+       0.238
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 1,
+      "share": 0.013,
+      "ci95": [
+       0.0023,
+       0.07
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 4,
+      "share": 0.0519,
+      "ci95": [
+       0.0204,
+       0.1261
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.0475
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 5,
+      "share": 0.0649,
+      "ci95": [
+       0.0281,
+       0.1432
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 1,
+      "share": 0.013,
+      "ci95": [
+       0.0023,
+       0.07
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 6,
+      "share": 0.0779,
+      "ci95": [
+       0.0362,
+       0.1598
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 2,
+      "share": 0.026,
+      "ci95": [
+       0.0072,
+       0.0898
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 8,
+      "share": 0.1039,
+      "ci95": [
+       0.0536,
+       0.1918
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 8,
+      "share": 0.1039,
+      "ci95": [
+       0.0536,
+       0.1918
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 2,
+      "share": 0.026,
+      "ci95": [
+       0.0072,
+       0.0898
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 2,
+      "share": 0.026,
+      "ci95": [
+       0.0072,
+       0.0898
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 5,
+      "share": 0.0649,
+      "ci95": [
+       0.0281,
+       0.1432
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 4,
+      "share": 0.0519,
+      "ci95": [
+       0.0204,
+       0.1261
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 3,
+      "share": 0.039,
+      "ci95": [
+       0.0133,
+       0.1084
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 1,
+      "share": 0.013,
+      "ci95": [
+       0.0023,
+       0.07
+      ]
+     }
+    }
+   },
+   "stop": {
+    "n": 110,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 65,
+      "share": 0.5909,
+      "ci95": [
+       0.4975,
+       0.6782
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 65,
+      "share": 0.5909,
+      "ci95": [
+       0.4975,
+       0.6782
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 50,
+      "share": 0.4545,
+      "ci95": [
+       0.3646,
+       0.5476
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 80,
+      "share": 0.7273,
+      "ci95": [
+       0.6374,
+       0.8018
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 26,
+      "share": 0.2364,
+      "ci95": [
+       0.1667,
+       0.3238
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 5,
+      "share": 0.0455,
+      "ci95": [
+       0.0196,
+       0.102
+      ]
+     },
+     "E_sip_control": {
+      "k": 13,
+      "share": 0.1182,
+      "ci95": [
+       0.0704,
+       0.1918
+      ]
+     },
+     "NO_AREA": {
+      "k": 12,
+      "share": 0.1091,
+      "ci95": [
+       0.0635,
+       0.1811
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 2,
+      "share": 0.0182,
+      "ci95": [
+       0.005,
+       0.0639
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 18,
+      "share": 0.1636,
+      "ci95": [
+       0.1061,
+       0.2439
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 31,
+      "share": 0.2818,
+      "ci95": [
+       0.2062,
+       0.3722
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 5,
+      "share": 0.0455,
+      "ci95": [
+       0.0196,
+       0.102
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 4,
+      "share": 0.0364,
+      "ci95": [
+       0.0142,
+       0.0898
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 2,
+      "share": 0.0182,
+      "ci95": [
+       0.005,
+       0.0639
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 22,
+      "share": 0.2,
+      "ci95": [
+       0.136,
+       0.2843
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 2,
+      "share": 0.0182,
+      "ci95": [
+       0.005,
+       0.0639
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 47,
+      "share": 0.4273,
+      "ci95": [
+       0.3388,
+       0.5206
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 12,
+      "share": 0.1091,
+      "ci95": [
+       0.0635,
+       0.1811
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 53,
+      "share": 0.4818,
+      "ci95": [
+       0.3906,
+       0.5742
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 14,
+      "share": 0.1273,
+      "ci95": [
+       0.0773,
+       0.2024
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 4,
+      "share": 0.0364,
+      "ci95": [
+       0.0142,
+       0.0898
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 7,
+      "share": 0.0636,
+      "ci95": [
+       0.0312,
+       0.1256
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 42,
+      "share": 0.3818,
+      "ci95": [
+       0.2965,
+       0.4751
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 1,
+      "share": 0.0091,
+      "ci95": [
+       0.0016,
+       0.0497
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 6,
+      "share": 0.0545,
+      "ci95": [
+       0.0252,
+       0.1139
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 19,
+      "share": 0.1727,
+      "ci95": [
+       0.1135,
+       0.2541
+      ]
+     }
+    }
+   },
+   "separation": {
+    "A_first_debit_and_autopay": {
+     "diff": 0.4091,
+     "diff_ci95": [
+      0.2831,
+      0.5351
+     ]
+    },
+    "B_money_status_and_resolution": {
+     "diff": 0.474,
+     "diff_ci95": [
+      0.3574,
+      0.5906
+     ]
+    },
+    "CORE_A_and_B": {
+     "diff": 0.3766,
+     "diff_ci95": [
+      0.266,
+      0.4872
+     ]
+    },
+    "CORE_A_or_B": {
+     "diff": 0.5065,
+     "diff_ci95": [
+      0.382,
+      0.631
+     ]
+    },
+    "C_returns_expectations": {
+     "diff": 0.0286,
+     "diff_ci95": [
+      -0.0919,
+      0.1491
+     ]
+    },
+    "D_cash_flow_flex": {
+     "diff": 0.0325,
+     "diff_ci95": [
+      -0.0139,
+      0.0789
+     ]
+    },
+    "E_sip_control": {
+     "diff": 0.0663,
+     "diff_ci95": [
+      -0.0118,
+      0.1444
+     ]
+    },
+    "NO_AREA": {
+     "diff": -0.4493,
+     "diff_ci95": [
+      -0.5746,
+      -0.324
+     ]
+    },
+    "sig:advice_from_others": {
+     "diff": -0.0337,
+     "diff_ci95": [
+      -0.0892,
+      0.0218
+     ]
+    },
+    "sig:app_problem_experienced": {
+     "diff": 0.0987,
+     "diff_ci95": [
+      0.0103,
+      0.1871
+     ]
+    },
+    "sig:autopay_mandate": {
+     "diff": 0.1389,
+     "diff_ci95": [
+      0.0241,
+      0.2537
+     ]
+    },
+    "sig:cash_or_income_change": {
+     "diff": 0.0325,
+     "diff_ci95": [
+      -0.0139,
+      0.0789
+     ]
+    },
+    "sig:confusing_returns_numbers": {
+     "diff": -0.0155,
+     "diff_ci95": [
+      -0.0762,
+      0.0452
+     ]
+    },
+    "sig:costs_tax_exit_load": {
+     "diff": 0.0182,
+     "diff_ci95": [
+      -0.0068,
+      0.0432
+     ]
+    },
+    "sig:first_debit_or_sip_date": {
+     "diff": 0.1351,
+     "diff_ci95": [
+      0.0423,
+      0.2279
+     ]
+    },
+    "sig:flat_returns": {
+     "diff": 0.0052,
+     "diff_ci95": [
+      -0.0304,
+      0.0408
+     ]
+    },
+    "sig:instalment_failed_or_lapsed": {
+     "diff": 0.3494,
+     "diff_ci95": [
+      0.2393,
+      0.4595
+     ]
+    },
+    "sig:order_status_units": {
+     "diff": 0.0831,
+     "diff_ci95": [
+      0.0149,
+      0.1513
+     ]
+    },
+    "sig:payment_problem_experienced": {
+     "diff": 0.3779,
+     "diff_ci95": [
+      0.2623,
+      0.4935
+     ]
+    },
+    "sig:saw_loss_or_flat": {
+     "diff": 0.0234,
+     "diff_ci95": [
+      -0.0689,
+      0.1157
+     ]
+    },
+    "sig:sip_control_failed": {
+     "diff": 0.0104,
+     "diff_ci95": [
+      -0.0395,
+      0.0603
+     ]
+    },
+    "sig:skip_pause_cancel_confusion": {
+     "diff": 0.0376,
+     "diff_ci95": [
+      -0.0202,
+      0.0954
+     ]
+    },
+    "sig:support_not_resolved": {
+     "diff": 0.3169,
+     "diff_ci95": [
+      0.2107,
+      0.4231
+     ]
+    },
+    "sig:trigger_market_fall": {
+     "diff": -0.0428,
+     "diff_ci95": [
+      -0.0954,
+      0.0098
+     ]
+    },
+    "sig:trigger_returns_disappointing": {
+     "diff": 0.0155,
+     "diff_ci95": [
+      -0.0451,
+      0.0761
+     ]
+    },
+    "sig:where_my_money_went": {
+     "diff": 0.1597,
+     "diff_ci95": [
+      0.0847,
+      0.2347
+     ]
+    }
+   }
+  },
+  "other": {
+   "consider": {
+    "n": 4,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 1,
+      "share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 1,
+      "share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 2,
+      "share": 0.5,
+      "ci95": [
+       0.15,
+       0.85
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "E_sip_control": {
+      "k": 2,
+      "share": 0.5,
+      "ci95": [
+       0.15,
+       0.85
+      ]
+     },
+     "NO_AREA": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 2,
+      "share": 0.5,
+      "ci95": [
+       0.15,
+       0.85
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 1,
+      "share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 2,
+      "share": 0.5,
+      "ci95": [
+       0.15,
+       0.85
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 1,
+      "share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     }
+    }
+   },
+   "cont": {
+    "n": 4,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 1,
+      "share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 1,
+      "share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 2,
+      "share": 0.5,
+      "ci95": [
+       0.15,
+       0.85
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "E_sip_control": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "NO_AREA": {
+      "k": 1,
+      "share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 1,
+      "share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 1,
+      "share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 1,
+      "share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 1,
+      "share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 1,
+      "share": 0.25,
+      "ci95": [
+       0.0456,
+       0.6994
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.4899
+      ]
+     }
+    }
+   },
+   "stop": {
+    "n": 12,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 9,
+      "share": 0.75,
+      "ci95": [
+       0.4677,
+       0.9111
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 9,
+      "share": 0.75,
+      "ci95": [
+       0.4677,
+       0.9111
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 7,
+      "share": 0.5833,
+      "ci95": [
+       0.3195,
+       0.8067
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 11,
+      "share": 0.9167,
+      "ci95": [
+       0.6461,
+       0.9851
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2425
+      ]
+     },
+     "E_sip_control": {
+      "k": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     },
+     "NO_AREA": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2425
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2425
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 5,
+      "share": 0.4167,
+      "ci95": [
+       0.1933,
+       0.6805
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2425
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2425
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2425
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 5,
+      "share": 0.4167,
+      "ci95": [
+       0.1933,
+       0.6805
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2425
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 8,
+      "share": 0.6667,
+      "ci95": [
+       0.3906,
+       0.8619
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 7,
+      "share": 0.5833,
+      "ci95": [
+       0.3195,
+       0.8067
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2425
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 2,
+      "share": 0.1667,
+      "ci95": [
+       0.047,
+       0.448
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2425
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.2425
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     }
+    }
+   },
+   "separation": {
+    "A_first_debit_and_autopay": {
+     "diff": 0.5,
+     "diff_ci95": [
+      0.01,
+      0.99
+     ]
+    },
+    "B_money_status_and_resolution": {
+     "diff": 0.75,
+     "diff_ci95": [
+      0.505,
+      0.995
+     ]
+    },
+    "CORE_A_and_B": {
+     "diff": 0.5833,
+     "diff_ci95": [
+      0.3044,
+      0.8622
+     ]
+    },
+    "CORE_A_or_B": {
+     "diff": 0.6667,
+     "diff_ci95": [
+      0.2145,
+      1.1189
+     ]
+    },
+    "C_returns_expectations": {
+     "diff": -0.4167,
+     "diff_ci95": [
+      -0.931,
+      0.0976
+     ]
+    },
+    "D_cash_flow_flex": {
+     "diff": 0.0,
+     "diff_ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "E_sip_control": {
+     "diff": 0.0833,
+     "diff_ci95": [
+      -0.0731,
+      0.2397
+     ]
+    },
+    "NO_AREA": {
+     "diff": -0.25,
+     "diff_ci95": [
+      -0.6744,
+      0.1744
+     ]
+    },
+    "sig:advice_from_others": {
+     "diff": 0.0,
+     "diff_ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "sig:app_problem_experienced": {
+     "diff": 0.0833,
+     "diff_ci95": [
+      -0.0731,
+      0.2397
+     ]
+    },
+    "sig:autopay_mandate": {
+     "diff": 0.4167,
+     "diff_ci95": [
+      0.1378,
+      0.6956
+     ]
+    },
+    "sig:cash_or_income_change": {
+     "diff": 0.0,
+     "diff_ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "sig:confusing_returns_numbers": {
+     "diff": -0.25,
+     "diff_ci95": [
+      -0.6744,
+      0.1744
+     ]
+    },
+    "sig:costs_tax_exit_load": {
+     "diff": 0.0,
+     "diff_ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "sig:first_debit_or_sip_date": {
+     "diff": 0.1667,
+     "diff_ci95": [
+      -0.3411,
+      0.6745
+     ]
+    },
+    "sig:flat_returns": {
+     "diff": -0.25,
+     "diff_ci95": [
+      -0.6744,
+      0.1744
+     ]
+    },
+    "sig:instalment_failed_or_lapsed": {
+     "diff": 0.6667,
+     "diff_ci95": [
+      0.4,
+      0.9334
+     ]
+    },
+    "sig:order_status_units": {
+     "diff": 0.0833,
+     "diff_ci95": [
+      -0.0731,
+      0.2397
+     ]
+    },
+    "sig:payment_problem_experienced": {
+     "diff": 0.5833,
+     "diff_ci95": [
+      0.3044,
+      0.8622
+     ]
+    },
+    "sig:saw_loss_or_flat": {
+     "diff": -0.1667,
+     "diff_ci95": [
+      -0.6189,
+      0.2855
+     ]
+    },
+    "sig:sip_control_failed": {
+     "diff": 0.0,
+     "diff_ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "sig:skip_pause_cancel_confusion": {
+     "diff": 0.0833,
+     "diff_ci95": [
+      -0.0731,
+      0.2397
+     ]
+    },
+    "sig:support_not_resolved": {
+     "diff": 0.1667,
+     "diff_ci95": [
+      -0.0442,
+      0.3776
+     ]
+    },
+    "sig:trigger_market_fall": {
+     "diff": 0.0,
+     "diff_ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "sig:trigger_returns_disappointing": {
+     "diff": -0.25,
+     "diff_ci95": [
+      -0.6744,
+      0.1744
+     ]
+    },
+    "sig:where_my_money_went": {
+     "diff": 0.0833,
+     "diff_ci95": [
+      -0.0731,
+      0.2397
+     ]
+    }
+   }
+  },
+  "pooled": {
+   "consider": {
+    "n": 405,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 19,
+      "share": 0.0469,
+      "ci95": [
+       0.0302,
+       0.0721
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 18,
+      "share": 0.0444,
+      "ci95": [
+       0.0283,
+       0.0692
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 6,
+      "share": 0.0148,
+      "ci95": [
+       0.0068,
+       0.0319
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 31,
+      "share": 0.0765,
+      "ci95": [
+       0.0544,
+       0.1066
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 244,
+      "share": 0.6025,
+      "ci95": [
+       0.5541,
+       0.649
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 11,
+      "share": 0.0272,
+      "ci95": [
+       0.0152,
+       0.048
+      ]
+     },
+     "E_sip_control": {
+      "k": 53,
+      "share": 0.1309,
+      "ci95": [
+       0.1015,
+       0.1672
+      ]
+     },
+     "NO_AREA": {
+      "k": 107,
+      "share": 0.2642,
+      "ci95": [
+       0.2236,
+       0.3092
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 24,
+      "share": 0.0593,
+      "ci95": [
+       0.0401,
+       0.0867
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 9,
+      "share": 0.0222,
+      "ci95": [
+       0.0117,
+       0.0417
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 14,
+      "share": 0.0346,
+      "ci95": [
+       0.0207,
+       0.0572
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 10,
+      "share": 0.0247,
+      "ci95": [
+       0.0135,
+       0.0448
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 38,
+      "share": 0.0938,
+      "ci95": [
+       0.0691,
+       0.1262
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 10,
+      "share": 0.0247,
+      "ci95": [
+       0.0135,
+       0.0448
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 7,
+      "share": 0.0173,
+      "ci95": [
+       0.0084,
+       0.0352
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 33,
+      "share": 0.0815,
+      "ci95": [
+       0.0586,
+       0.1122
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 3,
+      "share": 0.0074,
+      "ci95": [
+       0.0025,
+       0.0215
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 2,
+      "share": 0.0049,
+      "ci95": [
+       0.0014,
+       0.0178
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 6,
+      "share": 0.0148,
+      "ci95": [
+       0.0068,
+       0.0319
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 127,
+      "share": 0.3136,
+      "ci95": [
+       0.2703,
+       0.3603
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 10,
+      "share": 0.0247,
+      "ci95": [
+       0.0135,
+       0.0448
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 43,
+      "share": 0.1062,
+      "ci95": [
+       0.0798,
+       0.14
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 7,
+      "share": 0.0173,
+      "ci95": [
+       0.0084,
+       0.0352
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 16,
+      "share": 0.0395,
+      "ci95": [
+       0.0245,
+       0.0632
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 86,
+      "share": 0.2123,
+      "ci95": [
+       0.1753,
+       0.2548
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 4,
+      "share": 0.0099,
+      "ci95": [
+       0.0038,
+       0.0251
+      ]
+     }
+    }
+   },
+   "cont": {
+    "n": 1156,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 68,
+      "share": 0.0588,
+      "ci95": [
+       0.0467,
+       0.0739
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 33,
+      "share": 0.0285,
+      "ci95": [
+       0.0204,
+       0.0398
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 21,
+      "share": 0.0182,
+      "ci95": [
+       0.0119,
+       0.0276
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 80,
+      "share": 0.0692,
+      "ci95": [
+       0.056,
+       0.0853
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 290,
+      "share": 0.2509,
+      "ci95": [
+       0.2267,
+       0.2767
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 55,
+      "share": 0.0476,
+      "ci95": [
+       0.0367,
+       0.0614
+      ]
+     },
+     "E_sip_control": {
+      "k": 19,
+      "share": 0.0164,
+      "ci95": [
+       0.0105,
+       0.0255
+      ]
+     },
+     "NO_AREA": {
+      "k": 756,
+      "share": 0.654,
+      "ci95": [
+       0.6261,
+       0.6809
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 45,
+      "share": 0.0389,
+      "ci95": [
+       0.0292,
+       0.0517
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 15,
+      "share": 0.013,
+      "ci95": [
+       0.0079,
+       0.0213
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 35,
+      "share": 0.0303,
+      "ci95": [
+       0.0218,
+       0.0418
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 42,
+      "share": 0.0363,
+      "ci95": [
+       0.027,
+       0.0487
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 52,
+      "share": 0.045,
+      "ci95": [
+       0.0345,
+       0.0585
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.0033
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 42,
+      "share": 0.0363,
+      "ci95": [
+       0.027,
+       0.0487
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 51,
+      "share": 0.0441,
+      "ci95": [
+       0.0337,
+       0.0575
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 19,
+      "share": 0.0164,
+      "ci95": [
+       0.0105,
+       0.0255
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 11,
+      "share": 0.0095,
+      "ci95": [
+       0.0053,
+       0.017
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 27,
+      "share": 0.0234,
+      "ci95": [
+       0.0161,
+       0.0338
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 144,
+      "share": 0.1246,
+      "ci95": [
+       0.1068,
+       0.1449
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 5,
+      "share": 0.0043,
+      "ci95": [
+       0.0018,
+       0.0101
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 6,
+      "share": 0.0052,
+      "ci95": [
+       0.0024,
+       0.0113
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 10,
+      "share": 0.0087,
+      "ci95": [
+       0.0047,
+       0.0159
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 28,
+      "share": 0.0242,
+      "ci95": [
+       0.0168,
+       0.0348
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 34,
+      "share": 0.0294,
+      "ci95": [
+       0.0211,
+       0.0408
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 5,
+      "share": 0.0043,
+      "ci95": [
+       0.0018,
+       0.0101
+      ]
+     }
+    }
+   },
+   "stop": {
+    "n": 684,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 237,
+      "share": 0.3465,
+      "ci95": [
+       0.3118,
+       0.3829
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 221,
+      "share": 0.3231,
+      "ci95": [
+       0.2891,
+       0.3591
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 161,
+      "share": 0.2354,
+      "ci95": [
+       0.2051,
+       0.2686
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 297,
+      "share": 0.4342,
+      "ci95": [
+       0.3975,
+       0.4716
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 205,
+      "share": 0.2997,
+      "ci95": [
+       0.2666,
+       0.3351
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 64,
+      "share": 0.0936,
+      "ci95": [
+       0.074,
+       0.1177
+      ]
+     },
+     "E_sip_control": {
+      "k": 85,
+      "share": 0.1243,
+      "ci95": [
+       0.1016,
+       0.1511
+      ]
+     },
+     "NO_AREA": {
+      "k": 180,
+      "share": 0.2632,
+      "ci95": [
+       0.2315,
+       0.2974
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 33,
+      "share": 0.0482,
+      "ci95": [
+       0.0346,
+       0.067
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 53,
+      "share": 0.0775,
+      "ci95": [
+       0.0597,
+       0.1
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 113,
+      "share": 0.1652,
+      "ci95": [
+       0.1393,
+       0.1949
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 63,
+      "share": 0.0921,
+      "ci95": [
+       0.0727,
+       0.1161
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 29,
+      "share": 0.0424,
+      "ci95": [
+       0.0297,
+       0.0602
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 22,
+      "share": 0.0322,
+      "ci95": [
+       0.0213,
+       0.0482
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 112,
+      "share": 0.1637,
+      "ci95": [
+       0.1379,
+       0.1933
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 29,
+      "share": 0.0424,
+      "ci95": [
+       0.0297,
+       0.0602
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 173,
+      "share": 0.2529,
+      "ci95": [
+       0.2218,
+       0.2868
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 52,
+      "share": 0.076,
+      "ci95": [
+       0.0584,
+       0.0983
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 178,
+      "share": 0.2602,
+      "ci95": [
+       0.2288,
+       0.2944
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 115,
+      "share": 0.1681,
+      "ci95": [
+       0.142,
+       0.198
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 27,
+      "share": 0.0395,
+      "ci95": [
+       0.0273,
+       0.0568
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 54,
+      "share": 0.0789,
+      "ci95": [
+       0.061,
+       0.1016
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 112,
+      "share": 0.1637,
+      "ci95": [
+       0.1379,
+       0.1933
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 22,
+      "share": 0.0322,
+      "ci95": [
+       0.0213,
+       0.0482
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 49,
+      "share": 0.0716,
+      "ci95": [
+       0.0546,
+       0.0935
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 51,
+      "share": 0.0746,
+      "ci95": [
+       0.0572,
+       0.0967
+      ]
+     }
+    }
+   },
+   "separation": {
+    "A_first_debit_and_autopay": {
+     "diff": 0.2877,
+     "diff_ci95": [
+      0.2495,
+      0.3259
+     ]
+    },
+    "B_money_status_and_resolution": {
+     "diff": 0.2946,
+     "diff_ci95": [
+      0.2583,
+      0.3309
+     ]
+    },
+    "CORE_A_and_B": {
+     "diff": 0.2172,
+     "diff_ci95": [
+      0.1845,
+      0.2499
+     ]
+    },
+    "CORE_A_or_B": {
+     "diff": 0.365,
+     "diff_ci95": [
+      0.3251,
+      0.4049
+     ]
+    },
+    "C_returns_expectations": {
+     "diff": 0.0488,
+     "diff_ci95": [
+      0.0063,
+      0.0913
+     ]
+    },
+    "D_cash_flow_flex": {
+     "diff": 0.046,
+     "diff_ci95": [
+      0.021,
+      0.071
+     ]
+    },
+    "E_sip_control": {
+     "diff": 0.1079,
+     "diff_ci95": [
+      0.0821,
+      0.1337
+     ]
+    },
+    "NO_AREA": {
+     "diff": -0.3908,
+     "diff_ci95": [
+      -0.4337,
+      -0.3479
+     ]
+    },
+    "sig:advice_from_others": {
+     "diff": 0.0093,
+     "diff_ci95": [
+      -0.0102,
+      0.0288
+     ]
+    },
+    "sig:app_problem_experienced": {
+     "diff": 0.0645,
+     "diff_ci95": [
+      0.0434,
+      0.0856
+     ]
+    },
+    "sig:autopay_mandate": {
+     "diff": 0.1349,
+     "diff_ci95": [
+      0.1054,
+      0.1644
+     ]
+    },
+    "sig:cash_or_income_change": {
+     "diff": 0.0558,
+     "diff_ci95": [
+      0.0316,
+      0.08
+     ]
+    },
+    "sig:confusing_returns_numbers": {
+     "diff": -0.0026,
+     "diff_ci95": [
+      -0.0219,
+      0.0167
+     ]
+    },
+    "sig:costs_tax_exit_load": {
+     "diff": 0.0322,
+     "diff_ci95": [
+      0.019,
+      0.0454
+     ]
+    },
+    "sig:first_debit_or_sip_date": {
+     "diff": 0.1274,
+     "diff_ci95": [
+      0.0976,
+      0.1572
+     ]
+    },
+    "sig:flat_returns": {
+     "diff": -0.0017,
+     "diff_ci95": [
+      -0.0209,
+      0.0175
+     ]
+    },
+    "sig:instalment_failed_or_lapsed": {
+     "diff": 0.2365,
+     "diff_ci95": [
+      0.2031,
+      0.2699
+     ]
+    },
+    "sig:order_status_units": {
+     "diff": 0.0665,
+     "diff_ci95": [
+      0.0459,
+      0.0871
+     ]
+    },
+    "sig:payment_problem_experienced": {
+     "diff": 0.2368,
+     "diff_ci95": [
+      0.2028,
+      0.2708
+     ]
+    },
+    "sig:saw_loss_or_flat": {
+     "diff": 0.0435,
+     "diff_ci95": [
+      0.0096,
+      0.0774
+     ]
+    },
+    "sig:sip_control_failed": {
+     "diff": 0.0352,
+     "diff_ci95": [
+      0.0201,
+      0.0503
+     ]
+    },
+    "sig:skip_pause_cancel_confusion": {
+     "diff": 0.0737,
+     "diff_ci95": [
+      0.0531,
+      0.0943
+     ]
+    },
+    "sig:support_not_resolved": {
+     "diff": 0.155,
+     "diff_ci95": [
+      0.1268,
+      0.1832
+     ]
+    },
+    "sig:trigger_market_fall": {
+     "diff": 0.008,
+     "diff_ci95": [
+      -0.0079,
+      0.0239
+     ]
+    },
+    "sig:trigger_returns_disappointing": {
+     "diff": 0.0422,
+     "diff_ci95": [
+      0.0206,
+      0.0638
+     ]
+    },
+    "sig:where_my_money_went": {
+     "diff": 0.0703,
+     "diff_ci95": [
+      0.0503,
+      0.0903
+     ]
+    }
+   }
+  },
+  "reddit": {
+   "consider": {
+    "n": 341,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 12,
+      "share": 0.0352,
+      "ci95": [
+       0.0202,
+       0.0605
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 8,
+      "share": 0.0235,
+      "ci95": [
+       0.0119,
+       0.0456
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 3,
+      "share": 0.0088,
+      "ci95": [
+       0.003,
+       0.0255
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 17,
+      "share": 0.0499,
+      "ci95": [
+       0.0314,
+       0.0784
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 220,
+      "share": 0.6452,
+      "ci95": [
+       0.593,
+       0.6941
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 10,
+      "share": 0.0293,
+      "ci95": [
+       0.016,
+       0.0531
+      ]
+     },
+     "E_sip_control": {
+      "k": 24,
+      "share": 0.0704,
+      "ci95": [
+       0.0477,
+       0.1026
+      ]
+     },
+     "NO_AREA": {
+      "k": 99,
+      "share": 0.2903,
+      "ci95": [
+       0.2447,
+       0.3406
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 24,
+      "share": 0.0704,
+      "ci95": [
+       0.0477,
+       0.1026
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 5,
+      "share": 0.0147,
+      "ci95": [
+       0.0063,
+       0.0339
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 9,
+      "share": 0.0264,
+      "ci95": [
+       0.0139,
+       0.0494
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 9,
+      "share": 0.0264,
+      "ci95": [
+       0.0139,
+       0.0494
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 32,
+      "share": 0.0938,
+      "ci95": [
+       0.0673,
+       0.1295
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 8,
+      "share": 0.0235,
+      "ci95": [
+       0.0119,
+       0.0456
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 4,
+      "share": 0.0117,
+      "ci95": [
+       0.0046,
+       0.0298
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 31,
+      "share": 0.0909,
+      "ci95": [
+       0.0648,
+       0.1261
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.0111
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 2,
+      "share": 0.0059,
+      "ci95": [
+       0.0016,
+       0.0211
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 2,
+      "share": 0.0059,
+      "ci95": [
+       0.0016,
+       0.0211
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 115,
+      "share": 0.3372,
+      "ci95": [
+       0.2891,
+       0.389
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 6,
+      "share": 0.0176,
+      "ci95": [
+       0.0081,
+       0.0379
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 17,
+      "share": 0.0499,
+      "ci95": [
+       0.0314,
+       0.0784
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 2,
+      "share": 0.0059,
+      "ci95": [
+       0.0016,
+       0.0211
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 15,
+      "share": 0.044,
+      "ci95": [
+       0.0268,
+       0.0713
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 79,
+      "share": 0.2317,
+      "ci95": [
+       0.19,
+       0.2793
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 3,
+      "share": 0.0088,
+      "ci95": [
+       0.003,
+       0.0255
+      ]
+     }
+    }
+   },
+   "cont": {
+    "n": 1009,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 38,
+      "share": 0.0377,
+      "ci95": [
+       0.0276,
+       0.0513
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 20,
+      "share": 0.0198,
+      "ci95": [
+       0.0129,
+       0.0304
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 10,
+      "share": 0.0099,
+      "ci95": [
+       0.0054,
+       0.0181
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 48,
+      "share": 0.0476,
+      "ci95": [
+       0.0361,
+       0.0625
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 258,
+      "share": 0.2557,
+      "ci95": [
+       0.2297,
+       0.2835
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 54,
+      "share": 0.0535,
+      "ci95": [
+       0.0412,
+       0.0692
+      ]
+     },
+     "E_sip_control": {
+      "k": 10,
+      "share": 0.0099,
+      "ci95": [
+       0.0054,
+       0.0181
+      ]
+     },
+     "NO_AREA": {
+      "k": 673,
+      "share": 0.667,
+      "ci95": [
+       0.6373,
+       0.6954
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 40,
+      "share": 0.0396,
+      "ci95": [
+       0.0292,
+       0.0535
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 9,
+      "share": 0.0089,
+      "ci95": [
+       0.0047,
+       0.0169
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 18,
+      "share": 0.0178,
+      "ci95": [
+       0.0113,
+       0.028
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 41,
+      "share": 0.0406,
+      "ci95": [
+       0.0301,
+       0.0547
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 45,
+      "share": 0.0446,
+      "ci95": [
+       0.0335,
+       0.0592
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.0038
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 24,
+      "share": 0.0238,
+      "ci95": [
+       0.016,
+       0.0351
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 45,
+      "share": 0.0446,
+      "ci95": [
+       0.0335,
+       0.0592
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 7,
+      "share": 0.0069,
+      "ci95": [
+       0.0034,
+       0.0143
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 8,
+      "share": 0.0079,
+      "ci95": [
+       0.004,
+       0.0156
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 11,
+      "share": 0.0109,
+      "ci95": [
+       0.0061,
+       0.0194
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 131,
+      "share": 0.1298,
+      "ci95": [
+       0.1105,
+       0.152
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 2,
+      "share": 0.002,
+      "ci95": [
+       0.0005,
+       0.0072
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 5,
+      "share": 0.005,
+      "ci95": [
+       0.0021,
+       0.0115
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 3,
+      "share": 0.003,
+      "ci95": [
+       0.001,
+       0.0087
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 27,
+      "share": 0.0268,
+      "ci95": [
+       0.0185,
+       0.0387
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 30,
+      "share": 0.0297,
+      "ci95": [
+       0.0209,
+       0.0421
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 3,
+      "share": 0.003,
+      "ci95": [
+       0.001,
+       0.0087
+      ]
+     }
+    }
+   },
+   "stop": {
+    "n": 435,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 77,
+      "share": 0.177,
+      "ci95": [
+       0.144,
+       0.2157
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 56,
+      "share": 0.1287,
+      "ci95": [
+       0.1005,
+       0.1635
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 38,
+      "share": 0.0874,
+      "ci95": [
+       0.0643,
+       0.1176
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 95,
+      "share": 0.2184,
+      "ci95": [
+       0.1821,
+       0.2596
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 169,
+      "share": 0.3885,
+      "ci95": [
+       0.3439,
+       0.4351
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 52,
+      "share": 0.1195,
+      "ci95": [
+       0.0923,
+       0.1534
+      ]
+     },
+     "E_sip_control": {
+      "k": 26,
+      "share": 0.0598,
+      "ci95": [
+       0.0411,
+       0.0861
+      ]
+     },
+     "NO_AREA": {
+      "k": 164,
+      "share": 0.377,
+      "ci95": [
+       0.3327,
+       0.4234
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 27,
+      "share": 0.0621,
+      "ci95": [
+       0.043,
+       0.0888
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 16,
+      "share": 0.0368,
+      "ci95": [
+       0.0228,
+       0.0589
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 34,
+      "share": 0.0782,
+      "ci95": [
+       0.0565,
+       0.1072
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 51,
+      "share": 0.1172,
+      "ci95": [
+       0.0903,
+       0.1509
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 19,
+      "share": 0.0437,
+      "ci95": [
+       0.0281,
+       0.0672
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 15,
+      "share": 0.0345,
+      "ci95": [
+       0.021,
+       0.0561
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 34,
+      "share": 0.0782,
+      "ci95": [
+       0.0565,
+       0.1072
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 28,
+      "share": 0.0644,
+      "ci95": [
+       0.0449,
+       0.0915
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 56,
+      "share": 0.1287,
+      "ci95": [
+       0.1005,
+       0.1635
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 19,
+      "share": 0.0437,
+      "ci95": [
+       0.0281,
+       0.0672
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 54,
+      "share": 0.1241,
+      "ci95": [
+       0.0964,
+       0.1585
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 95,
+      "share": 0.2184,
+      "ci95": [
+       0.1821,
+       0.2596
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 9,
+      "share": 0.0207,
+      "ci95": [
+       0.0109,
+       0.0388
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 20,
+      "share": 0.046,
+      "ci95": [
+       0.03,
+       0.0699
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 16,
+      "share": 0.0368,
+      "ci95": [
+       0.0228,
+       0.0589
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 20,
+      "share": 0.046,
+      "ci95": [
+       0.03,
+       0.0699
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 44,
+      "share": 0.1011,
+      "ci95": [
+       0.0762,
+       0.1331
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 15,
+      "share": 0.0345,
+      "ci95": [
+       0.021,
+       0.0561
+      ]
+     }
+    }
+   },
+   "separation": {
+    "A_first_debit_and_autopay": {
+     "diff": 0.1393,
+     "diff_ci95": [
+      0.1016,
+      0.177
+     ]
+    },
+    "B_money_status_and_resolution": {
+     "diff": 0.1089,
+     "diff_ci95": [
+      0.0763,
+      0.1415
+     ]
+    },
+    "CORE_A_and_B": {
+     "diff": 0.0775,
+     "diff_ci95": [
+      0.0503,
+      0.1047
+     ]
+    },
+    "CORE_A_or_B": {
+     "diff": 0.1708,
+     "diff_ci95": [
+      0.1298,
+      0.2118
+     ]
+    },
+    "C_returns_expectations": {
+     "diff": 0.1328,
+     "diff_ci95": [
+      0.0797,
+      0.1859
+     ]
+    },
+    "D_cash_flow_flex": {
+     "diff": 0.066,
+     "diff_ci95": [
+      0.0325,
+      0.0995
+     ]
+    },
+    "E_sip_control": {
+     "diff": 0.0499,
+     "diff_ci95": [
+      0.0268,
+      0.073
+     ]
+    },
+    "NO_AREA": {
+     "diff": -0.29,
+     "diff_ci95": [
+      -0.344,
+      -0.236
+     ]
+    },
+    "sig:advice_from_others": {
+     "diff": 0.0225,
+     "diff_ci95": [
+      -0.0032,
+      0.0482
+     ]
+    },
+    "sig:app_problem_experienced": {
+     "diff": 0.0279,
+     "diff_ci95": [
+      0.0093,
+      0.0465
+     ]
+    },
+    "sig:autopay_mandate": {
+     "diff": 0.0604,
+     "diff_ci95": [
+      0.0339,
+      0.0869
+     ]
+    },
+    "sig:cash_or_income_change": {
+     "diff": 0.0766,
+     "diff_ci95": [
+      0.044,
+      0.1092
+     ]
+    },
+    "sig:confusing_returns_numbers": {
+     "diff": -0.0009,
+     "diff_ci95": [
+      -0.0239,
+      0.0221
+     ]
+    },
+    "sig:costs_tax_exit_load": {
+     "diff": 0.0345,
+     "diff_ci95": [
+      0.0173,
+      0.0517
+     ]
+    },
+    "sig:first_debit_or_sip_date": {
+     "diff": 0.0544,
+     "diff_ci95": [
+      0.0275,
+      0.0813
+     ]
+    },
+    "sig:flat_returns": {
+     "diff": 0.0198,
+     "diff_ci95": [
+      -0.0066,
+      0.0462
+     ]
+    },
+    "sig:instalment_failed_or_lapsed": {
+     "diff": 0.1218,
+     "diff_ci95": [
+      0.0899,
+      0.1537
+     ]
+    },
+    "sig:order_status_units": {
+     "diff": 0.0358,
+     "diff_ci95": [
+      0.0158,
+      0.0558
+     ]
+    },
+    "sig:payment_problem_experienced": {
+     "diff": 0.1132,
+     "diff_ci95": [
+      0.0816,
+      0.1448
+     ]
+    },
+    "sig:saw_loss_or_flat": {
+     "diff": 0.0886,
+     "diff_ci95": [
+      0.0446,
+      0.1326
+     ]
+    },
+    "sig:sip_control_failed": {
+     "diff": 0.0187,
+     "diff_ci95": [
+      0.005,
+      0.0324
+     ]
+    },
+    "sig:skip_pause_cancel_confusion": {
+     "diff": 0.041,
+     "diff_ci95": [
+      0.0208,
+      0.0612
+     ]
+    },
+    "sig:support_not_resolved": {
+     "diff": 0.0338,
+     "diff_ci95": [
+      0.0158,
+      0.0518
+     ]
+    },
+    "sig:trigger_market_fall": {
+     "diff": 0.0192,
+     "diff_ci95": [
+      -0.0029,
+      0.0413
+     ]
+    },
+    "sig:trigger_returns_disappointing": {
+     "diff": 0.0714,
+     "diff_ci95": [
+      0.0412,
+      0.1016
+     ]
+    },
+    "sig:where_my_money_went": {
+     "diff": 0.0315,
+     "diff_ci95": [
+      0.014,
+      0.049
+     ]
+    }
+   }
+  },
+  "stop_timing_0-3": {
+   "stop": {
+    "n": 116,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 50,
+      "share": 0.431,
+      "ci95": [
+       0.3446,
+       0.5219
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 53,
+      "share": 0.4569,
+      "ci95": [
+       0.3691,
+       0.5475
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 34,
+      "share": 0.2931,
+      "ci95": [
+       0.218,
+       0.3815
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 69,
+      "share": 0.5948,
+      "ci95": [
+       0.5038,
+       0.6797
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 35,
+      "share": 0.3017,
+      "ci95": [
+       0.2257,
+       0.3905
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 5,
+      "share": 0.0431,
+      "ci95": [
+       0.0185,
+       0.0969
+      ]
+     },
+     "E_sip_control": {
+      "k": 22,
+      "share": 0.1897,
+      "ci95": [
+       0.1287,
+       0.2705
+      ]
+     },
+     "NO_AREA": {
+      "k": 19,
+      "share": 0.1638,
+      "ci95": [
+       0.1074,
+       0.2417
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 5,
+      "share": 0.0431,
+      "ci95": [
+       0.0185,
+       0.0969
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 13,
+      "share": 0.1121,
+      "ci95": [
+       0.0667,
+       0.1823
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 24,
+      "share": 0.2069,
+      "ci95": [
+       0.1432,
+       0.2894
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 5,
+      "share": 0.0431,
+      "ci95": [
+       0.0185,
+       0.0969
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 8,
+      "share": 0.069,
+      "ci95": [
+       0.0354,
+       0.1302
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 3,
+      "share": 0.0259,
+      "ci95": [
+       0.0088,
+       0.0733
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 30,
+      "share": 0.2586,
+      "ci95": [
+       0.1876,
+       0.3451
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 3,
+      "share": 0.0259,
+      "ci95": [
+       0.0088,
+       0.0733
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 30,
+      "share": 0.2586,
+      "ci95": [
+       0.1876,
+       0.3451
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 10,
+      "share": 0.0862,
+      "ci95": [
+       0.0475,
+       0.1514
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 32,
+      "share": 0.2759,
+      "ci95": [
+       0.2027,
+       0.3634
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 16,
+      "share": 0.1379,
+      "ci95": [
+       0.0867,
+       0.2124
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 6,
+      "share": 0.0517,
+      "ci95": [
+       0.0239,
+       0.1083
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 14,
+      "share": 0.1207,
+      "ci95": [
+       0.0733,
+       0.1924
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 22,
+      "share": 0.1897,
+      "ci95": [
+       0.1287,
+       0.2705
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 3,
+      "share": 0.0259,
+      "ci95": [
+       0.0088,
+       0.0733
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 8,
+      "share": 0.069,
+      "ci95": [
+       0.0354,
+       0.1302
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 13,
+      "share": 0.1121,
+      "ci95": [
+       0.0667,
+       0.1823
+      ]
+     }
+    }
+   }
+  },
+  "stop_timing_13+": {
+   "stop": {
+    "n": 1,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "E_sip_control": {
+      "k": 1,
+      "share": 1.0,
+      "ci95": [
+       0.2065,
+       1.0
+      ]
+     },
+     "NO_AREA": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 1,
+      "share": 1.0,
+      "ci95": [
+       0.2065,
+       1.0
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.7935
+      ]
+     }
+    }
+   }
+  },
+  "stop_timing_4-12": {
+   "stop": {
+    "n": 102,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 13,
+      "share": 0.1275,
+      "ci95": [
+       0.076,
+       0.2059
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 11,
+      "share": 0.1078,
+      "ci95": [
+       0.0613,
+       0.1829
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 6,
+      "share": 0.0588,
+      "ci95": [
+       0.0272,
+       0.1224
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 18,
+      "share": 0.1765,
+      "ci95": [
+       0.1146,
+       0.2618
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 51,
+      "share": 0.5,
+      "ci95": [
+       0.4047,
+       0.5953
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 14,
+      "share": 0.1373,
+      "ci95": [
+       0.0836,
+       0.2173
+      ]
+     },
+     "E_sip_control": {
+      "k": 11,
+      "share": 0.1078,
+      "ci95": [
+       0.0613,
+       0.1829
+      ]
+     },
+     "NO_AREA": {
+      "k": 33,
+      "share": 0.3235,
+      "ci95": [
+       0.2406,
+       0.4193
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 2,
+      "share": 0.0196,
+      "ci95": [
+       0.0054,
+       0.0687
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 3,
+      "share": 0.0294,
+      "ci95": [
+       0.0101,
+       0.0829
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 5,
+      "share": 0.049,
+      "ci95": [
+       0.0211,
+       0.1097
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 14,
+      "share": 0.1373,
+      "ci95": [
+       0.0836,
+       0.2173
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 4,
+      "share": 0.0392,
+      "ci95": [
+       0.0154,
+       0.0965
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 4,
+      "share": 0.0392,
+      "ci95": [
+       0.0154,
+       0.0965
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 6,
+      "share": 0.0588,
+      "ci95": [
+       0.0272,
+       0.1224
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 12,
+      "share": 0.1176,
+      "ci95": [
+       0.0686,
+       0.1945
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 6,
+      "share": 0.0588,
+      "ci95": [
+       0.0272,
+       0.1224
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 1,
+      "share": 0.0098,
+      "ci95": [
+       0.0017,
+       0.0535
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 8,
+      "share": 0.0784,
+      "ci95": [
+       0.0403,
+       0.1472
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 36,
+      "share": 0.3529,
+      "ci95": [
+       0.2671,
+       0.4495
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 5,
+      "share": 0.049,
+      "ci95": [
+       0.0211,
+       0.1097
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 6,
+      "share": 0.0588,
+      "ci95": [
+       0.0272,
+       0.1224
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 5,
+      "share": 0.049,
+      "ci95": [
+       0.0211,
+       0.1097
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 7,
+      "share": 0.0686,
+      "ci95": [
+       0.0336,
+       0.1349
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 18,
+      "share": 0.1765,
+      "ci95": [
+       0.1146,
+       0.2618
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 1,
+      "share": 0.0098,
+      "ci95": [
+       0.0017,
+       0.0535
+      ]
+     }
+    }
+   }
+  },
+  "stop_timing_unknown": {
+   "stop": {
+    "n": 465,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 174,
+      "share": 0.3742,
+      "ci95": [
+       0.3314,
+       0.419
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 157,
+      "share": 0.3376,
+      "ci95": [
+       0.2961,
+       0.3818
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 121,
+      "share": 0.2602,
+      "ci95": [
+       0.2224,
+       0.3019
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 210,
+      "share": 0.4516,
+      "ci95": [
+       0.407,
+       0.4971
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 119,
+      "share": 0.2559,
+      "ci95": [
+       0.2184,
+       0.2975
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 45,
+      "share": 0.0968,
+      "ci95": [
+       0.0731,
+       0.127
+      ]
+     },
+     "E_sip_control": {
+      "k": 51,
+      "share": 0.1097,
+      "ci95": [
+       0.0844,
+       0.1413
+      ]
+     },
+     "NO_AREA": {
+      "k": 128,
+      "share": 0.2753,
+      "ci95": [
+       0.2366,
+       0.3176
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 26,
+      "share": 0.0559,
+      "ci95": [
+       0.0384,
+       0.0807
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 37,
+      "share": 0.0796,
+      "ci95": [
+       0.0583,
+       0.1078
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 84,
+      "share": 0.1806,
+      "ci95": [
+       0.1483,
+       0.2182
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 44,
+      "share": 0.0946,
+      "ci95": [
+       0.0712,
+       0.1246
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 17,
+      "share": 0.0366,
+      "ci95": [
+       0.0229,
+       0.0578
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 15,
+      "share": 0.0323,
+      "ci95": [
+       0.0196,
+       0.0525
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 76,
+      "share": 0.1634,
+      "ci95": [
+       0.1326,
+       0.1998
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 14,
+      "share": 0.0301,
+      "ci95": [
+       0.018,
+       0.0499
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 137,
+      "share": 0.2946,
+      "ci95": [
+       0.255,
+       0.3376
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 41,
+      "share": 0.0882,
+      "ci95": [
+       0.0657,
+       0.1174
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 138,
+      "share": 0.2968,
+      "ci95": [
+       0.2571,
+       0.3398
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 63,
+      "share": 0.1355,
+      "ci95": [
+       0.1073,
+       0.1696
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 16,
+      "share": 0.0344,
+      "ci95": [
+       0.0213,
+       0.0552
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 33,
+      "share": 0.071,
+      "ci95": [
+       0.051,
+       0.098
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 85,
+      "share": 0.1828,
+      "ci95": [
+       0.1503,
+       0.2205
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 12,
+      "share": 0.0258,
+      "ci95": [
+       0.0148,
+       0.0446
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 23,
+      "share": 0.0495,
+      "ci95": [
+       0.0332,
+       0.0731
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 37,
+      "share": 0.0796,
+      "ci95": [
+       0.0583,
+       0.1078
+      ]
+     }
+    }
+   }
+  },
+  "youtube": {
+   "consider": {
+    "n": 51,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 2,
+      "share": 0.0392,
+      "ci95": [
+       0.0108,
+       0.1322
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 4,
+      "share": 0.0784,
+      "ci95": [
+       0.0309,
+       0.185
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.07
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 6,
+      "share": 0.1176,
+      "ci95": [
+       0.055,
+       0.2338
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 20,
+      "share": 0.3922,
+      "ci95": [
+       0.2703,
+       0.5292
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 1,
+      "share": 0.0196,
+      "ci95": [
+       0.0035,
+       0.103
+      ]
+     },
+     "E_sip_control": {
+      "k": 25,
+      "share": 0.4902,
+      "ci95": [
+       0.3586,
+       0.6232
+      ]
+     },
+     "NO_AREA": {
+      "k": 8,
+      "share": 0.1569,
+      "ci95": [
+       0.0817,
+       0.2801
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.07
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 1,
+      "share": 0.0196,
+      "ci95": [
+       0.0035,
+       0.103
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 1,
+      "share": 0.0196,
+      "ci95": [
+       0.0035,
+       0.103
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 1,
+      "share": 0.0196,
+      "ci95": [
+       0.0035,
+       0.103
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 6,
+      "share": 0.1176,
+      "ci95": [
+       0.055,
+       0.2338
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 2,
+      "share": 0.0392,
+      "ci95": [
+       0.0108,
+       0.1322
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 1,
+      "share": 0.0196,
+      "ci95": [
+       0.0035,
+       0.103
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.07
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.07
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.07
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.07
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 10,
+      "share": 0.1961,
+      "ci95": [
+       0.1102,
+       0.3246
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 2,
+      "share": 0.0392,
+      "ci95": [
+       0.0108,
+       0.1322
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 22,
+      "share": 0.4314,
+      "ci95": [
+       0.305,
+       0.5673
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 1,
+      "share": 0.0196,
+      "ci95": [
+       0.0035,
+       0.103
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 1,
+      "share": 0.0196,
+      "ci95": [
+       0.0035,
+       0.103
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 6,
+      "share": 0.1176,
+      "ci95": [
+       0.055,
+       0.2338
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 1,
+      "share": 0.0196,
+      "ci95": [
+       0.0035,
+       0.103
+      ]
+     }
+    }
+   },
+   "cont": {
+    "n": 111,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 18,
+      "share": 0.1622,
+      "ci95": [
+       0.1051,
+       0.2418
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 7,
+      "share": 0.0631,
+      "ci95": [
+       0.0309,
+       0.1245
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 6,
+      "share": 0.0541,
+      "ci95": [
+       0.025,
+       0.1129
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 19,
+      "share": 0.1712,
+      "ci95": [
+       0.1124,
+       0.2519
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 27,
+      "share": 0.2432,
+      "ci95": [
+       0.1729,
+       0.3308
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 1,
+      "share": 0.009,
+      "ci95": [
+       0.0016,
+       0.0493
+      ]
+     },
+     "E_sip_control": {
+      "k": 5,
+      "share": 0.045,
+      "ci95": [
+       0.0194,
+       0.1011
+      ]
+     },
+     "NO_AREA": {
+      "k": 67,
+      "share": 0.6036,
+      "ci95": [
+       0.5106,
+       0.6897
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 5,
+      "share": 0.045,
+      "ci95": [
+       0.0194,
+       0.1011
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 1,
+      "share": 0.009,
+      "ci95": [
+       0.0016,
+       0.0493
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 9,
+      "share": 0.0811,
+      "ci95": [
+       0.0432,
+       0.1469
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 1,
+      "share": 0.009,
+      "ci95": [
+       0.0016,
+       0.0493
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 4,
+      "share": 0.036,
+      "ci95": [
+       0.0141,
+       0.089
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.0335
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 12,
+      "share": 0.1081,
+      "ci95": [
+       0.0629,
+       0.1795
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 5,
+      "share": 0.045,
+      "ci95": [
+       0.0194,
+       0.1011
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 5,
+      "share": 0.045,
+      "ci95": [
+       0.0194,
+       0.1011
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 3,
+      "share": 0.027,
+      "ci95": [
+       0.0092,
+       0.0765
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 10,
+      "share": 0.0901,
+      "ci95": [
+       0.0497,
+       0.1579
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 10,
+      "share": 0.0901,
+      "ci95": [
+       0.0497,
+       0.1579
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 1,
+      "share": 0.009,
+      "ci95": [
+       0.0016,
+       0.0493
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 0,
+      "share": 0.0,
+      "ci95": [
+       0.0,
+       0.0335
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 1,
+      "share": 0.009,
+      "ci95": [
+       0.0016,
+       0.0493
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 1,
+      "share": 0.009,
+      "ci95": [
+       0.0016,
+       0.0493
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 3,
+      "share": 0.027,
+      "ci95": [
+       0.0092,
+       0.0765
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 2,
+      "share": 0.018,
+      "ci95": [
+       0.005,
+       0.0633
+      ]
+     }
+    }
+   },
+   "stop": {
+    "n": 88,
+    "labels": {
+     "A_first_debit_and_autopay": {
+      "k": 37,
+      "share": 0.4205,
+      "ci95": [
+       0.3228,
+       0.5248
+      ]
+     },
+     "B_money_status_and_resolution": {
+      "k": 34,
+      "share": 0.3864,
+      "ci95": [
+       0.2914,
+       0.4908
+      ]
+     },
+     "CORE_A_and_B": {
+      "k": 18,
+      "share": 0.2045,
+      "ci95": [
+       0.1335,
+       0.3003
+      ]
+     },
+     "CORE_A_or_B": {
+      "k": 53,
+      "share": 0.6023,
+      "ci95": [
+       0.4978,
+       0.6982
+      ]
+     },
+     "C_returns_expectations": {
+      "k": 16,
+      "share": 0.1818,
+      "ci95": [
+       0.1151,
+       0.2751
+      ]
+     },
+     "D_cash_flow_flex": {
+      "k": 9,
+      "share": 0.1023,
+      "ci95": [
+       0.0547,
+       0.1831
+      ]
+     },
+     "E_sip_control": {
+      "k": 39,
+      "share": 0.4432,
+      "ci95": [
+       0.3439,
+       0.5472
+      ]
+     },
+     "NO_AREA": {
+      "k": 11,
+      "share": 0.125,
+      "ci95": [
+       0.0713,
+       0.2101
+      ]
+     },
+     "sig:advice_from_others": {
+      "k": 1,
+      "share": 0.0114,
+      "ci95": [
+       0.002,
+       0.0616
+      ]
+     },
+     "sig:app_problem_experienced": {
+      "k": 8,
+      "share": 0.0909,
+      "ci95": [
+       0.0468,
+       0.1693
+      ]
+     },
+     "sig:autopay_mandate": {
+      "k": 20,
+      "share": 0.2273,
+      "ci95": [
+       0.1522,
+       0.3251
+      ]
+     },
+     "sig:cash_or_income_change": {
+      "k": 9,
+      "share": 0.1023,
+      "ci95": [
+       0.0547,
+       0.1831
+      ]
+     },
+     "sig:confusing_returns_numbers": {
+      "k": 2,
+      "share": 0.0227,
+      "ci95": [
+       0.0063,
+       0.0791
+      ]
+     },
+     "sig:costs_tax_exit_load": {
+      "k": 1,
+      "share": 0.0114,
+      "ci95": [
+       0.002,
+       0.0616
+      ]
+     },
+     "sig:first_debit_or_sip_date": {
+      "k": 27,
+      "share": 0.3068,
+      "ci95": [
+       0.2202,
+       0.4096
+      ]
+     },
+     "sig:flat_returns": {
+      "k": 1,
+      "share": 0.0114,
+      "ci95": [
+       0.002,
+       0.0616
+      ]
+     },
+     "sig:instalment_failed_or_lapsed": {
+      "k": 19,
+      "share": 0.2159,
+      "ci95": [
+       0.1428,
+       0.3128
+      ]
+     },
+     "sig:order_status_units": {
+      "k": 6,
+      "share": 0.0682,
+      "ci95": [
+       0.0316,
+       0.1409
+      ]
+     },
+     "sig:payment_problem_experienced": {
+      "k": 22,
+      "share": 0.25,
+      "ci95": [
+       0.1713,
+       0.3496
+      ]
+     },
+     "sig:saw_loss_or_flat": {
+      "k": 5,
+      "share": 0.0568,
+      "ci95": [
+       0.0245,
+       0.1262
+      ]
+     },
+     "sig:sip_control_failed": {
+      "k": 6,
+      "share": 0.0682,
+      "ci95": [
+       0.0316,
+       0.1409
+      ]
+     },
+     "sig:skip_pause_cancel_confusion": {
+      "k": 28,
+      "share": 0.3182,
+      "ci95": [
+       0.2302,
+       0.4213
+      ]
+     },
+     "sig:support_not_resolved": {
+      "k": 4,
+      "share": 0.0455,
+      "ci95": [
+       0.0178,
+       0.1111
+      ]
+     },
+     "sig:trigger_market_fall": {
+      "k": 1,
+      "share": 0.0114,
+      "ci95": [
+       0.002,
+       0.0616
+      ]
+     },
+     "sig:trigger_returns_disappointing": {
+      "k": 4,
+      "share": 0.0455,
+      "ci95": [
+       0.0178,
+       0.1111
+      ]
+     },
+     "sig:where_my_money_went": {
+      "k": 9,
+      "share": 0.1023,
+      "ci95": [
+       0.0547,
+       0.1831
+      ]
+     }
+    }
+   },
+   "separation": {
+    "A_first_debit_and_autopay": {
+     "diff": 0.2583,
+     "diff_ci95": [
+      0.1344,
+      0.3822
+     ]
+    },
+    "B_money_status_and_resolution": {
+     "diff": 0.3233,
+     "diff_ci95": [
+      0.212,
+      0.4346
+     ]
+    },
+    "CORE_A_and_B": {
+     "diff": 0.1504,
+     "diff_ci95": [
+      0.0562,
+      0.2446
+     ]
+    },
+    "CORE_A_or_B": {
+     "diff": 0.4311,
+     "diff_ci95": [
+      0.3071,
+      0.5551
+     ]
+    },
+    "C_returns_expectations": {
+     "diff": -0.0614,
+     "diff_ci95": [
+      -0.1748,
+      0.052
+     ]
+    },
+    "D_cash_flow_flex": {
+     "diff": 0.0933,
+     "diff_ci95": [
+      0.0276,
+      0.159
+     ]
+    },
+    "E_sip_control": {
+     "diff": 0.3982,
+     "diff_ci95": [
+      0.2875,
+      0.5089
+     ]
+    },
+    "NO_AREA": {
+     "diff": -0.4786,
+     "diff_ci95": [
+      -0.5929,
+      -0.3643
+     ]
+    },
+    "sig:advice_from_others": {
+     "diff": -0.0336,
+     "diff_ci95": [
+      -0.0781,
+      0.0109
+     ]
+    },
+    "sig:app_problem_experienced": {
+     "diff": 0.0819,
+     "diff_ci95": [
+      0.0193,
+      0.1445
+     ]
+    },
+    "sig:autopay_mandate": {
+     "diff": 0.1462,
+     "diff_ci95": [
+      0.045,
+      0.2474
+     ]
+    },
+    "sig:cash_or_income_change": {
+     "diff": 0.0933,
+     "diff_ci95": [
+      0.0276,
+      0.159
+     ]
+    },
+    "sig:confusing_returns_numbers": {
+     "diff": -0.0133,
+     "diff_ci95": [
+      -0.0599,
+      0.0333
+     ]
+    },
+    "sig:costs_tax_exit_load": {
+     "diff": 0.0114,
+     "diff_ci95": [
+      -0.0108,
+      0.0336
+     ]
+    },
+    "sig:first_debit_or_sip_date": {
+     "diff": 0.1987,
+     "diff_ci95": [
+      0.0864,
+      0.311
+     ]
+    },
+    "sig:flat_returns": {
+     "diff": -0.0336,
+     "diff_ci95": [
+      -0.0781,
+      0.0109
+     ]
+    },
+    "sig:instalment_failed_or_lapsed": {
+     "diff": 0.1709,
+     "diff_ci95": [
+      0.0767,
+      0.2651
+     ]
+    },
+    "sig:order_status_units": {
+     "diff": 0.0412,
+     "diff_ci95": [
+      -0.0195,
+      0.1019
+     ]
+    },
+    "sig:payment_problem_experienced": {
+     "diff": 0.1599,
+     "diff_ci95": [
+      0.0549,
+      0.2649
+     ]
+    },
+    "sig:saw_loss_or_flat": {
+     "diff": -0.0333,
+     "diff_ci95": [
+      -0.1052,
+      0.0386
+     ]
+    },
+    "sig:sip_control_failed": {
+     "diff": 0.0592,
+     "diff_ci95": [
+      0.0037,
+      0.1147
+     ]
+    },
+    "sig:skip_pause_cancel_confusion": {
+     "diff": 0.3182,
+     "diff_ci95": [
+      0.2209,
+      0.4155
+     ]
+    },
+    "sig:support_not_resolved": {
+     "diff": 0.0365,
+     "diff_ci95": [
+      -0.0105,
+      0.0835
+     ]
+    },
+    "sig:trigger_market_fall": {
+     "diff": 0.0024,
+     "diff_ci95": [
+      -0.0259,
+      0.0307
+     ]
+    },
+    "sig:trigger_returns_disappointing": {
+     "diff": 0.0185,
+     "diff_ci95": [
+      -0.0345,
+      0.0715
+     ]
+    },
+    "sig:where_my_money_went": {
+     "diff": 0.0843,
+     "diff_ci95": [
+      0.0163,
+      0.1523
+     ]
+    }
+   }
+  }
+ },
+ "stop_by_post_year": {
+  "2024": {
+   "n": 168,
+   "labels": {
+    "A_first_debit_and_autopay": 0.3452,
+    "B_money_status_and_resolution": 0.3452,
+    "CORE_A_and_B": 0.2024,
+    "CORE_A_or_B": 0.4881,
+    "C_returns_expectations": 0.2619,
+    "D_cash_flow_flex": 0.0655,
+    "E_sip_control": 0.1667,
+    "NO_AREA": 0.2738,
+    "sig:advice_from_others": 0.0774,
+    "sig:app_problem_experienced": 0.0774,
+    "sig:autopay_mandate": 0.1667,
+    "sig:cash_or_income_change": 0.0655,
+    "sig:confusing_returns_numbers": 0.0417,
+    "sig:costs_tax_exit_load": 0.0298,
+    "sig:first_debit_or_sip_date": 0.1786,
+    "sig:flat_returns": 0.0357,
+    "sig:instalment_failed_or_lapsed": 0.244,
+    "sig:order_status_units": 0.0952,
+    "sig:payment_problem_experienced": 0.2143,
+    "sig:saw_loss_or_flat": 0.1071,
+    "sig:sip_control_failed": 0.0357,
+    "sig:skip_pause_cancel_confusion": 0.131,
+    "sig:support_not_resolved": 0.0893,
+    "sig:trigger_market_fall": 0.0238,
+    "sig:trigger_returns_disappointing": 0.0536,
+    "sig:where_my_money_went": 0.0952
+   }
+  },
+  "2025": {
+   "n": 211,
+   "labels": {
+    "A_first_debit_and_autopay": 0.218,
+    "B_money_status_and_resolution": 0.1659,
+    "CORE_A_and_B": 0.1232,
+    "CORE_A_or_B": 0.2607,
+    "C_returns_expectations": 0.4218,
+    "D_cash_flow_flex": 0.109,
+    "E_sip_control": 0.0806,
+    "NO_AREA": 0.3223,
+    "sig:advice_from_others": 0.0332,
+    "sig:app_problem_experienced": 0.0379,
+    "sig:autopay_mandate": 0.09,
+    "sig:cash_or_income_change": 0.109,
+    "sig:confusing_returns_numbers": 0.0427,
+    "sig:costs_tax_exit_load": 0.019,
+    "sig:first_debit_or_sip_date": 0.1137,
+    "sig:flat_returns": 0.0664,
+    "sig:instalment_failed_or_lapsed": 0.1469,
+    "sig:order_status_units": 0.0427,
+    "sig:payment_problem_experienced": 0.1564,
+    "sig:saw_loss_or_flat": 0.2464,
+    "sig:sip_control_failed": 0.019,
+    "sig:skip_pause_cancel_confusion": 0.0569,
+    "sig:support_not_resolved": 0.0664,
+    "sig:trigger_market_fall": 0.0569,
+    "sig:trigger_returns_disappointing": 0.1232,
+    "sig:where_my_money_went": 0.0332
+   }
+  },
+  "2026": {
+   "n": 130,
+   "labels": {
+    "A_first_debit_and_autopay": 0.1769,
+    "B_money_status_and_resolution": 0.1615,
+    "CORE_A_and_B": 0.1077,
+    "CORE_A_or_B": 0.2308,
+    "C_returns_expectations": 0.3462,
+    "D_cash_flow_flex": 0.1538,
+    "E_sip_control": 0.0769,
+    "NO_AREA": 0.3769,
+    "sig:advice_from_others": 0.0692,
+    "sig:app_problem_experienced": 0.0538,
+    "sig:autopay_mandate": 0.0692,
+    "sig:cash_or_income_change": 0.1462,
+    "sig:confusing_returns_numbers": 0.0385,
+    "sig:costs_tax_exit_load": 0.0538,
+    "sig:first_debit_or_sip_date": 0.0769,
+    "sig:flat_returns": 0.0538,
+    "sig:instalment_failed_or_lapsed": 0.1231,
+    "sig:order_status_units": 0.0308,
+    "sig:payment_problem_experienced": 0.1308,
+    "sig:saw_loss_or_flat": 0.2231,
+    "sig:sip_control_failed": 0.0231,
+    "sig:skip_pause_cancel_confusion": 0.0462,
+    "sig:support_not_resolved": 0.0769,
+    "sig:trigger_market_fall": 0.0385,
+    "sig:trigger_returns_disappointing": 0.0769,
+    "sig:where_my_money_went": 0.0462
+   }
+  },
+  "before_2024": {
+   "n": 174,
+   "labels": {
+    "A_first_debit_and_autopay": 0.6322,
+    "B_money_status_and_resolution": 0.6092,
+    "CORE_A_and_B": 0.5,
+    "CORE_A_or_B": 0.7414,
+    "C_returns_expectations": 0.1552,
+    "D_cash_flow_flex": 0.0575,
+    "E_sip_control": 0.1667,
+    "NO_AREA": 0.0977,
+    "sig:advice_from_others": 0.023,
+    "sig:app_problem_experienced": 0.1437,
+    "sig:autopay_mandate": 0.3276,
+    "sig:cash_or_income_change": 0.0575,
+    "sig:confusing_returns_numbers": 0.046,
+    "sig:costs_tax_exit_load": 0.0345,
+    "sig:first_debit_or_sip_date": 0.2759,
+    "sig:flat_returns": 0.0115,
+    "sig:instalment_failed_or_lapsed": 0.4885,
+    "sig:order_status_units": 0.1322,
+    "sig:payment_problem_experienced": 0.5287,
+    "sig:saw_loss_or_flat": 0.092,
+    "sig:sip_control_failed": 0.0805,
+    "sig:skip_pause_cancel_confusion": 0.0747,
+    "sig:support_not_resolved": 0.4195,
+    "sig:trigger_market_fall": 0.0057,
+    "sig:trigger_returns_disappointing": 0.023,
+    "sig:where_my_money_went": 0.1264
+   }
+  },
+  "unknown": {
+   "n": 1,
+   "labels": {
+    "A_first_debit_and_autopay": 0.0,
+    "B_money_status_and_resolution": 1.0,
+    "CORE_A_and_B": 0.0,
+    "CORE_A_or_B": 1.0,
+    "C_returns_expectations": 0.0,
+    "D_cash_flow_flex": 0.0,
+    "E_sip_control": 1.0,
+    "NO_AREA": 0.0,
+    "sig:advice_from_others": 0.0,
+    "sig:app_problem_experienced": 0.0,
+    "sig:autopay_mandate": 0.0,
+    "sig:cash_or_income_change": 0.0,
+    "sig:confusing_returns_numbers": 0.0,
+    "sig:costs_tax_exit_load": 0.0,
+    "sig:first_debit_or_sip_date": 0.0,
+    "sig:flat_returns": 0.0,
+    "sig:instalment_failed_or_lapsed": 0.0,
+    "sig:order_status_units": 0.0,
+    "sig:payment_problem_experienced": 0.0,
+    "sig:saw_loss_or_flat": 0.0,
+    "sig:sip_control_failed": 0.0,
+    "sig:skip_pause_cancel_confusion": 1.0,
+    "sig:support_not_resolved": 0.0,
+    "sig:trigger_market_fall": 0.0,
+    "sig:trigger_returns_disappointing": 0.0,
+    "sig:where_my_money_went": 0.0
+   }
+  }
+ }
+}

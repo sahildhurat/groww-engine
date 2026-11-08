@@ -1,6 +1,8 @@
 import Link from "next/link";
 import summaryData from "@/data/summary.json";
 import { FormattedText } from "@/components/FormattedText";
+import { CorePanel } from "@/components/CorePanel";
+import core from "@/data/core.json";
 import { ArrowRight, CheckCircle2, AlertTriangle, HelpCircle, Layers, TrendingUp, ShieldAlert, Sparkles } from "lucide-react";
 
 export default function OverviewPage() {
@@ -67,6 +69,9 @@ export default function OverviewPage() {
           })}
         </div>
       </section>
+
+      {/* (a2) Areas A and B together (9 Nov 2026) */}
+      <CorePanel />
 
       {/* (b) Data Funnel */}
       <section className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-8 space-y-6">
@@ -138,6 +143,7 @@ export default function OverviewPage() {
               <tr className="bg-slate-50 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">
                 <th className="py-3.5 px-3">Area</th>
                 <th className="py-3.5 px-3">Reach (n)</th>
+                <th className="py-3.5 px-3 text-center">All sources: stopped vs kept going</th>
                 <th className="py-3.5 px-3 text-center">Reddit Stop vs Cont</th>
                 <th className="py-3.5 px-3 text-center">YouTube</th>
                 <th className="py-3.5 px-3 text-center">App Reviews</th>
@@ -158,10 +164,21 @@ export default function OverviewPage() {
                       <span className="font-bold">{opp.letter}.</span>
                       <span>{opp.name}</span>
                     </Link>
+                    {(opp.letter === "A" || opp.letter === "B") && (
+                      <span className="mt-1 inline-block text-[11px] font-semibold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200" data-testid="mvp-tag">
+                        Taken forward to the MVP (SIP Passbook)
+                      </span>
+                    )}
                   </td>
                   <td className="py-3.5 px-3 font-mono text-xs whitespace-nowrap">
                     <span className="font-bold text-slate-900">{opp.reach_pct}%</span>{" "}
                     <span className="text-slate-500">({opp.reach_n.toLocaleString()})</span>
+                  </td>
+                  <td className="py-3.5 px-3 text-center text-xs whitespace-nowrap" data-testid="pooled-cell">
+                    <span className="font-mono">
+                      <strong className="text-slate-900">{opp.separation.pooled.stop_pct}%</strong> vs {opp.separation.pooled.cont_pct}%{" "}
+                      <strong className="text-emerald-700 ml-1">{opp.separation.pooled.mark}</strong>
+                    </span>
                   </td>
                   <td className="py-3.5 px-3 text-center text-xs whitespace-nowrap">
                     {opp.separation.reddit.stop_pct !== null ? (
@@ -217,6 +234,31 @@ export default function OverviewPage() {
                   </td>
                 </tr>
               ))}
+              <tr className="bg-emerald-50/50 border-t-2 border-emerald-200" data-testid="core-row">
+                <td className="py-3.5 px-3 font-medium text-slate-900">
+                  <a href="#core" className="text-indigo-600 hover:text-indigo-900 hover:underline">
+                    <span className="font-bold">A or B.</span> Money didn&apos;t move or the status was unclear
+                  </a>
+                </td>
+                <td className="py-3.5 px-3 font-mono text-xs whitespace-nowrap">
+                  <span className="font-bold text-slate-900">{core.reach.core_pct}%</span>{" "}
+                  <span className="text-slate-500">({core.reach.core_n.toLocaleString()})</span>
+                </td>
+                <td className="py-3.5 px-3 text-center text-xs whitespace-nowrap font-mono">
+                  <strong className="text-slate-900">{core.groups.stop.pct}%</strong> vs {core.groups.cont.pct}%{" "}
+                  <strong className="text-emerald-700 ml-1">{(core.pooled_sep.diff_ci95?.[0] ?? 0) > 0 ? "✓" : "~"}</strong>
+                </td>
+                {core.by_source.slice(0, 3).map((s) => (
+                  <td key={s.source} className="py-3.5 px-3 text-center text-xs whitespace-nowrap font-mono">
+                    {s.stop.pct}% vs {s.cont.pct}%{" "}
+                    <strong className="text-emerald-700 ml-1">{(s.diff_ci95?.[0] ?? 0) > 0 ? "✓" : "~"}</strong>
+                  </td>
+                ))}
+                <td className="py-3.5 px-3 text-center text-xs text-slate-400">-</td>
+                <td className="py-3.5 px-3 text-xs text-slate-700">Yes</td>
+                <td className="py-3.5 px-3 text-center text-xs text-slate-400">-</td>
+                <td className="py-3.5 px-3 text-right" />
+              </tr>
             </tbody>
           </table>
         </div>
@@ -224,7 +266,9 @@ export default function OverviewPage() {
           Reach is a weighted share. Records from the half-sampled tier count twice, so reach is an area&apos;s weighted
           early-journey episodes divided by all weighted early-journey episodes (35,440.0), not n divided by 32,868. The n in
           brackets is the raw number of episodes showing the area. The human check counts reviewers&apos; yes answers out of the
-          items they answered.
+          items they answered. &quot;All sources&quot; pools the three sources (stop n=684, kept going n=1,156); the per-source
+          columns are the stricter test. The A or B row counts a story once if it shows either area, so it is smaller than A
+          plus B; it comes from <code>reports/analysis/part1_core_v1.json</code>, which reproduces the A–E rows exactly.
         </p>
       </section>
 

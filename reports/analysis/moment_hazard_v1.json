@@ -1,0 +1,684 @@
+{
+ "failure_coding": {
+  "by_code": {
+   "debited_but_order_failed_or_not_shown": {
+    "pooled": {
+     "ci": [
+      0.7643,
+      0.9686
+     ],
+     "n": 33,
+     "stop": 30,
+     "stop_share": 0.909
+    },
+    "reddit": {
+     "ci": [
+      0.4365,
+      0.9699
+     ],
+     "n": 6,
+     "stop": 5,
+     "stop_share": 0.833
+    }
+   },
+   "instalment_did_not_go_through": {
+    "pooled": {
+     "ci": [
+      0.7077,
+      0.8881
+     ],
+     "n": 70,
+     "stop": 57,
+     "stop_share": 0.814
+    },
+    "reddit": {
+     "ci": [
+      0.6212,
+      0.9149
+     ],
+     "n": 26,
+     "stop": 21,
+     "stop_share": 0.808
+    }
+   },
+   "money_back_not_received": {
+    "pooled": {
+     "ci": [
+      0.6212,
+      0.9626
+     ],
+     "n": 15,
+     "stop": 13,
+     "stop_share": 0.867
+    },
+    "reddit": {
+     "ci": [
+      0.4385,
+      1.0
+     ],
+     "n": 3,
+     "stop": 3,
+     "stop_share": 1.0
+    }
+   },
+   "other": {
+    "pooled": {
+     "ci": [
+      0.4093,
+      0.9285
+     ],
+     "n": 8,
+     "stop": 6,
+     "stop_share": 0.75
+    },
+    "reddit": {
+     "ci": [
+      0.3006,
+      0.9544
+     ],
+     "n": 4,
+     "stop": 3,
+     "stop_share": 0.75
+    }
+   },
+   "unwanted_or_extra_debit": {
+    "pooled": {
+     "ci": [
+      0.4526,
+      0.9368
+     ],
+     "n": 9,
+     "stop": 7,
+     "stop_share": 0.778
+    },
+    "reddit": {
+     "ci": [
+      0.3424,
+      1.0
+     ],
+     "n": 2,
+     "stop": 2,
+     "stop_share": 1.0
+    }
+   }
+  },
+  "n": 135,
+  "n_continued": 22,
+  "no_units_combined": {
+   "ci": [
+    0.7625,
+    0.9021
+   ],
+   "n": 103,
+   "stop": 87,
+   "stop_share": 0.845
+  },
+  "recovery_if_continued": {
+   "not stated": 16,
+   "paid manually": 1,
+   "paid manually each month": 1,
+   "retried until it worked": 1,
+   "set up a new SIP": 2,
+   "set up a new SIP after the auto-cancel": 1
+  },
+  "sub_did_not_go_through": {
+   "amc_cancel": 2,
+   "app_screen": 5,
+   "auto_cancel": 2,
+   "balance": 14,
+   "bank_account": 3,
+   "could_not_skip_in_time": 1,
+   "first_instalment": 5,
+   "kyc": 8,
+   "mandate_upi": 12,
+   "no_failure_notice": 1,
+   "no_reason_given": 3,
+   "setup": 1
+  }
+ },
+ "failure_would_have_helped": {
+  "autopay_or_mandate_setup": 12,
+  "kyc": 7,
+  "n": 50,
+  "note": "the engine's model-written 'would have helped' summary, keyword themes, multi-label; colour only",
+  "pay_the_missed_instalment": 12,
+  "reason_status_or_next_step": 21,
+  "refund": 7,
+  "support_that_resolves": 23
+ },
+ "hazard": {
+  "advice_received": {
+   "appreviews": {
+    "ci": [
+     0.5101,
+     1.0
+    ],
+    "full_exit": 0,
+    "full_exit_ci": [
+     0.0,
+     0.4899
+    ],
+    "full_exit_share": 0.0,
+    "n": 4,
+    "n_reread": 4,
+    "stop": 4,
+    "stop_share": 1.0
+   },
+   "pooled": {
+    "ci": [
+     0.1876,
+     0.3905
+    ],
+    "full_exit": 6,
+    "full_exit_ci": [
+     0.0388,
+     0.1701
+    ],
+    "full_exit_share": 0.083,
+    "n": 72,
+    "n_reread": 72,
+    "stop": 20,
+    "stop_share": 0.278
+   },
+   "reddit": {
+    "ci": [
+     0.1601,
+     0.3682
+    ],
+    "full_exit": 6,
+    "full_exit_ci": [
+     0.0437,
+     0.1898
+    ],
+    "full_exit_share": 0.094,
+    "n": 64,
+    "n_reread": 64,
+    "stop": 16,
+    "stop_share": 0.25
+   },
+   "youtube": {
+    "ci": [
+     0.0,
+     0.4899
+    ],
+    "full_exit": 0,
+    "full_exit_ci": [
+     0.0,
+     0.4899
+    ],
+    "full_exit_share": 0.0,
+    "n": 4,
+    "n_reread": 4,
+    "stop": 0,
+    "stop_share": 0.0
+   }
+  },
+  "checked_returns": {
+   "appreviews": {
+    "ci": [
+     0.552,
+     0.953
+    ],
+    "full_exit": 9,
+    "full_exit_ci": [
+     0.4677,
+     0.9111
+    ],
+    "full_exit_share": 0.75,
+    "n": 12,
+    "n_reread": 12,
+    "stop": 10,
+    "stop_share": 0.833
+   },
+   "pooled": {
+    "ci": [
+     0.1596,
+     0.2856
+    ],
+    "full_exit": 14,
+    "full_exit_ci": [
+     0.0522,
+     0.1398
+    ],
+    "full_exit_share": 0.086,
+    "n": 162,
+    "n_reread": 162,
+    "stop": 35,
+    "stop_share": 0.216
+   },
+   "reddit": {
+    "ci": [
+     0.1102,
+     0.2344
+    ],
+    "full_exit": 4,
+    "full_exit_ci": [
+     0.0116,
+     0.0737
+    ],
+    "full_exit_share": 0.03,
+    "n": 135,
+    "n_reread": 135,
+    "stop": 22,
+    "stop_share": 0.163
+   },
+   "youtube": {
+    "ci": [
+     0.047,
+     0.448
+    ],
+    "full_exit": 1,
+    "full_exit_ci": [
+     0.0149,
+     0.3539
+    ],
+    "full_exit_share": 0.083,
+    "n": 12,
+    "n_reread": 12,
+    "stop": 2,
+    "stop_share": 0.167
+   }
+  },
+  "confused_in_app": {
+   "appreviews": {
+    "ci": [
+     0.7428,
+     0.9204
+    ],
+    "full_exit": 18,
+    "full_exit_ci": [
+     0.1955,
+     0.4189
+    ],
+    "full_exit_share": 0.295,
+    "n": 61,
+    "n_reread": 61,
+    "stop": 52,
+    "stop_share": 0.852
+   },
+   "pooled": {
+    "ci": [
+     0.4838,
+     0.6136
+    ],
+    "full_exit": 46,
+    "full_exit_ci": [
+     0.1591,
+     0.2653
+    ],
+    "full_exit_share": 0.207,
+    "n": 222,
+    "n_reread": 222,
+    "stop": 122,
+    "stop_share": 0.55
+   },
+   "reddit": {
+    "ci": [
+     0.3409,
+     0.5116
+    ],
+    "full_exit": 16,
+    "full_exit_ci": [
+     0.0803,
+     0.1978
+    ],
+    "full_exit_share": 0.128,
+    "n": 125,
+    "n_reread": 125,
+    "stop": 53,
+    "stop_share": 0.424
+   },
+   "youtube": {
+    "ci": [
+     0.2724,
+     0.5919
+    ],
+    "full_exit": 9,
+    "full_exit_ci": [
+     0.1507,
+     0.4422
+    ],
+    "full_exit_share": 0.273,
+    "n": 33,
+    "n_reread": 33,
+    "stop": 14,
+    "stop_share": 0.424
+   }
+  },
+  "considered_stopping": {
+   "appreviews": {
+    "ci": [
+     0.1206,
+     0.6458
+    ],
+    "full_exit": 2,
+    "full_exit_ci": [
+     0.0632,
+     0.5474
+    ],
+    "full_exit_share": 0.222,
+    "n": 9,
+    "n_reread": 9,
+    "stop": 3,
+    "stop_share": 0.333
+   },
+   "pooled": {
+    "ci": [
+     0.0631,
+     0.1155
+    ],
+    "full_exit": 13,
+    "full_exit_ci": [
+     0.0172,
+     0.0496
+    ],
+    "full_exit_share": 0.029,
+    "n": 443,
+    "n_reread": 443,
+    "stop": 38,
+    "stop_share": 0.086
+   },
+   "reddit": {
+    "ci": [
+     0.0617,
+     0.1179
+    ],
+    "full_exit": 9,
+    "full_exit_ci": [
+     0.0123,
+     0.0438
+    ],
+    "full_exit_share": 0.023,
+    "n": 385,
+    "n_reread": 385,
+    "stop": 33,
+    "stop_share": 0.086
+   },
+   "youtube": {
+    "ci": [
+     0.012,
+     0.1453
+    ],
+    "full_exit": 2,
+    "full_exit_ci": [
+     0.012,
+     0.1453
+    ],
+    "full_exit_share": 0.043,
+    "n": 46,
+    "n_reread": 46,
+    "stop": 2,
+    "stop_share": 0.043
+   }
+  },
+  "first_debit_or_gap": {
+   "appreviews": {
+    "ci": [
+     0.7202,
+     0.9409
+    ],
+    "full_exit": 14,
+    "full_exit_ci": [
+     0.2406,
+     0.539
+    ],
+    "full_exit_share": 0.378,
+    "n": 37,
+    "n_reread": 37,
+    "stop": 32,
+    "stop_share": 0.865
+   },
+   "pooled": {
+    "ci": [
+     0.6215,
+     0.7878
+    ],
+    "full_exit": 44,
+    "full_exit_ci": [
+     0.3103,
+     0.4894
+    ],
+    "full_exit_share": 0.396,
+    "n": 111,
+    "n_reread": 111,
+    "stop": 79,
+    "stop_share": 0.712
+   },
+   "reddit": {
+    "ci": [
+     0.3995,
+     0.6878
+    ],
+    "full_exit": 11,
+    "full_exit_ci": [
+     0.153,
+     0.4107
+    ],
+    "full_exit_share": 0.262,
+    "n": 42,
+    "n_reread": 42,
+    "stop": 23,
+    "stop_share": 0.548
+   },
+   "youtube": {
+    "ci": [
+     0.5789,
+     0.8778
+    ],
+    "full_exit": 17,
+    "full_exit_ci": [
+     0.4074,
+     0.7449
+    ],
+    "full_exit_share": 0.586,
+    "n": 29,
+    "n_reread": 29,
+    "stop": 22,
+    "stop_share": 0.759
+   }
+  },
+  "life_event_or_cash_need": {
+   "appreviews": {
+    "ci": [
+     0.4385,
+     1.0
+    ],
+    "full_exit": 3,
+    "full_exit_ci": [
+     0.4385,
+     1.0
+    ],
+    "full_exit_share": 1.0,
+    "n": 3,
+    "n_reread": 3,
+    "stop": 3,
+    "stop_share": 1.0
+   },
+   "pooled": {
+    "ci": [
+     0.518,
+     0.7685
+    ],
+    "full_exit": 14,
+    "full_exit_ci": [
+     0.1677,
+     0.4025
+    ],
+    "full_exit_share": 0.269,
+    "n": 52,
+    "n_reread": 52,
+    "stop": 34,
+    "stop_share": 0.654
+   },
+   "reddit": {
+    "ci": [
+     0.4104,
+     0.7011
+    ],
+    "full_exit": 7,
+    "full_exit_ci": [
+     0.0853,
+     0.3126
+    ],
+    "full_exit_share": 0.171,
+    "n": 41,
+    "n_reread": 41,
+    "stop": 23,
+    "stop_share": 0.561
+   },
+   "youtube": {
+    "ci": [
+     0.6756,
+     1.0
+    ],
+    "full_exit": 4,
+    "full_exit_ci": [
+     0.2152,
+     0.7848
+    ],
+    "full_exit_share": 0.5,
+    "n": 8,
+    "n_reread": 8,
+    "stop": 8,
+    "stop_share": 1.0
+   }
+  },
+  "payment_failed": {
+   "appreviews": {
+    "ci": [
+     0.7566,
+     0.9205
+    ],
+    "full_exit": 22,
+    "full_exit_ci": [
+     0.2176,
+     0.4303
+    ],
+    "full_exit_share": 0.314,
+    "n": 70,
+    "n_reread": 70,
+    "stop": 60,
+    "stop_share": 0.857
+   },
+   "pooled": {
+    "ci": [
+     0.7656,
+     0.8898
+    ],
+    "full_exit": 55,
+    "full_exit_ci": [
+     0.3282,
+     0.4917
+    ],
+    "full_exit_share": 0.407,
+    "n": 135,
+    "n_reread": 135,
+    "stop": 113,
+    "stop_share": 0.837
+   },
+   "reddit": {
+    "ci": [
+     0.6874,
+     0.9147
+    ],
+    "full_exit": 16,
+    "full_exit_ci": [
+     0.2566,
+     0.5427
+    ],
+    "full_exit_share": 0.39,
+    "n": 41,
+    "n_reread": 41,
+    "stop": 34,
+    "stop_share": 0.829
+   },
+   "youtube": {
+    "ci": [
+     0.444,
+     0.8584
+    ],
+    "full_exit": 13,
+    "full_exit_ci": [
+     0.5699,
+     0.9341
+    ],
+    "full_exit_share": 0.812,
+    "n": 16,
+    "n_reread": 16,
+    "stop": 11,
+    "stop_share": 0.688
+   }
+  },
+  "saw_loss_or_flat": {
+   "appreviews": {
+    "ci": [
+     0.4343,
+     0.9025
+    ],
+    "full_exit": 4,
+    "full_exit_ci": [
+     0.1517,
+     0.6462
+    ],
+    "full_exit_share": 0.364,
+    "n": 11,
+    "n_reread": 11,
+    "stop": 8,
+    "stop_share": 0.727
+   },
+   "pooled": {
+    "ci": [
+     0.2225,
+     0.3183
+    ],
+    "full_exit": 25,
+    "full_exit_ci": [
+     0.0526,
+     0.1111
+    ],
+    "full_exit_share": 0.077,
+    "n": 325,
+    "n_reread": 325,
+    "stop": 87,
+    "stop_share": 0.268
+   },
+   "reddit": {
+    "ci": [
+     0.2099,
+     0.3104
+    ],
+    "full_exit": 18,
+    "full_exit_ci": [
+     0.0399,
+     0.0966
+    ],
+    "full_exit_share": 0.062,
+    "n": 288,
+    "n_reread": 288,
+    "stop": 74,
+    "stop_share": 0.257
+   },
+   "youtube": {
+    "ci": [
+     0.0698,
+     0.3714
+    ],
+    "full_exit": 3,
+    "full_exit_ci": [
+     0.0454,
+     0.3213
+    ],
+    "full_exit_share": 0.13,
+    "n": 23,
+    "n_reread": 23,
+    "stop": 4,
+    "stop_share": 0.174
+   }
+  }
+ },
+ "note": "labelled = strict stop / cont / consider; stop share = stop / labelled; full exit = re-read action in stopped_all, lapsed_payment, switched_platform among labelled stories the re-read covers",
+ "restart": {
+  "stories_with_restart_event": 19,
+  "stories_with_stop_event": 394
+ }
+}
