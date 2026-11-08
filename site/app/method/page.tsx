@@ -140,7 +140,7 @@ export default function MethodPage() {
           {/* Sonnet Audits */}
           <div className="rounded-xl border border-border bg-card p-5 space-y-3">
             <div className="flex items-center justify-between">
-              <h3 className="text-sm font-semibold text-foreground">Blind Sonnet 3.5 Audits</h3>
+              <h3 className="text-sm font-semibold text-foreground">Blind Sonnet 5.5 Audits</h3>
               <span className="font-mono text-[10px] bg-muted px-1.5 py-0.5 rounded">n = {sonnetMain.n} + {sonnetJ1.n}</span>
             </div>
             <p className="text-xs text-muted-foreground leading-relaxed">Blind Sonnet audit comparing extraction items and journey items against Haiku baseline.</p>

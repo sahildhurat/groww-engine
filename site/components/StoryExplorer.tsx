@@ -238,7 +238,7 @@ export function StoryExplorer({ manifest }: { manifest: Manifest }) {
             <Search className="absolute left-3.5 top-3 h-4 w-4 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Search verbatim quotes, unmet needs, spans, or UIDs..."
+              placeholder="Search quotes, needs, spans or IDs, then press Enter"
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               onKeyDown={(e) => {
@@ -290,6 +290,7 @@ export function StoryExplorer({ manifest }: { manifest: Manifest }) {
               <option value="stop">Stopped / Cancelled</option>
               <option value="consider">Considering Stop</option>
               <option value="cont">Kept Going</option>
+              <option value="none">No action stated</option>
             </select>
           </div>
 
@@ -378,6 +379,12 @@ export function StoryExplorer({ manifest }: { manifest: Manifest }) {
             <span>
               Showing <strong className="text-foreground">{filteredStories.length.toLocaleString()}</strong> of{" "}
               {stories.length.toLocaleString()} loaded stories
+              {filteredStories.some((st) => st.targeted) && (
+                <span className="block text-xs">
+                  Includes {filteredStories.filter((st) => st.targeted).length.toLocaleString()} targeted top-up stories
+                  (marked), which the shares on the other pages leave out.
+                </span>
+              )}
             </span>
             {isLoadingMore && (
               <span className="inline-flex items-center gap-1 text-[11px] text-primary">
@@ -441,15 +448,24 @@ export function StoryExplorer({ manifest }: { manifest: Manifest }) {
                         ? "bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300"
                         : story.group === "consider"
                         ? "bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300"
-                        : "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300"
+                        : story.group === "cont"
+                        ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300"
+                        : "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300"
                     }`}
                   >
                     {story.group === "stop"
                       ? "Stopped"
                       : story.group === "consider"
                       ? "Considering Stop"
-                      : "Kept Going"}
+                      : story.group === "cont"
+                      ? "Kept Going"
+                      : "No action stated"}
                   </span>
+                  {story.targeted && (
+                    <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-violet-100 text-violet-800 dark:bg-violet-950/60 dark:text-violet-300">
+                      Targeted top-up
+                    </span>
+                  )}
                 </div>
               </div>
 
