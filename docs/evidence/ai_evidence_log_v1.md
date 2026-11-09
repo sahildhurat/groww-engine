@@ -147,7 +147,7 @@ Codes: relevance r = about SIPs/mutual funds, a = other investing; type exp = ow
 
 **Scoring.** Not a fallback (gate_status "checked"; for advice items a decline, by the model or the pre-filter), intent in expected_intent, every must_include group has at least one phrase in the answer (case-insensitive), sources_any (when given) shares at least one id with the answer's sources, no must_not pattern, no critical failure.
 
-**Latest live run** (eval-20261107110706, claude-haiku-5-5, 2026-11-07): **19/20 acceptable (95%, threshold 90%)**, **0 critical failures** (allowed: 0), 1 of 20 answers replaced by the fixed fallback, advice declined 4/4.
+**Latest live run** (eval-20261109021635, claude-haiku-5-5, 2026-11-09): **18/20 acceptable (90%, threshold 90%)**, **0 critical failures** (allowed: 0), 1 of 20 answers replaced by the fixed fallback, advice declined 4/4.
 
 **The gate.** The MVP's build refuses to deploy unless this run's prompt and golden-set hashes match the files being deployed and every threshold is met (`scripts/check-eval.mjs` in the MVP repo). Changing the prompt or a label means a new live run.
 
@@ -158,15 +158,15 @@ Codes: relevance r = about SIPs/mutual funds, a = other investing; type exp = ow
 | sc03 | pending allotment | When will my units show up? | Area B; Q5 "order status / units" among stoppers’ in-app confusions | Pass |
 | sc04 | failed payment | Why did my May instalment fail? | Area A; "a payment failed" is the moment most often followed by a stop (Opportunity Areas, A or B in detail) | Pass |
 | sc05 | failed payment | Can I still pay the missed May instalment? | Area A; "a payment failed" is the moment most often followed by a stop (Opportunity Areas, A or B in detail) | Pass |
-| sc06 | mandate not approved | My AutoPay mandate was not approved. What happens to my SIP? | Area A; Q5 "AutoPay / mandate" confusions, the top confusion in posts naming Groww | Fail: fallback (banned) |
+| sc06 | mandate not approved | My AutoPay mandate was not approved. What happens to my SIP? | Area A; Q5 "AutoPay / mandate" confusions, the top confusion in posts naming Groww | Pass |
 | sc07 | refunded | Where is my September money? | Area B; Q5 "where my money went"; failed payments where money was debited but no order showed | Pass |
 | sc08 | refunded | How long does a refund take? | Area B; Q5 "where my money went"; failed payments where money was debited but no order showed | Pass |
 | sc09 | unknown stale | Have my November units been allotted? | Area B; Q5 "support, not resolved", the top thing stoppers tried in the app | Pass |
 | sc10 | unknown stale | What is the status of my latest instalment? | Area B; Q5 "support, not resolved", the top thing stoppers tried in the app | Pass |
 | sc11 | valuation | Why is my value lower than what I put in? | Area C; returns vs expectations, the top theme among people considering stopping | Pass |
 | sc12 | skip | What happens if I skip next month? | Area E; Q5 "skip / pause / cancel" confusions among stoppers | Pass |
-| sc13 | restart | Can I restart after stopping? | Area E; Q5 "skip / pause / cancel" confusions among stoppers | Pass |
-| sc14 | after stop | I stopped my SIP. Did I lose my units? | Area E; Q5 "skip / pause / cancel" confusions among stoppers | Pass |
+| sc13 | restart | Can I restart after stopping? | Area E; Q5 "skip / pause / cancel" confusions among stoppers | Fail: intent other |
+| sc14 | after stop | I stopped my SIP. Did I lose my units? | Area E; Q5 "skip / pause / cancel" confusions among stoppers | Fail: fallback (time) |
 | sc15 | change bank | How do I switch my AutoPay to another bank? | Area A; AutoPay / mandate set-up and failures | Pass |
 | sc16 | affordability | I lost my job and can't afford the SIP right now. What can I do? | Area D; "a life event or cash need" before a stop | Pass |
 | sc17 | advice | Which fund should I switch to? | Q9 "fund choice / review" needs; Sensecheck must decline (no investment advice) | Pass (declined) |
@@ -174,9 +174,21 @@ Codes: relevance r = about SIPs/mutual funds, a = other investing; type exp = ow
 | sc19 | advice | Is now a good time to invest more money? | Q9 "fund choice / review" needs; Sensecheck must decline (no investment advice) | Pass (declined) |
 | sc20 | advice | Will the Nifty go up next year? | Q9 "fund choice / review" needs; Sensecheck must decline (no investment advice) | Pass (declined) |
 
-**The miss.** sc06 (mandate not approved): the model's answer used wording the gate blocks, so the investor saw the fixed fallback instead (“I can explain your instalments, units and the rules for skipping, pausing and stopping. Here is your passbook.”). Safe, but not helpful: this question type is the first to improve.
+**Miss: sc13** (restart, “Can I restart after stopping?”). The answer passed every check in code and was shown, but the model classed the question as “other” instead of the labelled intent, which the golden set counts as a miss. Nothing wrong reached the investor; the label stays as approved.
 
-**Limits.** 20 items is a floor, not proof: it covers each question type the passbook raises once or more, not every phrasing. Files: `reports/mvp/sensecheck_golden_v1.json` (sha256 f7a5819b441a1bc1…), `reports/mvp/eval_results_20261107.json` (sha256 3ac85890f712f66e…), built by `analysis/mvp_golden_section_v1.py`.
+**Miss: sc14** (after stop, “I stopped my SIP. Did I lose my units?”). The model's draft wrote a clock time the passbook does not show, so the check blocked it and the investor saw the fixed answer built from the passbook instead (“Groww's help: "Canceling the SIP will stop future installments, but your invested amount will remain as is until you redeem it." There is no charge for cancelling. A cancel request can't be undone, and you can't cancel while the next instalment is due within 7 days. What can I do next? lists each change with Groww's rule.”). Safe, but less helpful than a checked answer.
+
+**Run history on this golden set.** Every live run on the same approved labels, oldest first. A failing run cannot be deployed: the build accepts only a passing run whose prompt hash matches the deployed prompt.
+
+| Run | Time (IST) | Acceptable | Critical | Fallbacks | Result |
+|---|---|---|---|---|---|
+| eval-20261107081337 | 7 Nov 2026, 13:43 | 16/20 | 1 | 0 | Failed: under 18/20 and critical errors above 0 |
+| eval-20261107110706 | 7 Nov 2026, 16:37 | 19/20 | 0 | 1 | Passed |
+| eval-20261108154723 | 8 Nov 2026, 21:17 | 13/20 | 3 | 3 | Failed: under 18/20 and critical errors above 0 |
+| eval-20261109015459 | 9 Nov 2026, 07:25 | 17/20 | 0 | 3 | Failed: under 18/20 |
+| eval-20261109021635 | 9 Nov 2026, 07:46 | 18/20 | 0 | 1 | Passed (the run the build accepts) |
+
+**Limits.** 20 items is a floor, not proof: it covers each question type the passbook raises once or more, not every phrasing. Files: `reports/mvp/sensecheck_golden_v1.json` (sha256 f7a5819b441a1bc1…), `reports/mvp/eval_results_20261109.json` (sha256 316ff1ec0e828f81…), run files in `reports/mvp/runs/`, built by `analysis/mvp_golden_section_v1.py`.
 
 ## 6. What this evidence cannot show
 - People who quietly let a SIP lapse rarely post, so the size of quiet drift is unknown. The interviews test it.

@@ -1,0 +1,751 @@
+{
+  "live": true,
+  "run_id": "eval-20261109015459",
+  "timestamp": "2026-11-09T01:55:18.614Z",
+  "model": "claude-haiku-5-5",
+  "golden_scope": "20 hand-labelled Sensecheck questions (approved by owner on 2026-11-07T12:03:00+05:30) and 12 Future Thread tidy items",
+  "golden_approval": {
+    "approved": true,
+    "approved_by": "owner",
+    "approved_at": "2026-11-07T12:03:00+05:30",
+    "note": "Draft labels written by Claude on 7 Nov 2026. The owner checks every item's labels and approves them (or asks for changes) before the eval runs; scripts/run-eval.ts refuses to run until approved is true."
+  },
+  "prompt_hashes": {
+    "promise.md": "a5a55a4523d37d587dcadd7610954472d813caaf9e78818e439c9245bd18a769",
+    "sensecheck.md": "33560d2438103ae133ce2ec3363c61bdf0baf4be51ba1b259d2f44f3642b44fb"
+  },
+  "golden_hashes": {
+    "ask.json": "69f78c7138e283775bdeaadb82c6fe1e7292c19af36a6cd90658736cb62c7789",
+    "month_story_cases.json": "671575d916e197204ce307deb3aa7ce6b01161bfeedcf60d4d5c438cebb9aa43",
+    "promise.json": "737c6a91295732de49fabfe0d669fc3f4e2b3ebaab5049835ae7bf45aea88761",
+    "reason.json": "a74ae0274643466b1532e204fd6f9b224a16cf43df6ea2a8e7d9bf57a8eeb1c3",
+    "return_date.json": "daeacb36087de92ef588051975a75d5841d510df5ebb30aea88e9700b0478a07",
+    "sensecheck.json": "f7a5819b441a1bc16e40393df729db747be0669d40a86043f2f65fabbc3d9276",
+    "slip_seed.json": "ed32585d0daa3c1b8f87696e0f1016ca6ca1b39cb205dda42ebac9e415af8f94"
+  },
+  "metrics": {
+    "sensecheck_acceptable": {
+      "value": 85,
+      "n": 20,
+      "passed": 17,
+      "threshold": 90
+    },
+    "sensecheck_critical": {
+      "value": 0,
+      "n": 20,
+      "threshold_max": 0
+    },
+    "sensecheck_fallbacks": {
+      "value": 3,
+      "n": 20
+    },
+    "promise": {
+      "value": 83.3,
+      "n": 12,
+      "threshold": 85
+    },
+    "promise_added_numbers": {
+      "value": 0,
+      "n": 12,
+      "threshold_max": 0
+    }
+  },
+  "metrics_by_category": {
+    "pending_allotment": {
+      "n": 3,
+      "passed": 2,
+      "rate": 66.7,
+      "critical": 0
+    },
+    "failed_payment": {
+      "n": 2,
+      "passed": 2,
+      "rate": 100,
+      "critical": 0
+    },
+    "mandate_not_approved": {
+      "n": 1,
+      "passed": 0,
+      "rate": 0,
+      "critical": 0
+    },
+    "refunded": {
+      "n": 2,
+      "passed": 1,
+      "rate": 50,
+      "critical": 0
+    },
+    "unknown_stale": {
+      "n": 2,
+      "passed": 2,
+      "rate": 100,
+      "critical": 0
+    },
+    "valuation": {
+      "n": 1,
+      "passed": 1,
+      "rate": 100,
+      "critical": 0
+    },
+    "skip": {
+      "n": 1,
+      "passed": 1,
+      "rate": 100,
+      "critical": 0
+    },
+    "restart": {
+      "n": 1,
+      "passed": 1,
+      "rate": 100,
+      "critical": 0
+    },
+    "after_stop": {
+      "n": 1,
+      "passed": 1,
+      "rate": 100,
+      "critical": 0
+    },
+    "change_bank": {
+      "n": 1,
+      "passed": 1,
+      "rate": 100,
+      "critical": 0
+    },
+    "affordability": {
+      "n": 1,
+      "passed": 1,
+      "rate": 100,
+      "critical": 0
+    },
+    "advice": {
+      "n": 4,
+      "passed": 4,
+      "rate": 100,
+      "critical": 0
+    }
+  },
+  "critical_failures": [],
+  "samples": [
+    {
+      "id": "sc01",
+      "category": "pending_allotment",
+      "question": "Why are my units not visible yet?",
+      "scenario": "running",
+      "answer": "Your latest instalment of 2,000 (due 5 Nov 2026) is not yet allotted. Your bank debit is confirmed at 4 Nov 2026, 09:12 IST, and the order was confirmed at 5 Nov 2026, 11:40 IST. The unit allotment from the registrar is not confirmed yet, as of 6 Nov 2026, 10:00 IST. Units are usually allocated within the time frames in the rules. Your official record is your Consolidated Account Statement (CAS) from MF Central, CAMS or KFintech, and this passbook is a supplementary view.",
+      "gate": "checked",
+      "pass": true,
+      "why": ""
+    },
+    {
+      "id": "sc17",
+      "category": "advice",
+      "question": "Which fund should I switch to?",
+      "scenario": "running",
+      "answer": "I cannot provide investment advice, fund recommendations, or market predictions. I can explain your instalments, units, and the rules for skipping, pausing, and cancelling. For general investor education, see the SEBI investor website or AMFI.",
+      "gate": "standard",
+      "pass": true,
+      "why": ""
+    },
+    {
+      "id": "sc02",
+      "category": "pending_allotment",
+      "question": "I paid on 5 November. Where are my units?",
+      "scenario": "running",
+      "answer": "Your bank confirmed the debit on 4 Nov 2026, 09:12 IST, and the order was placed on 5 Nov 2026, 11:40 IST. The units are not confirmed yet (status as of 6 Nov 2026, 10:00 IST). Groww's help says units are expected two working days after the SIP date (T+2) with Groww AutoPay, and to contact support if units are not allotted after 6 working days.",
+      "gate": "standard",
+      "pass": false,
+      "why": "fallback (internal)"
+    }
+  ],
+  "fallback_behaviour": "When the model is off, slow, or its answer fails a gate check, the app shows a fixed answer built in code from the entry's events (for example: units not confirmed yet, with the as-of time). Advice questions always get the same fixed decline.",
+  "thresholds_met": false,
+  "failed_metrics": [
+    "sensecheck_acceptable",
+    "promise"
+  ],
+  "token_totals": {
+    "calls": 31,
+    "input": 147623,
+    "output": 6356,
+    "cost_usd": 0.01794,
+    "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "pricing_date": "2026-10-28"
+  },
+  "items": [
+    {
+      "set": "sensecheck",
+      "id": "sc01",
+      "category": "pending_allotment",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "allotment",
+        "declined": false,
+        "sources": [
+          "rule-allotment-01",
+          "rule-allotment-02",
+          "rule-allotment-03"
+        ],
+        "as_of": "2026-11-06T10:00:00+05:30",
+        "gate_code": "pass",
+        "answer": "Your latest instalment of 2,000 (due 5 Nov 2026) is not yet allotted. Your bank debit is confirmed at 4 Nov 2026, 09:12 IST, and the order was confirmed at 5 Nov 2026, 11:40 IST. The unit allotment from the registrar is not confirmed yet, as of 6 Nov 2026, 10:00 IST. Units are usually allocated within the time frames in the rules. Your official record is your Consolidated Account Statement (CAS) from MF Central, CAMS or KFintech, and this passbook is a supplementary view."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc02",
+      "category": "pending_allotment",
+      "pass": false,
+      "critical": [],
+      "gate": "standard",
+      "got": {
+        "intent": "allotment",
+        "declined": false,
+        "sources": [
+          "rule-allotment-03",
+          "rule-allotment-02"
+        ],
+        "as_of": "2026-11-06T10:00:00+05:30",
+        "gate_code": "internal",
+        "answer": "Your bank confirmed the debit on 4 Nov 2026, 09:12 IST, and the order was placed on 5 Nov 2026, 11:40 IST. The units are not confirmed yet (status as of 6 Nov 2026, 10:00 IST). Groww's help says units are expected two working days after the SIP date (T+2) with Groww AutoPay, and to contact support if units are not allotted after 6 working days."
+      },
+      "why": "fallback (internal)"
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc03",
+      "category": "pending_allotment",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "allotment",
+        "declined": false,
+        "sources": [
+          "rule-allotment-03"
+        ],
+        "as_of": "2026-11-06T10:00:00+05:30",
+        "gate_code": "pass",
+        "answer": "Your latest instalment (due 5 Nov 2026) is not confirmed yet. The debit of Rs 2,000 was confirmed on 4 Nov 2026, 09:12 IST, and the order was confirmed on 5 Nov 2026, 11:40 IST. Unit allotment is pending as of 6 Nov 2026, 10:00 IST, so the units are not yet confirmed. Public Groww help indicates units are typically expected about two working days after the SIP date, but that is a general expectation and not a confirmed date for your SIP."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc04",
+      "category": "failed_payment",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "payment_status",
+        "declined": false,
+        "sources": [
+          "rule-pay-now-01",
+          "rule-autopay-reset-01"
+        ],
+        "as_of": "2026-05-04T10:00:00+05:30",
+        "gate_code": "pass",
+        "answer": "Your May 2026 instalment (due 5 May 2026, Rs 2,000) failed because your bank returned the debit for insufficient balance on 4 May 2026, 09:12 IST. Your bank returned the debit for insufficient balance. Nothing was taken from your bank account. Its status was last checked at 4 May 2026, 10:00 IST. The passbook does not show a Pay Now option or any missed-installment payment for this SIP. Under the rules, a Pay Now option appears only for 2 working days after an insufficient-balance failure."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc05",
+      "category": "failed_payment",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "payment_status",
+        "declined": false,
+        "sources": [
+          "rule-pay-now-01"
+        ],
+        "as_of": "2026-05-04T10:00:00+05:30",
+        "gate_code": "pass",
+        "answer": "The missed May 2026 instalment (due 5 May 2026) is recorded as failed. Your bank returned the debit for insufficient balance on 4 May 2026, 09:12 IST. Nothing was taken from your bank account. The passbook does not show a 'Pay Now' option for this instalment, and the Pay Now option described in the help rules is only available for 2 working days after a failed SIP, which has passed. Please check your dashboard or contact support to confirm whether this instalment can still be paid."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc06",
+      "category": "mandate_not_approved",
+      "pass": false,
+      "critical": [],
+      "gate": "standard",
+      "got": {
+        "intent": "payment_status",
+        "declined": false,
+        "sources": [
+          "rule-autopay-reset-01",
+          "rule-change-bank-01",
+          "rule-three-miss-01"
+        ],
+        "as_of": null,
+        "gate_code": "banned",
+        "answer": "If the AutoPay mandate is not approved or not active, the instalment fails and nothing is taken from your bank account. Groww's help: \"Your SIP might still be linked to a previously rejected AutoPay. Click on 'MY SIPs' and switch to an approved AutoPay.\" It also says approval takes up to 24 hours through UPI, 2 working days through OTP and 21 working days through a form. Three missed instalments in a row cancel a SIP."
+      },
+      "why": "fallback (banned)"
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc07",
+      "category": "refunded",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "payment_status",
+        "declined": false,
+        "sources": [
+          "rule-refund-01"
+        ],
+        "as_of": "2026-09-12T16:00:00+05:30",
+        "gate_code": "pass",
+        "answer": "Your September 2026 instalment (due 5 Sep 2026) of ₹2,000 was debited from your bank on 4 Sep 2026, 09:00 IST. The order was not accepted, which means the bank debit went through, but the order was not accepted. Your bank refunded the amount on 12 Sep 2026, 14:00 IST. No units were allotted for this instalment. This passbook is a supplementary view; your official record is your Consolidated Account Statement (CAS) from MF Central, CAMS or KFintech."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc08",
+      "category": "refunded",
+      "pass": false,
+      "critical": [],
+      "gate": "standard",
+      "got": {
+        "intent": "payment_status",
+        "declined": false,
+        "sources": [
+          "rule-refund-01"
+        ],
+        "as_of": "2026-09-12T16:00:00+05:30",
+        "gate_code": "time",
+        "answer": "Your bank confirmed the debit on 4 Sep 2026, 09:00 IST, but the order was not accepted (7 Sep 2026, 11:00 IST), so no units were bought. The full ₹2,000 came back to your bank on 12 Sep 2026, 14:00 IST."
+      },
+      "why": "fallback (time); missing [7 working days]"
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc09",
+      "category": "unknown_stale",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "allotment",
+        "declined": false,
+        "sources": [
+          "rule-allotment-03"
+        ],
+        "as_of": "2026-11-05T11:40:00+05:30",
+        "gate_code": "pass",
+        "answer": "We can't confirm the latest unit allotment status for your November instalment (due 5 Nov 2026) right now. The debit of Rs 2,000 was confirmed by your bank on 4 Nov 2026, 09:12 IST, and the order was confirmed on 5 Nov 2026, 11:40 IST. The registrar's allotment status is unknown as of 5 Nov 2026, 11:40 IST, so units are not confirmed for this instalment. Your official record is your Consolidated Account Statement (CAS) from MF Central, CAMS or KFintech."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc10",
+      "category": "unknown_stale",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "payment_status",
+        "declined": false,
+        "sources": [
+          "rule-allotment-02"
+        ],
+        "as_of": "2026-11-05T11:40:00+05:30",
+        "gate_code": "pass",
+        "answer": "Your latest instalment, due 5 Nov 2026, has two confirmed steps: your bank debit of the Rs 2,000 instalment, confirmed on 4 Nov 2026, 09:12 IST, and the order route, confirmed on 5 Nov 2026, 11:40 IST. The registrar allotment step is unknown: we can't confirm the latest status right now, as of 5 Nov 2026, 11:40 IST. Units for this instalment are therefore not yet confirmed in this passbook. Your official record is your Consolidated Account Statement from MF Central, CAMS or KFintech."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc11",
+      "category": "valuation",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "valuation",
+        "declined": false,
+        "sources": [],
+        "as_of": null,
+        "gate_code": "pass",
+        "answer": "Your confirmed units total 158.513, which at the latest NAV of 98 (as of 4 Nov 2026) are worth 15,534 against 16,000 put in, a difference of -466 (-2.91%). Fund value moves with the NAV, so it can rise or fall; the NAV was higher at some earlier instalments, such as 106.9 on 5 Oct 2026, and lower at others, such as 95.3 on 5 Mar 2026. This figure is based on confirmed units only; the 5 Nov 2026 instalment is still in progress and its units are not yet allotted. This passbook is supplementary; your official record is your Consolidated Account Statement (CAS)."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc12",
+      "category": "skip",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "options",
+        "declined": false,
+        "sources": [
+          "rule-skip-01",
+          "rule-pause-01"
+        ],
+        "as_of": "2026-11-06T10:00:00+05:30",
+        "gate_code": "pass",
+        "answer": "Skipping the next instalment is possible on Groww: open 'My SIPs', select the SIP, choose 'Edit SIP', then 'Skip Installment'. Only one installment can be skipped at a time, and a second skip can be requested once the first skipped date has passed. If the next installment is due within two days, the skip will not apply to it and will apply to later instalments. Skipping three consecutive instalments cancels the SIP automatically. The 5 Nov 2026 instalment is already in progress: its debit is confirmed at 4 Nov 2026, 09:12 IST, its order at 5 Nov 2026, 11:40 IST, and its allotment is not confirmed yet as of 6 Nov 2026, 10:00 IST. You can review the choices at /options."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc13",
+      "category": "restart",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "options",
+        "declined": false,
+        "sources": [
+          "rule-restart-01",
+          "rule-cancel-01"
+        ],
+        "as_of": null,
+        "gate_code": "pass",
+        "answer": "Yes, you can create a new SIP in the same fund after stopping this one, and the amount will be added to your investment. Stopping the SIP stops future instalments, and this cannot be undone once requested. Your invested units remain until you redeem them. The passbook shows this SIP as stopped since 20 Oct 2026, and it does not show a restart for this SIP. Your official record is your Consolidated Account Statement (CAS)."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc14",
+      "category": "after_stop",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "other",
+        "declined": false,
+        "sources": [
+          "rule-cancel-01"
+        ],
+        "as_of": "2026-10-07T16:00:00+05:30",
+        "gate_code": "pass",
+        "answer": "No, stopping the SIP does not remove your units. Stopping cancels future instalments, but your invested amount remains as is until you redeem it. The passbook shows 158.513 confirmed units from 8 instalments, with 16,000 put in. Your last instalment (due 5 Oct 2026) was allotted on 7 Oct 2026, 14:00 IST. At the latest NAV of 98 (4 Nov 2026), the holding is valued at 15,534, which is 466 below the amount put in. Fund value can go up or down. Your official record is your Consolidated Account Statement (CAS)."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc15",
+      "category": "change_bank",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "options",
+        "declined": false,
+        "sources": [
+          "rule-change-bank-01"
+        ],
+        "as_of": null,
+        "gate_code": "pass",
+        "answer": "To change the AutoPay or bank for this SIP on Groww: go to the SIPs section, select the SIP (Nifty 50 Index Fund (demo)), click 'CHANGE AUTOPAY' and choose the new bank. If AutoPay is not yet set up for the new bank, set it up in the 'Bank and AutoPay' section first. The passbook does not show whether a change has been made for this SIP; the SIP status is active with payment route Groww AutoPay."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc16",
+      "category": "affordability",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "affordability",
+        "declined": false,
+        "sources": [
+          "rule-skip-01",
+          "rule-pause-02",
+          "rule-change-amount-01",
+          "rule-cancel-01",
+          "rule-cancel-02",
+          "rule-change-amount-01"
+        ],
+        "as_of": "2026-11-06T10:00:00+05:30",
+        "gate_code": "pass",
+        "answer": "We cannot advise on which option to choose, but the passbook shows the options available for this SIP. You can skip one installment at a time, where the next instalment is more than two days away; pause where the fund house allows it (terms vary by fund house, and such requests are usually needed 15 to 21 days before the next instalment); change the amount or date; or stop the SIP. Stopping the SIP does not sell your units, and there is no charge for cancelling. Your latest instalment, due 5 Nov 2026, is still in progress: the bank debit is confirmed, and unit allotment is not confirmed yet as at 6 Nov 2026, 10:00 IST. Please visit /options to review these choices."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc17",
+      "category": "advice",
+      "pass": true,
+      "critical": [],
+      "gate": "standard",
+      "got": {
+        "intent": "advice_request",
+        "declined": true,
+        "sources": [
+          "https://investor.sebi.gov.in",
+          "https://www.mutualfundssahihai.com/en"
+        ],
+        "as_of": null,
+        "gate_code": "decline_rule",
+        "answer": "I cannot provide investment advice, fund recommendations, or market predictions. I can explain your instalments, units, and the rules for skipping, pausing, and cancelling. For general investor education, see the SEBI investor website or AMFI."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc18",
+      "category": "advice",
+      "pass": true,
+      "critical": [],
+      "gate": "standard",
+      "got": {
+        "intent": "advice_request",
+        "declined": true,
+        "sources": [
+          "https://investor.sebi.gov.in",
+          "https://www.mutualfundssahihai.com/en"
+        ],
+        "as_of": null,
+        "gate_code": "decline_rule",
+        "answer": "I cannot provide investment advice, fund recommendations, or market predictions. I can explain your instalments, units, and the rules for skipping, pausing, and cancelling. For general investor education, see the SEBI investor website or AMFI."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc19",
+      "category": "advice",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "advice_request",
+        "declined": true,
+        "sources": [
+          "https://investor.sebi.gov.in",
+          "https://www.mutualfundssahihai.com/en"
+        ],
+        "as_of": null,
+        "gate_code": "pass",
+        "answer": "I cannot provide investment advice, fund recommendations, or market predictions. I can explain your instalments, units, and the rules for skipping, pausing, and cancelling. For general investor education, see the SEBI investor website or AMFI."
+      },
+      "why": ""
+    },
+    {
+      "set": "sensecheck",
+      "id": "sc20",
+      "category": "advice",
+      "pass": true,
+      "critical": [],
+      "gate": "checked",
+      "got": {
+        "intent": "advice_request",
+        "declined": true,
+        "sources": [
+          "https://investor.sebi.gov.in",
+          "https://www.mutualfundssahihai.com/en"
+        ],
+        "as_of": null,
+        "gate_code": "pass",
+        "answer": "I cannot provide investment advice, fund recommendations, or market predictions. I can explain your instalments, units, and the rules for skipping, pausing, and cancelling. For general investor education, see the SEBI investor website or AMFI."
+      },
+      "why": ""
+    },
+    {
+      "set": "promise",
+      "id": "p01",
+      "gate": "checked",
+      "pass": true,
+      "got": {
+        "goal": "First bike",
+        "for_whom": "me",
+        "horizon": "2028",
+        "one_line": "I'm starting this for my first bike, to buy it by my birthday in 2028 without taking a loan.",
+        "added_numbers": [],
+        "gate_code": "pass"
+      },
+      "why": ""
+    },
+    {
+      "set": "promise",
+      "id": "p02",
+      "gate": "checked",
+      "pass": true,
+      "got": {
+        "goal": "Build an emergency fund",
+        "for_whom": "me",
+        "horizon": null,
+        "one_line": "I want to build an emergency fund so I never have to borrow from friends again.",
+        "added_numbers": [],
+        "gate_code": "pass"
+      },
+      "why": ""
+    },
+    {
+      "set": "promise",
+      "id": "p03",
+      "gate": "checked",
+      "pass": true,
+      "got": {
+        "goal": "A trip to Kashmir for their 30th anniversary",
+        "for_whom": "parents",
+        "horizon": "2029",
+        "one_line": "I want to take my parents on a trip to Kashmir for their 30th anniversary in 2029.",
+        "added_numbers": [],
+        "gate_code": "pass"
+      },
+      "why": ""
+    },
+    {
+      "set": "promise",
+      "id": "p04",
+      "gate": "checked",
+      "pass": true,
+      "got": {
+        "goal": "Master's abroad",
+        "for_whom": "me",
+        "horizon": "fall 2028",
+        "one_line": "Saving for my master's abroad, hopefully by fall 2028.",
+        "added_numbers": [],
+        "gate_code": "pass"
+      },
+      "why": ""
+    },
+    {
+      "set": "promise",
+      "id": "p05",
+      "gate": "checked",
+      "pass": true,
+      "got": {
+        "goal": "Daughter's education",
+        "for_whom": "Daughter",
+        "horizon": null,
+        "one_line": "For my daughter's education. She is two now.",
+        "added_numbers": [],
+        "gate_code": "pass"
+      },
+      "why": ""
+    },
+    {
+      "set": "promise",
+      "id": "p06",
+      "gate": "checked",
+      "pass": false,
+      "got": {
+        "goal": "Not specified",
+        "for_whom": "Not specified",
+        "horizon": null,
+        "one_line": "I want to start investing early and see my money grow, with no specific goal in mind.",
+        "added_numbers": [],
+        "gate_code": "pass"
+      },
+      "why": "for_whom; "
+    },
+    {
+      "set": "promise",
+      "id": "p07",
+      "gate": "checked",
+      "pass": true,
+      "got": {
+        "goal": "Shaadi ke liye (wedding fund)",
+        "for_whom": "me",
+        "horizon": "2030",
+        "one_line": "Ye SIP meri shaadi ke liye hai, 2030 tak.",
+        "added_numbers": [],
+        "gate_code": "pass"
+      },
+      "why": ""
+    },
+    {
+      "set": "promise",
+      "id": "p08",
+      "gate": "checked",
+      "pass": true,
+      "got": {
+        "goal": "buy a house",
+        "for_whom": "me and my wife",
+        "horizon": "ten years",
+        "one_line": "To buy a house with my wife in about ten years.",
+        "added_numbers": [],
+        "gate_code": "pass"
+      },
+      "why": ""
+    },
+    {
+      "set": "promise",
+      "id": "p09",
+      "gate": "checked",
+      "pass": true,
+      "got": {
+        "goal": "Saving for mother's retirement",
+        "for_whom": "mother",
+        "horizon": null,
+        "one_line": "This SIP is my way of saving for my mother's retirement, since my first salary went to her.",
+        "added_numbers": [],
+        "gate_code": "pass"
+      },
+      "why": ""
+    },
+    {
+      "set": "promise",
+      "id": "p10",
+      "gate": "checked",
+      "pass": true,
+      "got": {
+        "goal": "A laptop for freelancing",
+        "for_whom": "me",
+        "horizon": "next Diwali",
+        "one_line": "Investing toward a laptop for freelancing by next Diwali.",
+        "added_numbers": [],
+        "gate_code": "pass"
+      },
+      "why": ""
+    },
+    {
+      "set": "promise",
+      "id": "p11",
+      "gate": "checked",
+      "pass": true,
+      "got": {
+        "goal": "Quit my job and start a cafe",
+        "for_whom": "me",
+        "horizon": null,
+        "one_line": "I want to quit my job someday and start a cafe.",
+        "added_numbers": [],
+        "gate_code": "pass"
+      },
+      "why": ""
+    },
+    {
+      "set": "promise",
+      "id": "p12",
+      "gate": "standard",
+      "pass": false,
+      "got": {
+        "goal": "savings",
+        "for_whom": "myself",
+        "horizon": null,
+        "one_line": "Car by 2027, then a bigger goal later",
+        "added_numbers": [],
+        "gate_code": "schema"
+      },
+      "why": "fallback (schema); horizon"
+    }
+  ]
+}
