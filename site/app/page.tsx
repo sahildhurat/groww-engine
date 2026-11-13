@@ -3,7 +3,7 @@ import summaryData from "@/data/summary.json";
 import { FormattedText } from "@/components/FormattedText";
 import { CorePanel } from "@/components/CorePanel";
 import core from "@/data/core.json";
-import { ArrowRight, CheckCircle2, AlertTriangle, HelpCircle, Layers, TrendingUp, ShieldAlert, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, AlertTriangle, HelpCircle, Layers, TrendingUp, ShieldAlert, Sparkles, Clock } from "lucide-react";
 
 export default function OverviewPage() {
   const { answer_in_five_lines, funnel, opportunities, cant_tell_us } = summaryData;
@@ -22,6 +22,17 @@ export default function OverviewPage() {
         <p className="mt-3 text-base sm:text-lg text-slate-600 max-w-3xl">
           An interactive discovery dashboard showing how the engine gathers public personal finance discourse, extracts structured investor journeys, validates findings against human and model audits, and isolates key continuity friction points.
         </p>
+        {/* Owner, 13 Nov 2026: who this is about, in the owner's words. Context for the reader, not an engine finding. */}
+        <div
+          className="mt-5 max-w-3xl flex items-start space-x-3 rounded-lg border border-indigo-100 bg-indigo-50/60 px-4 py-3"
+          data-testid="audience-note"
+        >
+          <Clock className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+          <p className="text-sm sm:text-base text-slate-800 leading-relaxed">
+            The target audience is used to the era of digital payments where money exchanges hands within seconds. The
+            SIP money takes 2–3 business days to reflect in their accounts, which can cause confusion and worry.
+          </p>
+        </div>
       </div>
 
       {/* (a) The Answer in Five Lines */}
