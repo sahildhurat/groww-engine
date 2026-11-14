@@ -3,7 +3,7 @@
   {
    "step": "1. Public Collection",
    "detail": "Reddit, YouTube, Play/App Store, TradingQ&A, X, social manual",
-   "records": "1,630,416 + 741"
+   "records": "1,631,157 (1,630,416 + 741 social)"
   },
   {
    "step": "2. Scrub & Privacy",
@@ -13,7 +13,7 @@
   {
    "step": "3. AI Gate v1.1",
    "detail": "Haiku 5.5 message batch; relevance (r/a/n) and type (exp/q/adv)",
-   "records": "231,654 gated (O2 census)"
+   "records": "232,395 gated (O2 census + 741 social)"
   },
   {
    "step": "4. Structured Extraction v1.2a",

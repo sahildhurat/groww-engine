@@ -12,13 +12,13 @@
  "funnel": [
   {
    "step": "Clean public records collected",
-   "count": "1,630,416 + 741 social",
-   "detail": "Reddit, YouTube, Play/App Store, TradingQ&A, X, social manual"
+   "count": "1,631,157",
+   "detail": "1,630,416 from Reddit, YouTube, Play/App Store, TradingQ&A and X, plus 741 social (manual)"
   },
   {
    "step": "Gated by AI for relevance",
-   "count": "231,654",
-   "detail": "AI relevance check on every record in the pool"
+   "count": "232,395",
+   "detail": "AI relevance check on every record in the pool (231,654) and every social record (741)"
   },
   {
    "step": "Analysed episodes",

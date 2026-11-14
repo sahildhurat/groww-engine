@@ -301,13 +301,14 @@ def build_summary() -> dict:
     funnel = [
         {
             "step": "Clean public records collected",
-            "count": f"{clean_count:,} + {social_count} social",
-            "detail": "Reddit, YouTube, Play/App Store, TradingQ&A, X, social manual",
+            # 14 Nov 2026: show the totals the Evidence Log shows (pool + social), with the split in the detail.
+            "count": f"{clean_count + social_count:,}",
+            "detail": f"{clean_count:,} from Reddit, YouTube, Play/App Store, TradingQ&A and X, plus {social_count} social (manual)",
         },
         {
             "step": "Gated by AI for relevance",
-            "count": f"{gate_census_count:,}",
-            "detail": "AI relevance check on every record in the pool",
+            "count": f"{gate_census_count + social_count:,}",
+            "detail": f"AI relevance check on every record in the pool ({gate_census_count:,}) and every social record ({social_count})",
         },
         {
             "step": "Analysed episodes",
@@ -581,9 +582,9 @@ def build_method() -> dict:
 
     # Pipeline diagram counts read directly from source files (§9.2.2)
     pipeline_steps = [
-        {"step": "1. Public Collection", "detail": "Reddit, YouTube, Play/App Store, TradingQ&A, X, social manual", "records": f"{clean_count:,} + {social_count}"},
+        {"step": "1. Public Collection", "detail": "Reddit, YouTube, Play/App Store, TradingQ&A, X, social manual", "records": f"{clean_count + social_count:,} ({clean_count:,} + {social_count} social)"},
         {"step": "2. Scrub & Privacy", "detail": "PII scrubbed, author_hash HMAC, zero usernames or handles", "records": f"{clean_count:,}"},
-        {"step": "3. AI Gate v1.1", "detail": "Haiku 5.5 message batch; relevance (r/a/n) and type (exp/q/adv)", "records": f"{gate_census_count:,} gated (O2 census)"},
+        {"step": "3. AI Gate v1.1", "detail": "Haiku 5.5 message batch; relevance (r/a/n) and type (exp/q/adv)", "records": f"{gate_census_count + social_count:,} gated (O2 census + {social_count} social)"},
         {"step": "4. Structured Extraction v1.2a", "detail": "Haiku 5.5 with H11 deterministic action rules and span grounding", "records": f"{pops['MAIN|all']:,} episodes"},
         {"step": "5. Second-Read Journey (J1)", "detail": "Date-aware event timeline extraction for strict action validation", "records": f"{j1_count:,} journey items"},
         {"step": "6. Strict Consensus Labels", "detail": "Deterministic consensus between main extraction and J1", "records": f"{pops['MAIN|E_stop']:,} stop / {pops['MAIN|E_consider']:,} consider / {pops['MAIN|E_cont']:,} cont (E)"},
